@@ -13,14 +13,17 @@ import javax.xml.parsers.SAXParserFactory;
 public class XMLFileReader {
 
 	public static void main(String[] args) {
-		File fxml = new File("data/News/2001/April.xml");
-		
+		File file = new File("data/News/2001/April.xml");
+		ArticleFile articles;
+
 		XMLFileReader xfr = new XMLFileReader();
-		xfr.readXMLFile(fxml);
+		articles = xfr.readXMLFile(file);
+
+		System.out.println(articles.toString(10));
 	}
 
 	public ArticleFile readXMLFile(File file) {
-		ArticleFile articleFile = new ArticleFile();
+		ArticleFile articleFile = new ArticleFile(file);
 
 		try {
 			// Preprocess file content
@@ -65,7 +68,7 @@ public class XMLFileReader {
 
 			// Affix closing data tag if it doesn't exist
 			int ind = text.indexOf("</data>");
-			System.out.println("INDEX: " + ind);
+			System.out.println("INDEX: " + ind + "\n");
 			if (ind == -1) {
 				sb.append("</data>");
 			}
