@@ -14,6 +14,8 @@ import models.ArticleFile;
 
 public class XMLFileReader {
 
+	String defaultHeader = null;
+
 	public static void main(String[] args) {
 		File file = new File("data/News/2001/April.xml");
 		ArticleFile articles;
@@ -53,6 +55,40 @@ public class XMLFileReader {
 			String text = readFile(file.getAbsolutePath(), Charset.defaultCharset());
 
 			// Expand header
+			sb.append(expandHeader());
+
+			// Escape links
+			text = text.replaceAll("<link>", "<link><![CDATA[");
+			text = text.replaceAll("</link>", "]]></link>");
+
+			// Escape unescaped characters
+			text = text.replaceAll("&", "&amp;");
+
+			// Append data
+			sb.append(text.substring(text.indexOf("<data>")));
+
+			// Affix closing data tag if it doesn't exist
+			int ind = text.indexOf("</data>");
+			// System.out.println("INDEX: " + ind + "\n");
+			if (ind == -1) {
+				sb.append("</data>");
+			}
+		} catch (IOException io) {
+			io.printStackTrace();
+		}
+		// Build preprocessed file
+		return sb.toString();
+	}
+
+	private String readFile(String path, Charset encoding) throws IOException {
+		byte[] encoded = Files.readAllBytes(Paths.get(path));
+		return new String(encoded, encoding);
+	}
+
+	private String expandHeader() {
+		if (this.defaultHeader == null) {
+			StringBuilder sb = new StringBuilder();
+
 			sb.append("<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n");
 			sb.append("<!DOCTYPE html [\n");
 			sb.append("<!ENTITY acirc  \"&#194;\">\n");
@@ -95,28 +131,9 @@ public class XMLFileReader {
 
 			sb.append("]>\n");
 
-			// Escape links
-			text = text.replaceAll("<link>", "<link><![CDATA[");
-			text = text.replaceAll("</link>", "]]></link>");
-
-			// Append data
-			sb.append(text.substring(text.indexOf("<data>")));
-
-			// Affix closing data tag if it doesn't exist
-			int ind = text.indexOf("</data>");
-			// System.out.println("INDEX: " + ind + "\n");
-			if (ind == -1) {
-				sb.append("</data>");
-			}
-		} catch (IOException io) {
-			io.printStackTrace();
+			defaultHeader = sb.toString();
 		}
-		// Build preprocessed file
-		return sb.toString();
-	}
 
-	private String readFile(String path, Charset encoding) throws IOException {
-		byte[] encoded = Files.readAllBytes(Paths.get(path));
-		return new String(encoded, encoding);
+		return defaultHeader;
 	}
 }
