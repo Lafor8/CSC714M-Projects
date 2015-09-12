@@ -53,13 +53,28 @@ public class XMLFileReader {
 		
 		try {
 			String text = readFile(fxml.getAbsolutePath(),Charset.defaultCharset());
+			StringBuilder sb = new StringBuilder();
+			sb.append("<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n");
+			sb.append("<!DOCTYPE html [\n");
+			sb.append("<!ENTITY acirc \"&#194;\">\n");
+			sb.append("<!ENTITY Atilde \"&#195;\">\n");
+			sb.append("<!ENTITY plusmn \"&#177;\">\n");
+			sb.append("<!ENTITY ntilde \"&#241;\">\n");
+			sb.append("]>\n");
 
-			text = text.replaceAll("<link>(.*)</link>", "<link></link>");
+			text = text.replaceAll("<link>", "<link><![CDATA[");
+			text = text.replaceAll("</link>", "]]></link>");
+			
+			sb.append(text.substring(text.indexOf("<data>")));
+			
 			int ind = text.indexOf("</data>");
 			System.out.println("INDEX: "+ind);
 			if(ind == -1){
-				text = text + "</data>";
+				sb.append("</data>");
 			}
+			
+			text = sb.toString();
+			System.out.println(text.substring(0,1000));
 			
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
