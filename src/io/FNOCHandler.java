@@ -8,6 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class FNOCHandler extends DefaultHandler {
 
 	StringBuilder sb = new StringBuilder();
+	ArticleFile articleFile;
 	boolean btitle = false;
 	boolean bauthor = false;
 	boolean bmonth = false;
@@ -15,120 +16,74 @@ public class FNOCHandler extends DefaultHandler {
 	boolean byear = false;
 	boolean bbody = false;
 	boolean blink = false;
-	
+
+	public FNOCHandler(ArticleFile articleFile) {
+		this.articleFile = articleFile;
+	}
+
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
-//		System.out.println("Start Element :" + qName);
-
-		if (qName.equalsIgnoreCase("TITLE")) {
+		// System.out.println("Start Element :" + qName);
+		switch (qName.toUpperCase()) {
+		case "TITLE":
 			btitle = true;
-		}
-
-		if (qName.equalsIgnoreCase("AUTHOR")) {
+			break;
+		case "AUTHOR":
 			bauthor = true;
-		}
-
-		if (qName.equalsIgnoreCase("MONTH")) {
+			break;
+		case "MONTH":
 			bmonth = true;
-		}
-
-		if (qName.equalsIgnoreCase("DAY")) {
+			break;
+		case "DAY":
 			bday = true;
-		}
-		
-		if (qName.equalsIgnoreCase("YEAR")) {
+			break;
+		case "YEAR":
 			byear = true;
-		}
-
-		if (qName.equalsIgnoreCase("BODY")) {
+			break;
+		case "BODY":
 			bbody = true;
-		}
-
-		if (qName.equalsIgnoreCase("LINK")) {
+			break;
+		case "LINK":
 			blink = true;
+			break;
 		}
-
-		
 	}
 
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-
-//		System.out.println("End Element :" + qName);
-		System.out.println(qName + ": " +sb.toString().trim());
+		// System.out.println("End Element :" + qName);
+		System.out.println(qName + ": " + sb.toString().trim());
 		sb.setLength(0);
 	}
 
 	public void characters(char ch[], int start, int length) throws SAXException {
-//		System.out.println("TEXT: **" + new String(ch, start, length)+"**");
 		if (btitle) {
-//			System.out.println("\tTitle : " + new String(ch, start, length));
+			// System.out.println("\tTitle : " + new String(ch, start, length));
 			btitle = false;
-		}
-
-		if (bauthor) {
-//			System.out.println("\tAuthor : " + new String(ch, start, length));
+		} else if (bauthor) {
+			// System.out.println("\tAuthor : " + new String(ch, start, length));
 			bauthor = false;
 		}
-
-		if (bmonth) {
-//			System.out.println("\tMonth : " + new String(ch, start, length));
+		else if (bmonth) {
+			// System.out.println("\tMonth : " + new String(ch, start, length));
 			bmonth = false;
 		}
-
-		if (bday) {
-//			System.out.println("\tDay : " + new String(ch, start, length));
+		else if (bday) {
+			// System.out.println("\tDay : " + new String(ch, start, length));
 			bday = false;
 		}
-
-		if (byear) {
-//			System.out.println("\tYear : " + new String(ch, start, length));
+		else if (byear) {
+			// System.out.println("\tYear : " + new String(ch, start, length));
 			byear = false;
 		}
-
-		if (bbody) {
-//			System.out.println("\tBody : " + new String(ch, start, length));
+		else if (bbody) {
+			// System.out.println("\tBody : " + new String(ch, start, length));
 			bbody = false;
 		}
-
-		if (blink) {
-//			System.out.println("\tLink : " + new String(ch, start, length));
+		else if (blink) {
+			// System.out.println("\tLink : " + new String(ch, start, length));
 			blink = false;
 		}
+		
 		sb.append(ch, start, length);
 	}
-//    String content = "";
-//    SystemTo systemTo=new SystemTo();
-//
-//    @Override
-//    public void startElement(String uri, String localName, String qName,
-//        Attributes attributes) throws SAXException {
-//
-//        switch (qName) {
-//            case "system":
-//                System.out.println("inside company");
-//                break;
-//        }
-//    }
-//
-//    @Override
-//    public void endElement(String uri, String localName, String qName)
-//        throws SAXException {
-//        switch (qName) {
-//            case "u_id":
-//                systemTo.setUid(content);
-//                break;
-//            case "serial_no":
-//                systemTo.setSerialNumber(content);
-//                break;
-//            case "branch_name":
-//                systemTo.setName(content);
-//                break;
-//        }
-//    }
-
-//    @Override
-//    public void characters(char[] ch, int start, int length)
-//        throws SAXException {
-//        content = String.copyValueOf(ch, start, length).trim();
-//    }
 }
