@@ -17,7 +17,7 @@ public class ArticleFile {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("File: " + file.getName() + "\n\n");
+		sb.append("File: " + file.getName() + "\n");
 
 		for (Article a : articles) {
 			sb.append(a.toString());
@@ -29,7 +29,7 @@ public class ArticleFile {
 	public String toString(int n) {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("File: " + file.getName() + "\n\n");
+		sb.append("File: " + file.getName() + "\n");
 
 		for (int i = 0; i < n; i++){
 			sb.append(articles.get(i).toString());

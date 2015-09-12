@@ -1,23 +1,12 @@
-import io.XMLFileReader;
-
-import java.io.File;
-
-import models.ArticleFile;
-
+import io.XMLFileIO;
 
 public class Driver {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		File file = new File("data/News/2001/April.xml");
-		ArticleFile articles;
-
-		XMLFileReader xfr = new XMLFileReader();
-		articles = xfr.readXMLFile(file);
-
-		System.out.println(articles.toString(10));
+		XMLFileIO io = new XMLFileIO();
+		
+		//io.processFile("data/News/2001/April.xml");
+		//io.crawlFolder("data/News");
+		//io.crawlFolder("data/Opinyon");
 	}
-
 }
