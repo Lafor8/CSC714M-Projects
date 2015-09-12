@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import models.ArticleFile;
+
 public class XMLFileReader {
 
 	public static void main(String[] args) {
