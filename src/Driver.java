@@ -36,5 +36,6 @@ Notes:
 	(See XMLFileReader's expandHeader)
 > Some files don't have a closing </data> tag
 > Some files don't escape characters that are supposed to be escaped in XML (& in Opinyon/2001/June.xml
+> http://www.w3.org/TR/html4/sgml/entities.html
 
 */

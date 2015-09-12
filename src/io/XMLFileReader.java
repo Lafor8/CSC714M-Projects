@@ -62,7 +62,7 @@ public class XMLFileReader {
 			text = text.replaceAll("</link>", "]]></link>");
 
 			// Escape unescaped characters
-			text = text.replaceAll("&", "&amp;");
+			text = text.replaceAll(" & ", "&amp;");
 
 			// Append data
 			sb.append(text.substring(text.indexOf("<data>")));
