@@ -28,7 +28,7 @@ public class XMLFileReader {
 			  return new String(encoded, encoding);
 			}
 	public static void main(String[] args) {
-		File fxml = new File("data/News/2001/Test.xml");
+		File fxml = new File("data/News/2001/April.xml");
 
 		// try {
 		//
@@ -66,7 +66,7 @@ public class XMLFileReader {
 
 			FNOCHandler handler = new FNOCHandler();
 //			saxParser.parse(new XMLFilterInputStream(new FileInputStream(fxml)), handler);
-			saxParser.parse(new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8)), handler);
+			saxParser.parse(new ByteArrayInputStream(text.getBytes(Charset.defaultCharset())), handler);
 
 		} catch (Exception e) {
 			e.printStackTrace();
