@@ -1,9 +1,16 @@
 package models;
 
-public class NamedEntity {
+public class NamedEntity implements Comparable<NamedEntity> {
 
 	public enum Category {
-		PERSON, LOCATION, DATE
+		PERSON("Person"), LOCATION("Location"), DATE("Date");
+
+		String value;
+
+		Category(String value) {
+			this.value = value;
+		}
+
 	}
 
 	public String string;
@@ -14,4 +21,17 @@ public class NamedEntity {
 		this.category = category;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		NamedEntity other = (NamedEntity) o;
+		return string.equals(other.string);
+	}
+
+	@Override
+	public int compareTo(NamedEntity other) {
+		if (!this.category.equals(other.category))
+			return this.category.value.compareTo(other.category.value);
+
+		return this.string.compareTo(other.string);
+	}
 }
