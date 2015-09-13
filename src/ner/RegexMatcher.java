@@ -42,7 +42,7 @@ public class RegexMatcher {
 
 	public static RegexMatcher getDateRegexMatcher() {
 		// TODO add the date regexes here
-		return null;
+		return new RegexMatcher();
 	}
 
 	/*
@@ -51,7 +51,7 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
 		// TODO add the person or location regexes here
-		return null;
+		return new RegexMatcher();
 	}
 
 	/*
@@ -63,7 +63,7 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getLocationKeywordsRegexMatcher() {
 		// TODO add the location keywords here
-		return null;
+		return new RegexMatcher();
 	}
 
 }

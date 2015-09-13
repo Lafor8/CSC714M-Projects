@@ -1,5 +1,7 @@
 package ner;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -14,7 +16,7 @@ public class ArticleNamedEntityExtractor {
 
 	public static final int N_GRAM_LIMIT = 5;
 
-	public HashSet<NamedEntity> process(List<ArticleFile> articleFiles) {
+	public List<NamedEntity> process(List<ArticleFile> articleFiles) {
 		HashSet<NamedEntity> namedEntities = new LinkedHashSet<NamedEntity>();
 
 		for (ArticleFile articleFile : articleFiles) {
@@ -39,11 +41,19 @@ public class ArticleNamedEntityExtractor {
 
 				// Process Body
 				namedEntities.addAll(processString(article.body));
-
 			}
 		}
 
-		return namedEntities;
+		List<NamedEntity> namedEntityList = convertSetToList(namedEntities);
+		Collections.sort(namedEntityList);
+		return namedEntityList;
+	}
+
+	private List<NamedEntity> convertSetToList(HashSet<NamedEntity> set) {
+		List<NamedEntity> namedEntityList = new ArrayList<NamedEntity>();
+		for (NamedEntity namedEntity : set)
+			namedEntityList.add(namedEntity);
+		return namedEntityList;
 	}
 
 	private HashSet<NamedEntity> processString(String string) {

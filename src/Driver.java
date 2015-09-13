@@ -3,8 +3,7 @@ import io.XMLFileIO;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.List;
 
 import models.ArticleFile;
 import models.NamedEntity;
@@ -25,15 +24,13 @@ public class Driver {
 
 		// Categorize Recognized Entities
 		ArticleNamedEntityExtractor articleNamedEntityExtractor = new ArticleNamedEntityExtractor();
-		HashSet<NamedEntity> namedEntities = articleNamedEntityExtractor.process(articleFiles);
+		List<NamedEntity> namedEntityList = articleNamedEntityExtractor.process(articleFiles);
 
 		// Write the output to a file
-		NamedEntity[] namedEntitiesArray = (NamedEntity[]) namedEntities.toArray();
-		Arrays.sort(namedEntitiesArray);
 
-		CSVWriter.write("output.csv", namedEntitiesArray); // TODO: Improve
-															// Write Output if
-															// needed
+		CSVWriter.write("output.csv", namedEntityList); // TODO: Improve
+														// Write Output if
+														// needed
 	}
 }
 
