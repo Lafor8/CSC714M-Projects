@@ -51,7 +51,11 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
 		// TODO add the person or location regexes here
-		return new RegexMatcher();
+		RegexMatcher matcher = new RegexMatcher();
+
+		matcher.regexList.add("[A-Z].*");
+
+		return matcher;
 	}
 
 	/*
