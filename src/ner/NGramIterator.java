@@ -15,8 +15,7 @@ public class NGramIterator {
 
 	public NGramIterator(String text, int n) {
 		this.text = text.trim();
-		this.tokens = this.text.split(" "); // TODO place proper reg-ex for
-											// capturing all white spaces here
+		this.tokens = this.text.split("\\s");
 
 		this.isTokenAlreadyNamedEntity = new boolean[tokens.length];
 		this.cursorIndex = 0;
