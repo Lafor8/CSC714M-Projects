@@ -25,20 +25,30 @@ public class NGramIterator {
 	}
 
 	public boolean hasNext() {
-		return cursorIndex < tokens.length - 1;
+		return cursorIndex < tokens.length - n + 1;
 	}
 
 	public String next() {
+
+		if (!hasNext())
+			return null;
+
 		StringBuilder nextStringBuilder = new StringBuilder();
-		for (int i = cursorIndex; i < cursorIndex + n && i < tokens.length; i++) {
+
+		int i;
+		for (i = cursorIndex; i < cursorIndex + n; i++) {
 			// Encountered a token that should not be considered anymore. So
-			// stop appending to the ngram
+			// stop appending to the n-gram
 			if (isTokenAlreadyNamedEntity[i])
 				break;
 
-			nextStringBuilder.append(tokens[i]);
+			nextStringBuilder.append(tokens[i] + " ");
 		}
-		return nextStringBuilder.toString();
+		cursorIndex++;
+
+		// System.out.println("Iterator: " + cursorIndex + " - " +
+		// nextStringBuilder.toString().trim());
+		return nextStringBuilder.toString().trim();
 	}
 
 	public void moveCursorAfterCurrNGram() {
