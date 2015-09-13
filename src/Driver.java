@@ -1,7 +1,9 @@
+import io.CSVWriter;
 import io.XMLFileIO;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 import models.ArticleFile;
@@ -21,12 +23,17 @@ public class Driver {
 		// articleFiles = io.process("data/Opinyon/2001/June.xml");
 		articleFiles = io.process("data/News/2001/April.xml");
 
-		// TODO: Categorize Recognized Entities
+		// Categorize Recognized Entities
 		ArticleNamedEntityExtractor articleNamedEntityExtractor = new ArticleNamedEntityExtractor();
 		HashSet<NamedEntity> namedEntities = articleNamedEntityExtractor.process(articleFiles);
 
-		// TODO: Write Output
+		// Write the output to a file
+		NamedEntity[] namedEntitiesArray = (NamedEntity[]) namedEntities.toArray();
+		Arrays.sort(namedEntitiesArray);
 
+		CSVWriter.write("output.csv", namedEntitiesArray); // TODO: Improve
+															// Write Output if
+															// needed
 	}
 }
 
