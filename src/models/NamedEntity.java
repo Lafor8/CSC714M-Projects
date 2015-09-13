@@ -3,7 +3,7 @@ package models;
 public class NamedEntity {
 
 	public enum Category {
-		Person, Location, Date
+		PERSON, LOCATION, DATE
 	}
 
 	public String string;
