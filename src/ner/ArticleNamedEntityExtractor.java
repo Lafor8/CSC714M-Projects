@@ -12,6 +12,8 @@ import models.NamedEntity.Category;
 
 public class ArticleNamedEntityExtractor {
 
+	public static final int N_GRAM_LIMIT = 5;
+
 	public HashSet<NamedEntity> process(List<ArticleFile> articleFiles) {
 		HashSet<NamedEntity> namedEntities = new LinkedHashSet<NamedEntity>();
 
@@ -50,9 +52,7 @@ public class ArticleNamedEntityExtractor {
 		NamedEntityRecognizer ner = new NamedEntityRecognizer();
 		NamedEntityCategorizer nec = new NamedEntityCategorizer();
 
-		// Try 5-Grams until 1-Grams
-
-		for (int n = 5; n > 0; n--) {
+		for (int n = N_GRAM_LIMIT; n > 0; n--) {
 
 			NGramIterator nGramIterator = new NGramIterator(string, n);
 
