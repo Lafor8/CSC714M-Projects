@@ -22,6 +22,11 @@ public class NamedEntity implements Comparable<NamedEntity> {
 	}
 
 	@Override
+	public String toString() {
+		return string + "," + category;
+	}
+
+	@Override
 	public boolean equals(Object o) {
 		NamedEntity other = (NamedEntity) o;
 		return string.equals(other.string);
