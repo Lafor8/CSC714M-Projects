@@ -29,8 +29,9 @@ public class Driver {
 		// Write the output to a file
 
 		CSVWriter.write("output.csv", namedEntityList); // TODO: Improve
-														// Write Output if
-														// needed
+		// Write Output if
+		// needed
+
 	}
 }
 

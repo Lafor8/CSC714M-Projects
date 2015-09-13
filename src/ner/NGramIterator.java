@@ -13,14 +13,17 @@ public class NGramIterator {
 
 	private int n;
 
-	public NGramIterator(String text, int n) {
+	public NGramIterator(String text) {
 		this.text = text.trim();
 		this.tokens = this.text.split("\\s");
 
 		this.isTokenAlreadyNamedEntity = new boolean[tokens.length];
 		this.cursorIndex = 0;
-		this.n = n;
+	}
 
+	public void restart(int newN) {
+		this.n = newN;
+		cursorIndex = 0;
 	}
 
 	public boolean hasNext() {
@@ -50,14 +53,14 @@ public class NGramIterator {
 		return nextStringBuilder.toString().trim();
 	}
 
-	public void moveCursorAfterCurrNGram() {
+	public void markLastNGramAsAlreadyProcessed() {
 
 		// The current n-gram is already considered a named entity, so mark it
 		// accordingly
-		for (int i = cursorIndex; i < cursorIndex + n && i < tokens.length; i++)
+		for (int i = cursorIndex - 1; i < cursorIndex - 1 + n && i < tokens.length; i++)
 			isTokenAlreadyNamedEntity[i] = true;
 
-		// Move the cursor to point after the n-gram
+		// Move the cursor to point after the marked n-gram
 		cursorIndex = Math.min(tokens.length, cursorIndex + n);
 	}
 

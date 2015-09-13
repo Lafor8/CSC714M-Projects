@@ -61,10 +61,11 @@ public class ArticleNamedEntityExtractor {
 
 		NamedEntityRecognizer ner = new NamedEntityRecognizer();
 		NamedEntityCategorizer nec = new NamedEntityCategorizer();
+		NGramIterator nGramIterator = new NGramIterator(string);
 
 		for (int n = N_GRAM_LIMIT; n > 0; n--) {
 
-			NGramIterator nGramIterator = new NGramIterator(string, n);
+			nGramIterator.restart(n);
 
 			while (nGramIterator.hasNext()) {
 
@@ -84,7 +85,7 @@ public class ArticleNamedEntityExtractor {
 					// This also invalidates the current n-gram tokens
 					// so that they won't be considered in the next
 					// iteration anymore
-					nGramIterator.moveCursorAfterCurrNGram();
+					nGramIterator.markLastNGramAsAlreadyProcessed();
 				}
 
 			}

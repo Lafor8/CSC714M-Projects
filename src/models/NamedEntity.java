@@ -17,7 +17,7 @@ public class NamedEntity implements Comparable<NamedEntity> {
 	public Category category;
 
 	public NamedEntity(String string, Category category) {
-		this.string = string;
+		this.string = string.trim();
 		this.category = category;
 	}
 
@@ -30,6 +30,11 @@ public class NamedEntity implements Comparable<NamedEntity> {
 	public boolean equals(Object o) {
 		NamedEntity other = (NamedEntity) o;
 		return string.equals(other.string);
+	}
+
+	@Override
+	public int hashCode() {
+		return string.hashCode();
 	}
 
 	@Override
