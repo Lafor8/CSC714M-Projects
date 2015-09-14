@@ -102,14 +102,16 @@ public class RegexMatcher {
 	 * location keywords.
 	 */
 	public static RegexMatcher getLocationKeywordsRegexMatcher() {
-		// TODO add the location keywords here
+
 		RegexMatcher locationKeywords = new RegexMatcher();
 
-		String genericKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo).*";
-		String actualPlaceNames = "";
+		String genericFilipinoKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo|[lL]ugar|[pP]ook).*";
+		String genericEnglishKeywords = ".*([cC]ity|[cC]ountry|[pP]rovince|[rR]egion|[sS]tate|[rR]epublic).*";
+		String actualPlaceNames = "[aA]laminos|[aA]ngeles|[aA]ntipolo|[bB]acolod|[bB]acoor|[bB]ago|[bB]aguio|[bB]ais|[bB]alanga|[bB]atac|[bB]atangas|[bB]ayawan|[bB]aybay|[bB]ayugan|[bB]binan|[bB]islig|[bB]ogo|[bB]orongan|[bB]utuan|[cC]abadbaran|[cC]abanatuan|[cC]abuyao|[cC]adiz|[cC]agayan|[cC]alamba[pP]hilippines";
 
-		locationKeywords.regexList.add("**");
-		locationKeywords.regexList.add("*[lL]ungsod*");
+		locationKeywords.regexList.add(genericFilipinoKeywords);
+		locationKeywords.regexList.add(genericEnglishKeywords);
+		locationKeywords.regexList.add(actualPlaceNames);
 
 		return new RegexMatcher();
 	}
