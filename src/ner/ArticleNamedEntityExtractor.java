@@ -72,14 +72,17 @@ public class ArticleNamedEntityExtractor {
 				String currNGram = nGramIterator.next();
 
 				// Check if the n-gram is a Named Entity
-				if (ner.isNamedEntity(currNGram)) {
+
+				NamedEntity ne = ner.isNamedEntity(currNGram);
+
+				if (ne != null) {
 
 					// Categorize the Name Entity
-					Category category = nec.categorize(currNGram);
+					Category category = nec.categorize(ne);
 
 					// Add the newly recognized and categorized Named
 					// Entity to the set
-					namedEntities.add(new NamedEntity("\"" + currNGram + "\"", category));
+					namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
 
 					// Move the cursor after the current n-gram
 					// This also invalidates the current n-gram tokens

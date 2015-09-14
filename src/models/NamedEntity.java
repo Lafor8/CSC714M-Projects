@@ -21,6 +21,18 @@ public class NamedEntity implements Comparable<NamedEntity> {
 		this.category = category;
 	}
 
+	public String getCleanString() {
+		if (category.equals(Category.PERSON)) {
+			// remove si/ni/kay/sina/nina/kina
+			return string.replaceAll("\\s(si|ni|kay|sina|nina|kina)\\s", " ").trim();
+		} else if (category.equals(Category.LOCATION)) {
+			return string.replaceAll("\\s(sa)\\s", " ").trim();
+		}
+
+		return string;
+
+	}
+
 	@Override
 	public String toString() {
 		return string + "," + category;

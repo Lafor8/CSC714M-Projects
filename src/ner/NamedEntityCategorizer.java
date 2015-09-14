@@ -1,5 +1,6 @@
 package ner;
 
+import models.NamedEntity;
 import models.NamedEntity.Category;
 
 public class NamedEntityCategorizer {
@@ -14,7 +15,12 @@ public class NamedEntityCategorizer {
 		locationKeywordsRegexMatcher = RegexMatcher.getLocationKeywordsRegexMatcher();
 	}
 
-	public Category categorize(String string) {
+	public Category categorize(NamedEntity ne) {
+
+		if (ne.category != null)
+			return ne.category;
+
+		String string = ne.string;
 
 		if (dateRegexMatcher.matchesAnyRegex(string))
 			return Category.DATE;

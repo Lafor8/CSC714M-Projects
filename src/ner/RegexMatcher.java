@@ -26,6 +26,18 @@ public class RegexMatcher {
 		return newRegexMatcher;
 	}
 
+	static String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
+	static String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
+	static String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
+	static String number = "[0-9]+";
+
+	static String articles = "(ng|mga|ni|at|of|on|the|an?)";
+
+	static String first = "((^.\\s)[A-Z][^(\\s|\\.|,)]+)";
+	static String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+	static String end = " (" + capitalizedStart + "|" + number + ")";
+	static String neRegex = first + middle + end;
+
 	/*
 	 * This RegexMatcher will be used for deciding whether a string is a named
 	 * entity or not. Basically, the date + person/location regex matchers
@@ -57,6 +69,27 @@ public class RegexMatcher {
 		return matcher;
 	}
 
+	public static RegexMatcher getPersonRegexMatcher() {
+		RegexMatcher matcher = new RegexMatcher();
+
+		String pantukoy = "(ni|si|nina|sina|kay|kina)";
+
+		matcher.regexList.add(pantukoy + "\\s" + neRegex);
+
+		return matcher;
+
+	}
+
+	public static RegexMatcher getLocationRegexMatcher() {
+		RegexMatcher matcher = new RegexMatcher();
+
+		String pantukoy = "(sa)";
+
+		matcher.regexList.add(pantukoy + "\\s" + neRegex);
+
+		return matcher;
+	}
+
 	/*
 	 * This RegexMatcher will be used to determine whether a string refers to a
 	 * person/location.
@@ -67,24 +100,10 @@ public class RegexMatcher {
 
 		// matcher.regexList.add("[A-Z].*");
 
-		String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
-		String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
-		String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
-		String number = "[0-9]+";
-
-		String articles = "(ng|mga|ni|at|of|on|the|an?)";
-
-		// 1-5 Consecutive Capitals
-
-		String first = "((^.\\s)[A-Z][^(\\s|\\.|,)]+)";
-		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
-		String end = " (" + capitalizedStart + "|" + number + ")";
-		String regex = first + middle + end;
-
 		matcher.regexList.add(capitalizedWord);
-		matcher.regexList.add(regex);
+		matcher.regexList.add(neRegex);
 
-		System.out.println(regex + "|" + capitalizedWord);
+		// System.out.println(neRegex + "|" + capitalizedWord);
 
 		//
 		// // Capital first but with 1 or more small intermediate
