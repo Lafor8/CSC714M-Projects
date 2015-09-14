@@ -17,13 +17,14 @@ public class NamedEntityCategorizer {
 
 	public Category categorize(NamedEntity ne) {
 
-		if (ne.category != null)
-			return ne.category;
-
 		String string = ne.string;
 
-		if (dateRegexMatcher.matchesAnyRegex(string))
+		if (dateRegexMatcher.matchesAnyRegex(string)) // override those obtained
+														// with sa Enero ....
 			return Category.DATE;
+
+		if (ne.category != null)
+			return ne.category;
 
 		if (locationKeywordsRegexMatcher.matchesAnyRegex(string))
 			return Category.LOCATION;

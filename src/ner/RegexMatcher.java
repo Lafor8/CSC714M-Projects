@@ -58,11 +58,11 @@ public class RegexMatcher {
 		// matcher.regexList.add("[A-Z].*");
 
 		// 1-5 Consecutive Capitals
-		matcher.regexList.add("[A-Z][A-z]+ [0-9]{1,2}([,]?[ ]?[0-9]{2,4})?");
-		matcher.regexList.add("[0-9]{1,2}[/.-][0-9]{1,2}([/.-]([0-9][0-9]){1,2})?");
-		matcher.regexList.add("[Ii]ka-[0-9]{1,2} ng [A-z][a-z]+");
-		matcher.regexList.add("[0-9]{4}");
-		matcher.regexList.add("[Dd]ekada '[0-9]{2}");
+		// matcher.regexList.add("[A-Z][A-z]+ [0-9]{1,2}([,]?[ ]?[0-9]{2,4})?");
+		// matcher.regexList.add("[0-9]{1,2}[/.-][0-9]{1,2}([/.-]([0-9][0-9]){1,2})?");
+		// matcher.regexList.add("[Ii]ka-[0-9]{1,2} ng [A-z][a-z]+");
+		// matcher.regexList.add("[0-9]{4}");
+		// matcher.regexList.add("[Dd]ekada '[0-9]{2}");
 
 		// Capital first but with 1 or more small intermediate
 
@@ -70,22 +70,50 @@ public class RegexMatcher {
 	}
 
 	public static RegexMatcher getPersonRegexMatcher() {
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = "(ni|si|nina|sina|kay|kina)";
 
-		matcher.regexList.add(pantukoy + "\\s" + neRegex);
+		matcher.regexList.add(pantukoy + "\\s" + regex);
 
 		return matcher;
 
 	}
 
 	public static RegexMatcher getLocationRegexMatcher() {
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|,|!|?)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = "(sa)";
 
-		matcher.regexList.add(pantukoy + "\\s" + neRegex);
+		matcher.regexList.add(pantukoy + "\\s" + regex);
 
 		return matcher;
 	}

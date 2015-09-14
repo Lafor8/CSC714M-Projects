@@ -1,112 +1,110 @@
-"10.74",DATE
-"1898",DATE
-"1946",DATE
-"1948",DATE
-"1961",DATE
-"1973",DATE
-"1986",DATE
-"1987",DATE
-"1989",DATE
-"1994",DATE
-"1997",DATE
-"2.2",DATE
-"2000",DATE
-"2004",DATE
-"3.8",DATE
-"3210",DATE
-"4.5",DATE
-"4540",DATE
-"6150",DATE
-"7.4",DATE
-"Ang 15",DATE
-"April 23, 2000",DATE
-"August 13, 1983",DATE
-"August 1988",DATE
-"DAO 17",DATE
-"December 1999",DATE
-"December 31, 2001",DATE
-"EDSA 2",DATE
-"February 1986",DATE
-"Hunyo 10",DATE
-"Hunyo 2001",DATE
-"January 2000",DATE
-"July 4",DATE
-"June 01 2002",DATE
-"June 02 2002",DATE
-"June 03 2002",DATE
-"June 04 2002",DATE
-"June 05 2002",DATE
-"June 06 2002",DATE
-"June 07 2002",DATE
-"June 08 2002",DATE
-"June 09 2002",DATE
-"June 10 2002",DATE
-"June 11 2002",DATE
-"June 12 2002",DATE
-"June 12",DATE
-"June 12, 2001",DATE
-"June 13 2002",DATE
-"June 14 2002",DATE
-"June 14",DATE
-"June 14, 2002",DATE
-"June 15 2002",DATE
-"June 16 2002",DATE
-"June 17 2002",DATE
-"June 18 2002",DATE
-"June 19 2002",DATE
-"June 20 2002",DATE
-"June 21 2002",DATE
-"June 22 2002",DATE
-"June 23 2002",DATE
-"June 24 2002",DATE
-"June 25 2002",DATE
-"June 26 2002",DATE
-"June 27 2002",DATE
-"June 28 2002",DATE
-"June 29 2002",DATE
-"June 30 2002",DATE
-"June 7",DATE
-"Mahigit 20",DATE
-"Mahigit 400",DATE
-"March 23, 1986",DATE
-"Marso 2000",DATE
-"May 1",DATE
-"May 1995",DATE
-"May 20",DATE
-"May 2001",DATE
-"May 27, 2001",DATE
-"May 31, 2002",DATE
-"May 4,000",DATE
-"Mayo 5",DATE
-"Mayo 8",DATE
-"Mayroong 3,200",DATE
-"Noong 1964",DATE
-"Noong 2000",DATE
-"October 1986",DATE
-"October 1996",DATE
-"Region 4",DATE
-"Riyadh 11693",DATE
-"SB 1834",DATE
-"SB 2132",DATE
-"Sa 1988",DATE
-"Sapagkat 24",DATE
+"Abu Sayyaf",LOCATION
+"Anti-Crime Campaign",LOCATION
+"Apelo Cruz",LOCATION
+"Armed Forces",LOCATION
+"Assumption Antipolo",LOCATION
+"Bagong Tipan",LOCATION
+"Bataan Nuclear Power",LOCATION
+"Bureau of Customs",LOCATION
+"Bureau of Import Service",LOCATION
+"Cabinet ni President Gloria",LOCATION
+"Caltex Station",LOCATION
+"Camp Crame",LOCATION
+"Center Angela",LOCATION
+"Center for Pop Music",LOCATION
+"Central Region",LOCATION
+"Club Intramuros",LOCATION
+"Commonwealth Avenue;",LOCATION
+"DAO 17",LOCATION
+"Department of Energy",LOCATION
+"Department of Labor",LOCATION
+"Dinagat Island",LOCATION
+"Dos Palmas",LOCATION
+"Elap; Joseph",LOCATION
+"Fisheries Act",LOCATION
+"Ghia; Danny",LOCATION
+"Ghia; Jun",LOCATION
+"Golden City",LOCATION
+"Hong Kong",LOCATION
+"House of Representatives",LOCATION
+"House of Reps",LOCATION
+"Hunyo 10",LOCATION
+"Independent Power Producers",LOCATION
+"Jawasat Deportation",LOCATION
+"Jose Torres Hospital",LOCATION
+"July 4",LOCATION
+"June 14",LOCATION
+"Kalabisan ng PPA",LOCATION
+"Kataas-taasang Hukuman",LOCATION
+"Kuratong Baleleng",LOCATION
+"Lake Buhi",LOCATION
+"Lumang Tipan",LOCATION
+"Manila Cathedral",LOCATION
+"Manila City Hall",LOCATION
+"Marikina City",LOCATION
+"Medical Center",LOCATION
+"Metro Manila",LOCATION
+"Mothers Day",LOCATION
+"Muntinlupa City",LOCATION
+"National Home Mortgage",LOCATION
+"National Mapping Office",LOCATION
+"New York City",LOCATION
+"New York",LOCATION
+"Nida Blanca",LOCATION
+"Nilagdaang EO 215",LOCATION
+"Omnibus Power",LOCATION
+"P. Guevarra",LOCATION
+"PNB Hong",LOCATION
+"POP Housing",LOCATION
+"Pag-IBIG Dagupan Extension Office",LOCATION
+"Pag-IBIG Dagupan Extension",LOCATION
+"Pag-IBIG Multi-Purpose Loan",LOCATION
+"Pag-IBIG Overseas Program Office",LOCATION
+"Pag-IBIG Overseas Program",LOCATION
+"Pag-IBIG Overseas",LOCATION
+"Pasay City",LOCATION
+"Philippine Amusement",LOCATION
+"Philippine Embassy",LOCATION
+"Philippine Military Academy",LOCATION
+"Philippine National Police",LOCATION
+"Philippine Navy",LOCATION
+"Pilipino Star",LOCATION
+"Poong Maykapal",LOCATION
+"Quezon City",LOCATION
+"Riyadh Saudi Arabia",LOCATION
+"SB 1834",LOCATION
+"SB 2132",LOCATION
+"Sale of Mortgage Rights",LOCATION
+"San Juan",LOCATION
+"Sangguniang Kabataan",LOCATION
+"Saudi Arabia",LOCATION
+"Supreme Court",LOCATION
+"Taal Lake",LOCATION
+"Thanksgiving Day",LOCATION
+"UP Manila",LOCATION
+"US Embassy",LOCATION
+"Valderama St.",LOCATION
+"Workmen?s Compensation Act",LOCATION
+"- DOTC: Malaking",PERSON
+"- Kamatayan  Dexter: Leksiyon",PERSON
+"1 Allan Macalanda at SPO1",PERSON
+"A MISMO  Butch M.",PERSON
+"A MISMO  Butch Quejada",PERSON
 "ABS-CBN",PERSON
 "AFP",PERSON
 "AIDS",PERSON
 "ALA-Meralco",PERSON
 "ALAM",PERSON
-"ANG June",PERSON
-"ANG Sangguniang Kabataan",PERSON
-"ANG Wilm?s",PERSON
 "ANG",PERSON
 "ANO",PERSON
 "ASAP",PERSON
 "ASG",PERSON
-"AT'S UP DOC?",PERSON
+"AT",PERSON
+"AT'S",PERSON
 "ATM",PERSON
-"ATS' UP DOC? Ni",PERSON
-"AW AT ANG BATAS",PERSON
-"AY DANGAL",PERSON
+"ATS'",PERSON
+"AW",PERSON
+"AY",PERSON
 "AY-DANGAL",PERSON
 "Aalis",PERSON
 "Aangat",PERSON
@@ -116,43 +114,43 @@
 "Abalang-abala",PERSON
 "Abalos",PERSON
 "Abangan",PERSON
-"Abdul Macaompang",PERSON
+"Abdul",PERSON
 "Abdurajak",PERSON
 "Abot",PERSON
 "Abu Sabaya",PERSON
-"Abu Sayad",PERSON
-"Abu Sayyaf!",PERSON
-"Abu Sayyaf",PERSON
-"Abu Sayyaf? Hindi",PERSON
-"Abu Sayyaf?",PERSON
 "Abu",PERSON
+"Academy",PERSON
+"Act",PERSON
 "Acting Press Secretary Silvestre",PERSON
-"Action Team??",PERSON
+"Action",PERSON
+"Adjustments",PERSON
 "Ador Mawanay",PERSON
-"Adrian Ricci Mamuyac",PERSON
 "Adrian",PERSON
 "Agad",PERSON
 "Agad-agad",PERSON
-"Against Pollution"",PERSON
+"Against",PERSON
+"Agchem;",PERSON
+"Agency",PERSON
 "Aglipay",PERSON
+"Agnir",PERSON
+"Agreement",PERSON
 "Aida",PERSON
 "Aida?",PERSON
-"Ajmawi",PERSON
 "Akala",PERSON
 "Akalain",PERSON
 "Akmang-akma",PERSON
 "Ako",PERSON
-"Al Faisaliyyah District",PERSON
 "Al G. Pedroche",PERSON
 "Al",PERSON
 "Alabang",PERSON
 "Alagaan",PERSON
 "Alalahanin",PERSON
 "Alam",PERSON
+"Alcaraz",PERSON
 "Alex",PERSON
 "Alfredo Benipayo",PERSON
+"Alfredo",PERSON
 "Aling",PERSON
-"Allan Macalanda",PERSON
 "Alnie",PERSON
 "Alona",PERSON
 "Alvarez",PERSON
@@ -162,29 +160,9 @@
 "Amerikano",PERSON
 "Amerikanong",PERSON
 "Ana Fe Carbajosa",PERSON
-"Anak ng Tao",PERSON
+"Anak",PERSON
 "And",PERSON
 "Andres",PERSON
-"Ang Amerikanong",PERSON
-"Ang BFAD",PERSON
-"Ang CAMANAVA",PERSON
-"Ang Caloocan",PERSON
-"Ang Carmel",PERSON
-"Ang Diyos",PERSON
-"Ang HUDCC",PERSON
-"Ang Kano",PERSON
-"Ang MWSI",PERSON
-"Ang Meralco",PERSON
-"Ang Multi-Purpose Loan",PERSON
-"Ang Pag-IBIG Housing Loan",PERSON
-"Ang Pag-IBIG",PERSON
-"Ang Quezon Power",PERSON
-"Ang Rent-to-Own Program",PERSON
-"Ang SB 2132",PERSON
-"Ang STM",PERSON
-"Ang Simbahan",PERSON
-"Ang Spaniard",PERSON
-"Ang United Nations International Children?s",PERSON
 "Ang",PERSON
 "Angara",PERSON
 "Anim",PERSON
@@ -192,66 +170,65 @@
 "Annie",PERSON
 "Ano",PERSON
 "Anong",PERSON
-"Anti-Crime Campaign ng Presidente?",PERSON
 "Anuman",PERSON
 "Apat",PERSON
 "Apektado",PERSON
-"Apelo Cruz",PERSON
 "Aphrodisiac",PERSON
-"Apo Hiking",PERSON
+"Apo",PERSON
 "Application",PERSON
 "Appointment",PERSON
 "Appointments",PERSON
 "April",PERSON
-"Aquatic Resources",PERSON
-"Aquilino Pimentel",PERSON
+"Aquatic",PERSON
 "Aquilino",PERSON
 "Ara",PERSON
 "Araneta",PERSON
-"Araw ng Pasasalamat",PERSON
-"Araw ng Pasasalamat???",PERSON
 "Araw",PERSON
-"Area Manager Laguna Collection Group",PERSON
+"Area",PERSON
 "Ariel",PERSON
-"Arlene Vano",PERSON
+"Arlene",PERSON
+"Armand",PERSON
 "Armando",PERSON
 "Armando?",PERSON
-"Armed Forces of the Philippines",PERSON
+"Armed",PERSON
 "Arroyo",PERSON
 "As",PERSON
 "Asar",PERSON
 "Asawa",PERSON
 "Asia",PERSON
 "Asia"",PERSON
-"Asiong Hernandez",PERSON
-"Assumption Antipolo",PERSON
+"Asiong",PERSON
+"Asset",PERSON
 "Assunta",PERSON
 "At",PERSON
 "Ate Glo",PERSON
 "Ate",PERSON
 "Ateneo",PERSON
-"Ativan Gang",PERSON
 "Ativan",PERSON
 "Atrium",PERSON
 "Atty. Jose C. Sison",PERSON
 "Atty. Jose Sison",PERSON
-"Atty. Jun",PERSON
 "Atty. Leonard",PERSON
-"Atty. Lina",PERSON
 "Atty. Molly ng Customs",PERSON
 "Audit",PERSON
-"Auditor ng COA",PERSON
+"Auditor",PERSON
+"August",PERSON
 "Augusto",PERSON
 "Aurora",PERSON
+"Authority",PERSON
 "Awayan",PERSON
 "Ay",PERSON
-"Ayaw ng Meralco",PERSON
 "Ayaw",PERSON
 "Ayon",PERSON
-"BANTAY KAPWA",PERSON
+"Azucena",PERSON
+"BANTAY",PERSON
+"BATAS",PERSON
+"BATUIGAS",PERSON
 "BF",PERSON
+"BFAD",PERSON
 "BINALASA",PERSON
-"BOC Commissioner Tony",PERSON
+"BIRA!",PERSON
+"BOC",PERSON
 "BUKAS",PERSON
 "Baby",PERSON
 "Bacolod",PERSON
@@ -259,13 +236,11 @@
 "Bagama?t",PERSON
 "Bagay",PERSON
 "Bago",PERSON
-"Bagong Tipan",PERSON
 "Bagong",PERSON
 "Baguhin",PERSON
 "Baguio",PERSON
 "Bahagi",PERSON
 "Bahala",PERSON
-"Baka Korte",PERSON
 "Baka",PERSON
 "Bakit",PERSON
 "Balak",PERSON
@@ -279,31 +254,27 @@
 "Bangis",PERSON
 "Bangkok",PERSON
 "Bantayan",PERSON
-"Barangay Council",PERSON
-"Barangay Kagawad",PERSON
 "Barangay",PERSON
 "Barcelona",PERSON
 "Baron Cervantes",PERSON
-"Baron R.",PERSON
 "Baron",PERSON
 "Bartolome;",PERSON
 "Basahin",PERSON
 "Basil",PERSON
 "Basilan",PERSON
 "Basketball",PERSON
-"Bataan Nuclear Power",PERSON
 "Bataan",PERSON
 "Batangas",PERSON
 "Batay",PERSON
 "Batid",PERSON
 "Bawat",PERSON
-"Bayani Fernando",PERSON
+"Baya Fernando",PERSON
 "Bayani",PERSON
+"Bayani?",PERSON
 "Bebot",PERSON
-"Benigno Aquino Jr.",PERSON
+"Benigno",PERSON
 "Bening Batuigas",PERSON
 "Benipayo",PERSON
-"Benjamin Abalos",PERSON
 "Benjamin",PERSON
 "Benjie",PERSON
 "Bernardo",PERSON
@@ -317,7 +288,6 @@
 "Bilang",PERSON
 "Bilib",PERSON
 "Bin",PERSON
-"Binanggit ng PNP",PERSON
 "Binanggit",PERSON
 "Binaril",PERSON
 "Binatikos",PERSON
@@ -327,22 +297,20 @@
 "Binigyang-kapangyarihan",PERSON
 "Binira",PERSON
 "Binondo",PERSON
-"Bisperas ng Bagong",PERSON
+"Bisperas",PERSON
 "Biyernes",PERSON
-"Blas Ople",PERSON
+"Blas",PERSON
 "Bobby Dacer",PERSON
 "Box",PERSON
-"Boy! Talagang",PERSON
+"Boy!",PERSON
 "Boy",PERSON
-"Branch EDSA",PERSON
 "Branch",PERSON
 "Briefs",PERSON
 "Brig. Gen. M.",PERSON
-"Bubby Dacer",PERSON
-"Buboy ng Sampaloc",PERSON
+"Bubby",PERSON
 "Buboy",PERSON
 "Bubunutin",PERSON
-"Buhay ng Pinoy",PERSON
+"Buhay",PERSON
 "Bukas",PERSON
 "Bukod",PERSON
 "Bullet",PERSON
@@ -352,21 +320,15 @@
 "Bumibilang",PERSON
 "Bumigat",PERSON
 "Bumili",PERSON
-"Bureau of Customs",PERSON
-"Bureau of Food",PERSON
-"Bureau of Import Service",PERSON
-"Bureau of Internal Revenue",PERSON
+"Bun",PERSON
 "Bureau",PERSON
 "Burnham",PERSON
 "Burnhams",PERSON
 "Bush",PERSON
 "Business",PERSON
 "Butch Albarracin",PERSON
-"Butch M. Quejada",PERSON
-"Butch Quejada",PERSON
 "Buti",PERSON
 "Buwan-buwan",PERSON
-"C. Sison",PERSON
 "CAMANAVA",PERSON
 "CBA",PERSON
 "CDO",PERSON
@@ -376,70 +338,58 @@
 "COA?",PERSON
 "COMELEC Chairman Benjamin Abalos",PERSON
 "Cabigon",PERSON
-"Cabinet Secretarial Staff",PERSON
 "Cabinet",PERSON
-"Caloocan City",PERSON
 "Caloocan Ciy",PERSON
-"Caltex Station",PERSON
+"Caloocan",PERSON
 "Camarines",PERSON
-"Camp Crame",PERSON
 "Camp",PERSON
 "Caren P. Abobo",PERSON
 "Carlo",PERSON
 "Carmel",PERSON
 "Caro",PERSON
-"Catholic Church",PERSON
-"Catholic Mass Media Awards",PERSON
 "Catholic",PERSON
 "Cavite",PERSON
 "Cayetano",PERSON
-"Cebu Pacific",PERSON
-"Celia Goduco",PERSON
+"Cebu",PERSON
 "Celia ng 10",PERSON
 "Celia",PERSON
-"Center Angela Live",PERSON
-"Center Angela",PERSON
 "Center",PERSON
-"Central Region",PERSON
 "Central",PERSON
 "Centralized",PERSON
 "Cerna",PERSON
 "Cerna"",PERSON
 "Cervantes",PERSON
 "Cesar",PERSON
-"Chairman Abalos: The",PERSON
-"Chairman Alfredo Benipayo",PERSON
-"Chairman Alfredo",PERSON
-"Chairman Joe Toledo",PERSON
 "Chairman",PERSON
 "Channel",PERSON
-"Charlie Lising",PERSON
+"Charlie",PERSON
 "Charmaine",PERSON
-"Chief Dir. Gen. Leandro Mendoza",PERSON
-"Chief Directorial Staff",PERSON
 "Chief Inspector Ferdinand",PERSON
 "Chief Kuwago",PERSON
 "Chief Supt. Manuel Cabigon",PERSON
 "Chief Supt. Nick",PERSON
-"Chief Supt. Nicolas",PERSON
 "Chief Supt. Reynaldo",PERSON
 "Chief Supt. Rowlando Sacramento",PERSON
 "Chief",PERSON
+"Children?s",PERSON
 "China Mae Cardona",PERSON
 "Chinese",PERSON
+"Ching",PERSON
 "Christian",PERSON
 "Chriszel",PERSON
 "Chung Young",PERSON
 "Chung",PERSON
+"Church",PERSON
+"Cielito "Mahal" Del Mundo",PERSON
+"Cielito "Mahal" Del MundoPATULOY",PERSON
+"Cielito "Mahal"",PERSON
 "Cielito",PERSON
-"City",PERSON
-"Civil Service Code",PERSON
+"Civil",PERSON
 "Clamor",PERSON
 "Class",PERSON
-"Clean Air Act of 1999",PERSON
-"Club Intramuros",PERSON
+"Clean",PERSON
+"Code",PERSON
 "Col. Jess",PERSON
-"Col. Victor Corpus",PERSON
 "Col. Victor Corpuz",PERSON
 "Col. Victor",PERSON
 "Col. Villareal",PERSON
@@ -448,11 +398,10 @@
 "Comelec",PERSON
 "Commission",PERSON
 "Commissioner Bernardo",PERSON
-"Commissioner Luzviminda Tancangco",PERSON
+"Commissioner",PERSON
 "Commissioners Luzviminda Tancangco",PERSON
 "Commissioners Resureccion Borra",PERSON
 "Committee",PERSON
-"Commonwealth Avenue;",PERSON
 "Commonwealth",PERSON
 "Communication",PERSON
 "Computer",PERSON
@@ -460,47 +409,46 @@
 "Congressman Gilbert Remulla",PERSON
 "Congressman Ricky Sandoval",PERSON
 "Congressman S.",PERSON
-"Congressman ng Surigao",PERSON
 "Congressman",PERSON
 "Conrad",PERSON
-"Conservation Center-Crocodile Farming Institute",PERSON
+"Conservation",PERSON
 "Constancio",PERSON
 "Consumers'",PERSON
 "Contract",PERSON
-"Corazon Alma",PERSON
+"Coordinating",PERSON
+"Corazon",PERSON
 "Cotabato",PERSON
-"Criminal Investigation",PERSON
+"Court",PERSON
+"Criminal",PERSON
 "Cris",PERSON
-"Cristina C. Encarnacion",PERSON
+"Cristina",PERSON
 "Cruz",PERSON
 "Customs Commissioner Antonio Bernardo",PERSON
 "Customs",PERSON
 "D-3",PERSON
 "DAHIL",PERSON
 "DALAWANG",PERSON
+"DANGAL",PERSON
 "DAO",PERSON
 "DAR Sec. Hernani",PERSON
-"DENR Administrative Order",PERSON
 "DENR Sec. Heherson Alvarez:",PERSON
 "DENR",PERSON
 "DIDM",PERSON
 "DILG Secretary Joey Lina",PERSON
 "DILG",PERSON
-"DOF Secretary Lito",PERSON
+"DOC?",PERSON
+"DOF",PERSON
 "DOH",PERSON
 "DOTC Sec. Pantaleon Alvarez",PERSON
 "DOTC Sec. Pantaleon",PERSON
-"DOTC Secretary",PERSON
 "DOTC",PERSON
-"DOTC: Malaking",PERSON
 "DPWH",PERSON
-"DTI Secretary Mar",PERSON
 "DTI",PERSON
 "Da",PERSON
+"Dacer",PERSON
 "Dadalawa",PERSON
 "Dadong Matinik",PERSON
 "Dagdag",PERSON
-"Dagupan City",PERSON
 "Dagupan",PERSON
 "Dahil",PERSON
 "Daising",PERSON
@@ -510,58 +458,42 @@
 "Danny Macabuhay",PERSON
 "Danny",PERSON
 "Dante",PERSON
-"Danton Bueser ng Laguna; Mayor",PERSON
+"Danton",PERSON
 "Dapat",PERSON
 "Dati",PERSON
 "Dating",PERSON
 "Dati?y",PERSON
-"Davies Agchem; Daisy",PERSON
+"Day",PERSON
+"Day?",PERSON
 "De",PERSON
 "Deadma",PERSON
-"Dear Sec. Mike",PERSON
+"Dear",PERSON
 "Deborah Yap",PERSON
 "Deborah",PERSON
 "December",PERSON
 "Decena/Ramos",PERSON
-"Deed of Sale",PERSON
 "Deed",PERSON
 "Defensor",PERSON
-"Del Mundo",PERSON
-"Del MundoPATULOY",PERSON
+"Del",PERSON
 "Delikado",PERSON
-"Dengue Awareness",PERSON
-"Dengue Hemorrhagic Fever",PERSON
-"Dennis Van Tiga!",PERSON
-"Dennis Van Tiga",PERSON
+"Dengue",PERSON
+"Dennis",PERSON
 "Denver Trinidad ng IBC-13",PERSON
 "Deo Macalma",PERSON
 "Deomides Talbo",PERSON
-"Department of Energy",PERSON
-"Department of Environment",PERSON
-"Department of Foreign",PERSON
-"Department of Health",PERSON
-"Department of Housing",PERSON
-"Department of Labor",PERSON
-"Department of Public Works",PERSON
-"Department of Trade",PERSON
-"Department of Transportation",PERSON
 "Department",PERSON
-"Deputy Dir. Gen. Hermogenes Ebdane",PERSON
+"Deputy Dir. Gen. Hermogenes",PERSON
 "Deputy Dir. Hermogenes Ebdane",PERSON
-"Deputy Director Gen. Hermogenes Ebdane",PERSON
 "Deputy Director Gen. Hermogenes",PERSON
-"Deputy Director General Edgardo Aglipay",PERSON
+"Deputy Director General Edgardo",PERSON
 "Deputy",PERSON
 "Desperado",PERSON
 "Despite",PERSON
-"Detection Group",PERSON
 "Detection",PERSON
 "Development",PERSON
 "Dexter Balala",PERSON
 "Dexter",PERSON
-"Dexter: Leksiyon",PERSON
 "Di",PERSON
-"Dinagat Island",PERSON
 "Dinala",PERSON
 "Dinanas",PERSON
 "Dindo",PERSON
@@ -569,24 +501,14 @@
 "Dinukot",PERSON
 "Diomedes Talbo",PERSON
 "Diomedes Talvo",PERSON
-"Diplomatic Quarters",PERSON
-"Dir. Gen. Edgar Aglipay",PERSON
-"Dir. Gen. Edgar",PERSON
-"Dir. Gen. Hermogenes Ebdane",PERSON
-"Dir. Gen. Leandro Mendoza",PERSON
-"Dir. Gen. Leandro",PERSON
-"Dir. Gen. Rex Piad",PERSON
-"Dir. Gen. Reynaldo",PERSON
+"Diomedes",PERSON
+"Diplomatic",PERSON
 "Dir. Gualberto ng CIDG?",PERSON
 "Dir. Lucas",PERSON
 "Dir. Managuelod",PERSON
 "Dir. Nestorio",PERSON
 "Dir. Reynaldo",PERSON
-"Dir. Virtus",PERSON
-"Director Avelino Razon ng Central",PERSON
-"Director Domingo Reyes ng Region",PERSON
-"Director Edgar",PERSON
-"Director Gen. Leandro Mendoza",PERSON
+"Director",PERSON
 "Direk Heidi O. Sison",PERSON
 "District",PERSON
 "Disyembre",PERSON
@@ -600,10 +522,9 @@
 "Don Eugenio Lopez",PERSON
 "Don Eugenio",PERSON
 "Donna",PERSON
-"Don?t Rain On My",PERSON
+"Don?t",PERSON
 "Doon",PERSON
-"Doreen Cardinal",PERSON
-"Dos Palmas",PERSON
+"Doreen",PERSON
 "Dos",PERSON
 "Dr. Tambunting",PERSON
 "Dr. Tranquilino",PERSON
@@ -615,15 +536,13 @@
 "Dumating",PERSON
 "Dummy",PERSON
 "Durugin",PERSON
-"EDSA People?s",PERSON
-"EDSA Uno",PERSON
+"E-Just",PERSON
 "EDSA",PERSON
 "ERC",PERSON
 "Earth",PERSON
 "East",PERSON
-"Eastern Police District",PERSON
+"Eastern",PERSON
 "Ebanghelyo",PERSON
-"Ebdane Jr.",PERSON
 "Ebdane",PERSON
 "Ebdane?",PERSON
 "Echeverri",PERSON
@@ -633,19 +552,19 @@
 "Ed",PERSON
 "Eddie Caro ng Marikina",PERSON
 "Eddie",PERSON
-"Edgar Aglipay",PERSON
 "Edgar Sangel",PERSON
-"Edgardo Angara",PERSON
-"Ediborah Yap",PERSON
+"Edgar",PERSON
+"Edgardo",PERSON
 "Ediborah",PERSON
 "Edison",PERSON
 "Editha Lumami",PERSON
 "Editoryal",PERSON
-"Education Secretary Armand Fabella",PERSON
+"Eduardo",PERSON
+"Education",PERSON
 "Edukasyon",PERSON
-"Edward Alican",PERSON
-"Edwin San",PERSON
-"Efren Alano",PERSON
+"Edward",PERSON
+"Edwin",PERSON
+"Efren",PERSON
 "Egay Galis",PERSON
 "Egay Galis"",PERSON
 "Egay",PERSON
@@ -654,26 +573,25 @@
 "Ejercito",PERSON
 "Ekonomiya",PERSON
 "Eksakto",PERSON
-"Elap; Joseph",PERSON
-"Elap; Richard Nganga ng Marikina",PERSON
+"Elap; Richard Nganga",PERSON
 "Elections",PERSON
-"Electric Power Industry Reform Act",PERSON
 "Electric",PERSON
-"Elicaño Jr.",PERSON
+"Elicaño",PERSON
 "Elizabeth",PERSON
 "Elmer",PERSON
-"Emergency Fund",PERSON
 "Emma",PERSON
 "Empleyado",PERSON
 "Employment",PERSON
-"Energy Regulatory Commission",PERSON
-"Energy Regulatory",PERSON
+"Encarnacion",PERSON
+"Energy",PERSON
 "Engr. Ador Andrada",PERSON
-"Enrico Echeverri",PERSON
+"Enrico",PERSON
 "Entrance",PERSON
 "Environment",PERSON
-"Erlindo Torres",PERSON
+"Erlindo",PERSON
+"Ernesto",PERSON
 "Erning",PERSON
+"Espinosa",PERSON
 "Estados",PERSON
 "Estrada",PERSON
 "Europe",PERSON
@@ -684,63 +602,66 @@
 "Exchange",PERSON
 "FAME",PERSON
 "FPJ",PERSON
-"FPJ-Gringo Dream",PERSON
+"FPJ-Gringo",PERSON
 "FVR",PERSON
 "FVR?s",PERSON
 "Faizal Marohomsar",PERSON
 "Faizal",PERSON
+"Farming",PERSON
 "Father",PERSON
+"February",PERSON
 "Feling",PERSON
 "Felipe",PERSON
 "Ferdinand E.",PERSON
-"Fernandez",PERSON
 "Fernando Alipunga",PERSON
 "Fernando Poe Jr.",PERSON
 "Fernando",PERSON
 "Fil-Ams",PERSON
 "Filipino",PERSON
-"Finance Corporation",PERSON
-"Finance Secretary Lito",PERSON
-"First Gas",PERSON
-"Fisheries Act",PERSON
+"Finance",PERSON
+"First",PERSON
 "Fisheries",PERSON
-"Floor Atrium",PERSON
+"Flavier",PERSON
+"Floor",PERSON
 "Florentino",PERSON
+"Food",PERSON
 "Foolish",PERSON
 "For",PERSON
-"Forces of the Philippines",PERSON
 "Ford",PERSON
-"Foreign Affairs",PERSON
-"Former President Fidel",PERSON
-"Founding Member ng Young Officers",PERSON
+"Foreign",PERSON
+"Form",PERSON
+"Former",PERSON
+"Founding",PERSON
 "Fr. Cirilo",PERSON
 "Fr. Guiseppe Pierantoni",PERSON
-"Fr. James Reuter: Higit",PERSON
 "Fr. Jesus",PERSON
 "Fr. Jose C.",PERSON
 "Fr. Ruel Gallardo",PERSON
+"Francisco",PERSON
 "Frank Drilon",PERSON
-"Franklin Drilon",PERSON
+"Frank",PERSON
+"Franklin",PERSON
+"French",PERSON
 "Fresnedi",PERSON
 "Friday",PERSON
 "Fund",PERSON
-"G. Bayani?",PERSON
 "GALIT",PERSON
 "GMA",PERSON
-"GONG SIBOL Ni Alice V.",PERSON
-"GONG SIBOL",PERSON
+"GONG",PERSON
 "GRO",PERSON
 "Gaano",PERSON
 "Gabinete",PERSON
 "Gabundok",PERSON
 "Gagayahin",PERSON
+"Galilee",PERSON
 "Galman",PERSON
 "Gambling",PERSON
-"Gaming Corporation",PERSON
+"Gaming",PERSON
 "Gamitin",PERSON
 "Ganito",PERSON
 "Ganoon",PERSON
 "Ganyan",PERSON
+"Garcia",PERSON
 "Gary San",PERSON
 "Gary",PERSON
 "Gat Andres Bonifacio",PERSON
@@ -761,8 +682,6 @@
 "Gerry",PERSON
 "Get",PERSON
 "Gethsemane",PERSON
-"Ghia; Danny",PERSON
-"Ghia; Jun",PERSON
 "Ginagamit",PERSON
 "Ginagamot",PERSON
 "Ginagawa",PERSON
@@ -770,17 +689,17 @@
 "Ginawa",PERSON
 "Gipit",PERSON
 "Gising",PERSON
-"Gitnang Silangan",PERSON
-"Gleen Dy",PERSON
+"Gitnang",PERSON
+"Gleen",PERSON
+"Glenda",PERSON
 "Glo",PERSON
 "Globe",PERSON
 "Gobernador",PERSON
 "Gobyerno",PERSON
-"Golden City",PERSON
 "Golden",PERSON
 "Good",PERSON
 "Gorilya",PERSON
-"Governors Lito Lapid ng Pampanga;",PERSON
+"Governors",PERSON
 "Grabe",PERSON
 "Gracia Burnham",PERSON
 "Gracia",PERSON
@@ -789,6 +708,7 @@
 "Gringo Honasan",PERSON
 "Gringo",PERSON
 "Gringo?y",PERSON
+"Group",PERSON
 "Gualberto",PERSON
 "Gualberto?",PERSON
 "Guardians",PERSON
@@ -808,7 +728,7 @@
 "HALOS",PERSON
 "HINDI",PERSON
 "HIV",PERSON
-"HUDCC? Sa",PERSON
+"HUDCC?",PERSON
 "HULI",PERSON
 "Habang",PERSON
 "Habulin",PERSON
@@ -826,44 +746,34 @@
 "Hari",PERSON
 "Hari:",PERSON
 "Hayop",PERSON
-"He-he-he! Ano",PERSON
-"He-he-he! Inggit",PERSON
-"He-he-he! Kaya",PERSON
-"He-he-he! Parang",PERSON
-"He-he-he! Sa",PERSON
 "He-he-he!",PERSON
+"Health",PERSON
 "Heherson Alvarez",PERSON
 "Heinous",PERSON
 "Hermie",PERSON
-"Hermogenes Ebdane?",PERSON
+"Hermogenes",PERSON
 "Heswita",PERSON
 "High",PERSON
 "Highways",PERSON
 "Higit",PERSON
 "Hilaw",PERSON
-"Hinagpis ng Meralco",PERSON
+"Hinagpis",PERSON
 "Hinahanapan",PERSON
 "Hinanap",PERSON
-"Hindi Amerika",PERSON
 "Hindi",PERSON
 "Hinding-hindi",PERSON
 "Hinihikayat",PERSON
 "Hinihintay",PERSON
 "Hiniling",PERSON
-"Hiningi ng NBI",PERSON
+"Hiningi",PERSON
 "Hinoholdap",PERSON
 "Hinostage",PERSON
 "Hinuhuli",PERSON
 "Home",PERSON
-"Hong Kong",PERSON
 "Hong",PERSON
-"House Speaker Jose",PERSON
-"House of Representatives",PERSON
-"House of Reps",PERSON
+"Honor!",PERSON
 "House",PERSON
 "Houseboy",PERSON
-"Housing Department",PERSON
-"Housing Loan",PERSON
 "Housing",PERSON
 "Hubad",PERSON
 "Huli",PERSON
@@ -878,8 +788,8 @@
 "I-drug",PERSON
 "IBA-IBA",PERSON
 "ID",PERSON
-"II ng NHMFC",PERSON
-"IPINAGMALAKI ng Philippine National Police",PERSON
+"II",PERSON
+"IPINAGMALAKI",PERSON
 "IPP",PERSON
 "IPPs",PERSON
 "ISA",PERSON
@@ -919,7 +829,7 @@
 "Imbestigahan",PERSON
 "Imbis",PERSON
 "Imelda",PERSON
-"Immune Deficiency Syndrome",PERSON
+"Immune",PERSON
 "In",PERSON
 "Inaabot",PERSON
 "Inaabsuwelto",PERSON
@@ -927,7 +837,7 @@
 "Inaamin",PERSON
 "Inaantok",PERSON
 "Inaasahan",PERSON
-"Inagaw ng Oposisyon",PERSON
+"Inagaw",PERSON
 "Inakala",PERSON
 "Inakusahan",PERSON
 "Inambansa",PERSON
@@ -935,10 +845,8 @@
 "Inamoy",PERSON
 "Inay",PERSON
 "Inay? Hindi",PERSON
-"Income Tax Return",PERSON
-"Independent Power Producers",PERSON
+"Income",PERSON
 "Independent",PERSON
-"Individual Payor",PERSON
 "Indonesia",PERSON
 "Indonesian",PERSON
 "Indonesians",PERSON
@@ -950,24 +858,25 @@
 "Inihatid",PERSON
 "Iniisip",PERSON
 "Inilipat",PERSON
-"Inireport ng PNP",PERSON
-"Inireport ng World Health",PERSON
+"Inireport",PERSON
 "Inirerekomenda",PERSON
 "Inisyu",PERSON
 "Iniwan",PERSON
 "Inokupahan",PERSON
 "Inordinahan",PERSON
 "Inspector",PERSON
-"Institute",PERSON
-"Intelligence Service of the Armed",PERSON
+"Intelligence",PERSON
 "Interior Sec. Jose Lina",PERSON
 "Interior Secretary Joey Lina",PERSON
-"Interior Secretary",PERSON
+"Interior",PERSON
+"Internal",PERSON
+"International",PERSON
 "Internet",PERSON
 "Intsik",PERSON
 "Inutil",PERSON
 "Inutos",PERSON
 "Inuulit",PERSON
+"Investigation",PERSON
 "Ipaalam",PERSON
 "Ipadadala",PERSON
 "Ipadala",PERSON
@@ -984,7 +893,7 @@
 "Ipinagbabawal",PERSON
 "Ipinagbili",PERSON
 "Ipinagmamalaki",PERSON
-"Ipinahayag ng Department of Social",PERSON
+"Ipinahayag",PERSON
 "Ipinahihiwatig",PERSON
 "Ipinakita",PERSON
 "Ipinakulong",PERSON
@@ -997,7 +906,6 @@
 "Ire-report",PERSON
 "Isa",PERSON
 "Isa-isahin",PERSON
-"Isang French",PERSON
 "Isang",PERSON
 "Isa?t",PERSON
 "Isinalaysay",PERSON
@@ -1035,7 +943,7 @@
 "JV",PERSON
 "Jack",PERSON
 "Jaguar",PERSON
-"Jaime Centeno",PERSON
+"Jaime",PERSON
 "James",PERSON
 "Jamie",PERSON
 "Janaira",PERSON
@@ -1043,12 +951,14 @@
 "January",PERSON
 "Japan",PERSON
 "Japanese",PERSON
+"Jardine",PERSON
 "Jarius Bondoc",PERSON
 "Jarius",PERSON
-"Jawasat Deportation",PERSON
+"Jaworski",PERSON
 "Jay",PERSON
 "Jeddah",PERSON
 "Jeffrey",PERSON
+"Jericho",PERSON
 "Jesus",PERSON
 "Jesus:",PERSON
 "Jimenez",PERSON
@@ -1058,19 +968,15 @@
 "John O.",PERSON
 "John Osmeña",PERSON
 "John",PERSON
-"Jojo Sadiwa",PERSON
+"Jojo",PERSON
 "Joke",PERSON
 "Jolina",PERSON
 "Jopet Sison",PERSON
+"Jopet",PERSON
 "Jorge",PERSON
 "Jose Mari",PERSON
-"Jose Torres Hospital",PERSON
-"Jose Torres Memorial Hospital",PERSON
-"Jose Torres",PERSON
-"Joseph Mostrales",PERSON
+"Jose",PERSON
 "Joseph",PERSON
-"Jr. Western Manila Police",PERSON
-"Juan M. Flavier",PERSON
 "Juan",PERSON
 "Juanita",PERSON
 "Judas",PERSON
@@ -1081,27 +987,28 @@
 "Jueteng",PERSON
 "Julie Baba",PERSON
 "Julie",PERSON
-"Julio Ledesma",PERSON
 "Julio",PERSON
 "July",PERSON
-"Jun ng Parañaque",PERSON
 "Jun",PERSON
 "June",PERSON
-"Junie Cua ng Quirino; Mrs.",PERSON
+"Junie",PERSON
 "KAHAPON",PERSON
 "KAILANGANG",PERSON
 "KAKATWA",PERSON
 "KALAGITNAAN",PERSON
+"KAPWA",PERSON
 "KASABIHAN",PERSON
 "KASALUKUYANG",PERSON
 "KATULAD",PERSON
+"KATWIRAN",PERSON
 "KB",PERSON
-"KILUSAN Kontra",PERSON
+"KILUSAN",PERSON
 "KINILIG",PERSON
 "KULANG",PERSON
 "KUNG",PERSON
 "Kaagad",PERSON
-"Kabataang Barangay",PERSON
+"Kabataan",PERSON
+"Kabataang",PERSON
 "Kabilang",PERSON
 "Kaguluhan",PERSON
 "Kahalagahan",PERSON
@@ -1112,7 +1019,6 @@
 "Kailan",PERSON
 "Kailangan",PERSON
 "Kailangang",PERSON
-"Kakahiya! Sila",PERSON
 "Kakahiya!",PERSON
 "Kakaiba",PERSON
 "Kakailanganin",PERSON
@@ -1121,7 +1027,6 @@
 "Kakampi",PERSON
 "Kakaunti",PERSON
 "Kakutsaba",PERSON
-"Kalabisan ng PPA",PERSON
 "Kalabisan",PERSON
 "Kalayaan",PERSON
 "Kalinisan",PERSON
@@ -1129,13 +1034,11 @@
 "Kamakailan",PERSON
 "Kamakalawa",PERSON
 "Kamala-mala",PERSON
-"Kamatayan",PERSON
 "Kami",PERSON
 "Kamuntik",PERSON
 "Kano",PERSON
 "Kapag",PERSON
 "Kapansin-pansin",PERSON
-"Kapwa Pinoy",PERSON
 "Kapwa",PERSON
 "Karamihan",PERSON
 "Kasabay",PERSON
@@ -1147,13 +1050,12 @@
 "Kasosyo",PERSON
 "Kastila",PERSON
 "Kasukat",PERSON
-"Kataas-taasang Hukuman",PERSON
 "Katawan",PERSON
 "Katwiran",PERSON
 "Katy",PERSON
 "Kautusan",PERSON
 "Kawawa",PERSON
-"Kay Inay",PERSON
+"Kay",PERSON
 "Kaya",PERSON
 "Kayang-kaya",PERSON
 "Kaya?t",PERSON
@@ -1164,7 +1066,7 @@
 "Kikilos",PERSON
 "Kilala",PERSON
 "Kilalang",PERSON
-"Kilusang Mayo Uno",PERSON
+"Kilusang",PERSON
 "Kim Wong",PERSON
 "Kinagabihan",PERSON
 "Kinailangan",PERSON
@@ -1172,46 +1074,47 @@
 "Kinakailangang",PERSON
 "Kinapa",PERSON
 "Kinausap",PERSON
-"King Joe",PERSON
+"King",PERSON
 "Kinidnap",PERSON
 "Kinuha",PERSON
 "Kinuwestiyon",PERSON
 "Kita",PERSON
-"Kix Santos",PERSON
+"Kix",PERSON
 "Kokoy",PERSON
 "Komite",PERSON
 "Kongresista",PERSON
 "Kongreso",PERSON
 "Kongreso?",PERSON
 "Konstitusyon",PERSON
+"Kontra",PERSON
 "Korea",PERSON
 "Korean",PERSON
 "Korek",PERSON
-"Korte Suprema",PERSON
 "Korte",PERSON
 "Kotong",PERSON
 "Kristiyano",PERSON
 "Kulang",PERSON
 "Kumambiyo",PERSON
-"Kumander Mubarak",PERSON
 "Kumander Robot",PERSON
+"Kumander",PERSON
 "Kumanta",PERSON
 "Kumilos",PERSON
 "Kumita",PERSON
 "Kumpara",PERSON
-"Kumpirmadong Abu Sayyaf",PERSON
+"Kumpirmadong",PERSON
 "Kung",PERSON
 "Kunin",PERSON
-"Kuratong Baleleng",PERSON
 "Kuratong",PERSON
-"LA BIRA!",PERSON
+"LA",PERSON
+"LABAN",PERSON
 "LABINDALAWANG",PERSON
+"LANG",PERSON
 "LANTIK",PERSON
 "LIMANG",PERSON
-"LITANG SPECIAL",PERSON
+"LITANG",PERSON
 "LTFRB",PERSON
 "LUNES",PERSON
-"Laban Senators",PERSON
+"Laban",PERSON
 "Labimpito",PERSON
 "Labintatlong",PERSON
 "Labor Secretary Patricia",PERSON
@@ -1225,48 +1128,56 @@
 "Laging",PERSON
 "Lagot",PERSON
 "Laguna",PERSON
+"Laguna;",PERSON
 "Lahat",PERSON
-"Lake Buhi",PERSON
 "Laking",PERSON
 "Lakipan",PERSON
 "Lalabas",PERSON
 "Lalo",PERSON
 "Lalong",PERSON
 "Lalo?t",PERSON
+"Lapid",PERSON
 "Lara",PERSON
 "Larry",PERSON
 "Las",PERSON
 "Lawrence",PERSON
+"Leader",PERSON
 "Leandro",PERSON
-"Ledesma ng Negros Oriental",PERSON
 "Ledesma",PERSON
+"Lee",PERSON
 "Legarda",PERSON
-"Leonalyn Pablo",PERSON
-"Level Pearl",PERSON
+"Leonalyn",PERSON
+"Leonilo",PERSON
 "Level",PERSON
+"Life",PERSON
 "Ligaw",PERSON
-"Light Rail Transit",PERSON
+"Light",PERSON
 "Liliit",PERSON
+"Lim",PERSON
 "Lima",PERSON
 "Lina",PERSON
+"Lina?",PERSON
+"Lines",PERSON
 "Linisin",PERSON
 "Lipulin",PERSON
 "Lita",PERSON
 "Lito",PERSON
+"Live",PERSON
+"Loan",PERSON
 "Lopez",PERSON
 "Lord",PERSON
-"Loren Legarda",PERSON
+"Loren",PERSON
 "Lourdes",PERSON
+"Loyola",PERSON
 "Lt. Col. Reynato",PERSON
 "Lubhang",PERSON
 "Lubusin",PERSON
-"Lucio San",PERSON
 "Lucio Tan",PERSON
+"Lucio",PERSON
 "Lumabas",PERSON
 "Lumakas",PERSON
 "Lumalabas",PERSON
 "Lumalakas",PERSON
-"Lumang Tipan",PERSON
 "Lumang",PERSON
 "Lumapad",PERSON
 "Lumarawan",PERSON
@@ -1275,7 +1186,6 @@
 "Lutasin",PERSON
 "Luzon",PERSON
 "M-16",PERSON
-"M. Flavier",PERSON
 "MABIGAT",PERSON
 "MAHABANG",PERSON
 "MAHIGIT",PERSON
@@ -1286,18 +1196,14 @@
 "MARAMING",PERSON
 "MATAGAL",PERSON
 "MAY",PERSON
-"MERALCO ng PPA",PERSON
+"MERALCO",PERSON
 "MERONG",PERSON
 "MICHIGAN",PERSON
-"MISMO",PERSON
 "MISTERYO",PERSON
-"MMDA Chairman Benjamin Abalos",PERSON
 "MMDA Chairman Benjamin",PERSON
-"MMDA Chairman",PERSON
 "MMDA",PERSON
-"MMDA: Metro Marikina Development Authority",PERSON
 "MMDA:",PERSON
-"MNLF Chairman Nur",PERSON
+"MNLF",PERSON
 "MULA",PERSON
 "MWC",PERSON
 "MWSI",PERSON
@@ -1313,9 +1219,10 @@
 "Mabigat",PERSON
 "Mabilis",PERSON
 "Mabubuhay",PERSON
-"Mabuhay Singers",PERSON
+"Mabuhay",PERSON
 "Mabuti",PERSON
-"Mac Douton",PERSON
+"Mac",PERSON
+"Macapagal-Arroyo?",PERSON
 "Macha",PERSON
 "Madalas",PERSON
 "Madali",PERSON
@@ -1344,7 +1251,7 @@
 "Magpasalamat",PERSON
 "Magpatingin",PERSON
 "Magsasampa",PERSON
-"Magsaysay Award",PERSON
+"Magsaysay",PERSON
 "Magwawakas",PERSON
 "Mahabang",PERSON
 "Mahal",PERSON
@@ -1361,8 +1268,6 @@
 "Majority",PERSON
 "Makali-pas",PERSON
 "Makararanas",PERSON
-"Makati Business",PERSON
-"Makati City",PERSON
 "Makati",PERSON
 "Makatwirang",PERSON
 "Makikita",PERSON
@@ -1376,7 +1281,6 @@
 "Malamang",PERSON
 "Malayo",PERSON
 "Malaysia",PERSON
-"Mali Pare",PERSON
 "Mali",PERSON
 "Malibang",PERSON
 "Maliit",PERSON
@@ -1388,21 +1292,18 @@
 "Malugi",PERSON
 "Malulubos",PERSON
 "Mamerto",PERSON
+"Mamuyac",PERSON
 "Managuelod",PERSON
 "Mananatili",PERSON
-"Mandaluyong City",PERSON
 "Mandaluyong",PERSON
 "Mang Joe",PERSON
 "Mangyari",PERSON
-"Manila Cathedral",PERSON
-"Manila City Hall",PERSON
 "Manila Mayor Lito",PERSON
-"Manila Water",PERSON
-"Manila Waters",PERSON
 "Manila",PERSON
-"Mann Hann",PERSON
+"Manila?",PERSON
+"Mann",PERSON
 "Manny",PERSON
-"Manong Ed Alcaraz ng Unilab;",PERSON
+"Manong",PERSON
 "Mantakin",PERSON
 "Manunumpa",PERSON
 "Mapalad",PERSON
@@ -1410,14 +1311,12 @@
 "Marahas",PERSON
 "Marahil",PERSON
 "Marami",PERSON
-"Maraming Pinoy",PERSON
 "Maraming",PERSON
 "Maranan",PERSON
+"March",PERSON
 "Marcos",PERSON
-"Marikina City",PERSON
-"Marikina Mayor Bayani",PERSON
 "Marikina",PERSON
-"Maritime Industry Authority",PERSON
+"Maritime",PERSON
 "Marivic",PERSON
 "Mariwasa",PERSON
 "Marohomsar",PERSON
@@ -1426,7 +1325,7 @@
 "Martin Burnham",PERSON
 "Martin",PERSON
 "Mary",PERSON
-"Marylou Sandoval Pe Tiu Lim",PERSON
+"Marylou Sandoval Pe Tiu",PERSON
 "Mas",PERSON
 "Masagana",PERSON
 "Masakit",PERSON
@@ -1436,8 +1335,9 @@
 "Masayang-masaya",PERSON
 "Masigasig",PERSON
 "Maski",PERSON
+"Mass",PERSON
 "Mastermind",PERSON
-"Master?? ng PBMA",PERSON
+"Master??",PERSON
 "Masyado",PERSON
 "Masyadong",PERSON
 "Matagal",PERSON
@@ -1452,11 +1352,10 @@
 "Matindi",PERSON
 "Matinding",PERSON
 "Matunog",PERSON
-"May TV",PERSON
+"Maturity",PERSON
 "May",PERSON
 "May-ari",PERSON
 "Maynila",PERSON
-"Maynilad Water Services",PERSON
 "Maynilad",PERSON
 "Mayo",PERSON
 "Mayor A. ng Southern",PERSON
@@ -1464,20 +1363,18 @@
 "Mayor Fresnedi",PERSON
 "Mayor JV Ejercito",PERSON
 "Mayor Jaime Fresnedi",PERSON
-"Mayor Luduvico Espinosa",PERSON
-"Mayor Roy Loyola",PERSON
+"Mayor",PERSON
 "Mayroon",PERSON
 "Mayroong",PERSON
 "McNutt"",PERSON
 "Me",PERSON
-"Medical Center",PERSON
-"Medrano Group",PERSON
+"Media",PERSON
+"Medrano",PERSON
 "Medyo",PERSON
-"Mega Fishing",PERSON
 "Mega Star Sharon",PERSON
 "Mega",PERSON
-"Membership Form",PERSON
 "Membership",PERSON
+"Memorial",PERSON
 "Mendoza ng Commission",PERSON
 "Mendoza",PERSON
 "Mendoza? Tanong",PERSON
@@ -1487,38 +1384,31 @@
 "Merlyza",PERSON
 "Meron",PERSON
 "Merong",PERSON
-"Mesa Manila",PERSON
 "Mesa",PERSON
-"Metro Manila Development Authority",PERSON
-"Metro Manila",PERSON
-"Metro Manila?",PERSON
-"Metro Rail Transit Authority",PERSON
 "Metro",PERSON
-"Metropolitan Waterworks",PERSON
-"Mga Ativan Gang",PERSON
-"Mga Pinoy",PERSON
+"Metropolitan",PERSON
 "Mga",PERSON
 "Michael Hennequin",PERSON
 "Michigan",PERSON
 "Migrante",PERSON
 "Miguel Belmonte",PERSON
 "Mike",PERSON
-"Milo Samson",PERSON
 "Milo",PERSON
 "Milyong",PERSON
-"Milyun-milyong Pilipino",PERSON
+"Milyun-milyong",PERSON
 "Mindanao",PERSON
 "Minsan",PERSON
 "Miski",PERSON
 "Mismong",PERSON
+"Missionaries",PERSON
 "Miyerkules",PERSON
 "Modelo",PERSON
 "Mommy",PERSON
 "Mon",PERSON
 "Montalban",PERSON
+"Monte",PERSON
 "Most",PERSON
 "Mostrales",PERSON
-"Mothers Day",PERSON
 "Mount",PERSON
 "Mr. Ching",PERSON
 "Mr. Ely",PERSON
@@ -1529,28 +1419,26 @@
 "Mr. S.",PERSON
 "Mrs. Arroyo",PERSON
 "Mrs. Burnham",PERSON
-"Mrs. Ernesto Castillo",PERSON
 "Mrs. Gracia Burnham",PERSON
-"Mrs. Marivic",PERSON
 "Ms. Korina",PERSON
 "Ms. Mimi",PERSON
 "Mukhang",PERSON
 "Mula",PERSON
 "Muli",PERSON
 "Muling",PERSON
-"Multi-Purpose Loan",PERSON
+"Mulong",PERSON
+"Multi-Purpose",PERSON
 "Multo",PERSON
 "Mundo",PERSON
 "Muntilupa",PERSON
-"Muntinlupa City",PERSON
 "Muntinlupa",PERSON
 "Muslim",PERSON
-"Mutual Logistics Support Agreement",PERSON
+"Mutual",PERSON
 "NABUHAY",PERSON
 "NAGKATUWAANG",PERSON
 "NAGSARA",PERSON
 "NAGSASAGAWA",PERSON
-"NAIA Customs Collector Celso Templo",PERSON
+"NAIA Customs Collector Celso",PERSON
 "NAIA",PERSON
 "NAIS",PERSON
 "NAKAKADISMAYA",PERSON
@@ -1560,25 +1448,23 @@
 "NANG",PERSON
 "NAPAKALAYO",PERSON
 "NAPAKARAMI",PERSON
-"NAPOCOR ng PPA",PERSON
 "NAPOCOR",PERSON
 "NARARAPAT",PERSON
 "NARITO",PERSON
 "NASA",PERSON
-"NAT NI BATUIGAS",PERSON
+"NAT",PERSON
 "NAUBOS",PERSON
 "NBI",PERSON
 "NCRPO",PERSON
-"NDI PA TAPOS ANG LABAN",PERSON
+"NDI",PERSON
 "NGAYON",PERSON
-"NGAYONG Linggong",PERSON
+"NGAYONG",PERSON
 "NGUMANGAWA",PERSON
 "NHMFC",PERSON
 "NLRC",PERSON
 "NOONG",PERSON
 "NPA",PERSON
-"NTAY KAPWA Ni Cielito",PERSON
-"NTAY KAPWA",PERSON
+"NTAY",PERSON
 "Na",PERSON
 "Naaangkop",PERSON
 "Naalala",PERSON
@@ -1613,7 +1499,6 @@
 "Naging",PERSON
 "Nagising",PERSON
 "Nagkagulo",PERSON
-"Nagkaroon ng EDSA Dos",PERSON
 "Nagkaroon",PERSON
 "Nagkasagutan",PERSON
 "Nagkasukatan",PERSON
@@ -1655,7 +1540,7 @@
 "Nagulat",PERSON
 "Nagustuhan",PERSON
 "Nahawahan",PERSON
-"Nahuli ng Naktaf",PERSON
+"Nahuli",PERSON
 "Naibalik",PERSON
 "Naibulong",PERSON
 "Naiinis",PERSON
@@ -1722,7 +1607,6 @@
 "Nangungupahan",PERSON
 "Naniniwala",PERSON
 "Napadura",PERSON
-"Napag-alaman ng UP Marines Science",PERSON
 "Napag-alaman",PERSON
 "Napahinto",PERSON
 "Napairap",PERSON
@@ -1740,7 +1624,7 @@
 "Napocor",PERSON
 "Napuno",PERSON
 "Nararapat",PERSON
-"Narcotics Group Chief Dir. Efren",PERSON
+"Narcotics Group Chief",PERSON
 "Narcotics",PERSON
 "Narinig",PERSON
 "Nariyan",PERSON
@@ -1761,20 +1645,11 @@
 "Natanggap",PERSON
 "Natigil",PERSON
 "Natigilan",PERSON
-"National Anti-Kidnapping Task Force",PERSON
-"National Bureau of Investigation",PERSON
-"National Capital Region Police Office",PERSON
-"National Capital Regional Po-lice Office",PERSON
-"National Capital Regional Police Office",PERSON
-"National Capital",PERSON
-"National Director ng Mass Media",PERSON
-"National Home Mortgage",PERSON
-"National Kidney",PERSON
-"National Mapping Office",PERSON
-"National Police",PERSON
+"Nation",PERSON
+"National Capital Region Police",PERSON
+"National",PERSON
+"Nations",PERSON
 "Natuklasan",PERSON
-"Natural Resources Development",PERSON
-"Natural Resources",PERSON
 "Natural",PERSON
 "Natutuhan",PERSON
 "Naudlot",PERSON
@@ -1785,68 +1660,61 @@
 "Nawalan",PERSON
 "Negosyo",PERSON
 "Negros Oriental",PERSON
+"Negros",PERSON
 "Nene",PERSON
 "Neneng? Baka",PERSON
 "Nestor",PERSON
 "Never",PERSON
-"New York City",PERSON
-"New York",PERSON
 "Ng",PERSON
 "Ngayon",PERSON
 "Ngayong",PERSON
 "Ngayo?y",PERSON
 "Ngumangawa",PERSON
 "Ngunit",PERSON
-"Ni Sec. Mike Defensor",PERSON
+"Ni",PERSON
 "Ni-rape",PERSON
-"Ni-rescue ng Philippine",PERSON
-"Nida Blanca",PERSON
+"Ni-rescue",PERSON
+"Nicolas",PERSON
 "Nida ng Nobyembre",PERSON
-"Nilagdaang EO 215",PERSON
+"Nida",PERSON
 "Niligawan",PERSON
 "Nilingon",PERSON
-"Nilo Valderama",PERSON
+"Nilo",PERSON
 "Ninang",PERSON
-"Ninong Toto",PERSON
 "Ninong",PERSON
 "Ninong? S?ya",PERSON
-"Ninoy Aquino International Airport",PERSON
+"Ninoy",PERSON
 "Nirerekomenda",PERSON
-"Nitz Castillo",PERSON
+"Nitz",PERSON
 "Nobyembre",PERSON
 "Nokia",PERSON
 "Nolyn",PERSON
 "Noon",PERSON
-"Noong Abril",PERSON
-"Noong June",PERSON
-"Noong Mayo 21",PERSON
-"Noong Setyembre",PERSON
 "Noong",PERSON
-"Norte Congresswoman Glenda Ecleo",PERSON
 "Norte",PERSON
-"Northern Police District",PERSON
 "Northern",PERSON
 "Now",PERSON
 "Noypi",PERSON
+"Nur",PERSON
 "OFW",PERSON
 "OFWs",PERSON
 "OFW?s",PERSON
 "OICs",PERSON
-"ON PO SA NAYON",PERSON
+"ON",PERSON
 "OPM",PERSON
-"ORA MISMO",PERSON
+"ORA",PERSON
 "OWWA",PERSON
 "Oakley",PERSON
 "Oasay",PERSON
+"October",PERSON
 "Of",PERSON
-"Office of the Chairman Housing",PERSON
 "Office",PERSON
+"Officer",PERSON
 "Oggie",PERSON
 "Okay",PERSON
 "Okey",PERSON
 "Old",PERSON
-"Omnibus Election Code",PERSON
-"Omnibus Power",PERSON
+"Omnibus",PERSON
 "On",PERSON
 "Ong",PERSON
 "Onli",PERSON
@@ -1855,14 +1723,13 @@
 "Ople",PERSON
 "Oposisyon",PERSON
 "Opposition",PERSON
+"Order",PERSON
 "Oreta",PERSON
 "Organization",PERSON
 "Osama",PERSON
 "Out",PERSON
-"Overseas Workers Welfare Administration",PERSON
-"Overseas Workers",PERSON
-"Oyie Guerra",PERSON
-"P. Guevarra",PERSON
+"Overseas",PERSON
+"Oyie",PERSON
 "P120-million",PERSON
 "P150",PERSON
 "P2",PERSON
@@ -1873,10 +1740,9 @@
 "P50",PERSON
 "P6",PERSON
 "PAANO",PERSON
-"PAG MAY KATWIRAN Ni Jopet",PERSON
-"PAG MAY KATWIRAN",PERSON
+"PAG",PERSON
 "PAL",PERSON
-"PAL? Kung",PERSON
+"PAL?",PERSON
 "PALabigasan",PERSON
 "PANAHON",PERSON
 "PARANG",PERSON
@@ -1888,23 +1754,19 @@
 "PIN",PERSON
 "PLEASE",PERSON
 "PMA",PERSON
-"PNB Hong",PERSON
 "PNP Col. Raffy",PERSON
 "PNP",PERSON
-"PNP-Criminal Investigation",PERSON
+"PNP-Criminal",PERSON
 "PNP-Narcotics",PERSON
-"PNP? Marami",PERSON
-"PO2 Christopher",PERSON
-"PO3 Robert Zapata",PERSON
+"PNP?",PERSON
+"PO2",PERSON
 "PO3 Rolando",PERSON
 "PO3",PERSON
 "POL",PERSON
-"POP Housing",PERSON
 "POP",PERSON
-"PPA ng Meralco",PERSON
 "PPA",PERSON
 "PPA-Meralco",PERSON
-"PPAs ng Meralco",PERSON
+"PPAs",PERSON
 "PR",PERSON
 "PSN",PERSON
 "PTA",PERSON
@@ -1912,20 +1774,9 @@
 "Paano",PERSON
 "Paanong",PERSON
 "Paano?y",PERSON
-"Pablo Garcia ng Cebu",PERSON
 "Pabor",PERSON
 "Padilim",PERSON
 "Pag",PERSON
-"Pag-IBIG Branch",PERSON
-"Pag-IBIG Dagupan Extension Office",PERSON
-"Pag-IBIG Dagupan Extension",PERSON
-"Pag-IBIG Housing Loan",PERSON
-"Pag-IBIG Membership Maturity",PERSON
-"Pag-IBIG Multi-Purpose Loan",PERSON
-"Pag-IBIG Overseas Program Office",PERSON
-"Pag-IBIG Overseas Program",PERSON
-"Pag-IBIG Overseas",PERSON
-"Pag-IBIG POP",PERSON
 "Pag-IBIG",PERSON
 "Pag-aalsa",PERSON
 "Pag-opera",PERSON
@@ -1940,7 +1791,6 @@
 "Pagilingin",PERSON
 "Pagkakapatay",PERSON
 "Pagkakuha",PERSON
-"Pagkaraan ng 32",PERSON
 "Pagkaraan",PERSON
 "Pagkaraa?y",PERSON
 "Pagkat",PERSON
@@ -1967,21 +1817,19 @@
 "Palsipikadong",PERSON
 "Paminsan-minsan",PERSON
 "Pampanga",PERSON
+"Pampanga;",PERSON
 "Panahon",PERSON
 "Panalo",PERSON
 "Panandaliang",PERSON
 "Panay",PERSON
-"Panfilo Lacson",PERSON
 "Panfilo",PERSON
 "Pang",PERSON
 "Pangalagaan",PERSON
 "Pangalawa",PERSON
-"Pangarap Village",PERSON
 "Pangarap",PERSON
 "Pangarap??",PERSON
-"Pangasinan PNP",PERSON
 "Pangasinan",PERSON
-"Pangasinan; Jack Mayor ng Jardine",PERSON
+"Pangasinan;",PERSON
 "Panghugas",PERSON
 "Panginoong",PERSON
 "Pangkat",PERSON
@@ -2001,22 +1849,19 @@
 "Parang",PERSON
 "Parating",PERSON
 "Parañaque",PERSON
+"Pare",PERSON
 "Parehas",PERSON
 "Pareho",PERSON
 "Pari",PERSON
 "Paris",PERSON
 "Pasama",PERSON
-"Pasasalamat ng Pinoy",PERSON
-"Pasay City Chief of Police",PERSON
-"Pasay City",PERSON
-"Pasay Police Chief Eduardo",PERSON
-"Pasay Police",PERSON
-"Pasay Police?s",PERSON
+"Pasasalamat",PERSON
+"Pasasalamat???",PERSON
+"Pasay City Chief",PERSON
 "Pasay",PERSON
 "Pasig",PERSON
 "Pasok",PERSON
 "Patay",PERSON
-"Pati Senado",PERSON
 "Pati",PERSON
 "Patindi",PERSON
 "Patiño",PERSON
@@ -2032,49 +1877,33 @@
 "Pedro",PERSON
 "Penarubia",PERSON
 "Pendaton Ramos",PERSON
-"Pentagon Gang",PERSON
+"Pentagon",PERSON
 "Pera-pera",PERSON
 "Perez",PERSON
 "Pero",PERSON
 "Personal",PERSON
-"Philip-pine Military Academy",PERSON
-"Philippine Amusement",PERSON
-"Philippine Benevolent Missionaries Association",PERSON
-"Philippine Coast",PERSON
-"Philippine Consulate General Sarhan Al",PERSON
-"Philippine Consulate General United",PERSON
-"Philippine Embassy Site",PERSON
-"Philippine Embassy",PERSON
-"Philippine Information Agency",PERSON
-"Philippine Military Academy",PERSON
-"Philippine National Police",PERSON
-"Philippine National",PERSON
-"Philippine Navy",PERSON
-"Philippine Port",PERSON
-"Philippine Postal",PERSON
+"Philip-pine",PERSON
 "Philippine",PERSON
 "Philippines!",PERSON
+"Philippines",PERSON
 "Philosophy",PERSON
-"Philtranco Bus Lines",PERSON
 "Philtranco",PERSON
 "Piad",PERSON
 "Pilipina",PERSON
 "Pilipinang",PERSON
 "Pilipinas",PERSON
-"Pilipino Star",PERSON
 "Pilipino",PERSON
 "Pilipino"",PERSON
 "Pilipino'",PERSON
-"Pilipinong HIV",PERSON
 "Pilipinong",PERSON
 "Pimentel",PERSON
-"Pina-kaladkad ng Hari",PERSON
+"Pina-kaladkad",PERSON
 "Pinabuhusan",PERSON
 "Pinag-interesan",PERSON
 "Pinagiba",PERSON
 "Pinagkalooban",PERSON
 "Pinagsumikapan",PERSON
-"Pinagtigi-tigisahan ng 12",PERSON
+"Pinagtigi-tigisahan",PERSON
 "Pinaka-latest",PERSON
 "Pinaka-mahalagang",PERSON
 "Pinakabagong",PERSON
@@ -2085,7 +1914,7 @@
 "Pinanatili",PERSON
 "Pinaniniwalaan",PERSON
 "Pinaniniwalaang",PERSON
-"Pinapa-alala ng National Kidney",PERSON
+"Pinapa-alala",PERSON
 "Pinapalapit",PERSON
 "Pinapasok",PERSON
 "Pinapupunta",PERSON
@@ -2096,53 +1925,41 @@
 "Pinatay",PERSON
 "Pinawalang",PERSON
 "Pinay",PERSON
-"Ping Lacson",PERSON
 "Ping",PERSON
 "Pinoy",PERSON
 "Pinulot",PERSON
 "Pipirmahan",PERSON
 "Pito",PERSON
 "Pitong",PERSON
-"Police Chief",PERSON
-"Police District-Intelligence",PERSON
-"Police Intelligence Unit",PERSON
-"Police Regional Office 4",PERSON
-"Poong Maykapal",PERSON
+"Police",PERSON
+"Pollution"",PERSON
+"Poloniong",PERSON
 "Poong",PERSON
-"Pop Music",PERSON
 "Pope John Paul II",PERSON
 "Power",PERSON
 "Pranses",PERSON
-"President Fidel Ramos",PERSON
-"President Fidel",PERSON
 "President Gloria Arroyo",PERSON
 "President Gloria Macapagal- Arroyo",PERSON
 "President Gloria Macapagal-Arroyo",PERSON
-"President Gloria Macapagal-Arroyo? Ayon",PERSON
 "President Gloria",PERSON
-"President Joseph",PERSON
-"President Pro",PERSON
 "President",PERSON
 "Presidente Arroyo",PERSON
-"Presidente Erap",PERSON
-"Presidente Estrada",PERSON
-"Presidente Fidel V.",PERSON
 "Presidente Gloria Macapagal-Arroyo",PERSON
 "Presidente",PERSON
 "Presidente?",PERSON
-"Presidential Management Staff",PERSON
+"Presidential",PERSON
 "Prez GMA",PERSON
-"Prez Gloria",PERSON
 "Prez",PERSON
+"Pro",PERSON
 "Probinsya",PERSON
 "Problema",PERSON
 "Prognois",PERSON
+"Program",PERSON
 "Prosecutors",PERSON
-"Provident Benefit Form",PERSON
-"Public Order",PERSON
+"Provident",PERSON
+"Public",PERSON
 "Puerto",PERSON
-"Pulaman Wild Life Rescue",PERSON
-"Pulse Asia",PERSON
+"Pulaman",PERSON
 "Pulse",PERSON
 "Pumalit",PERSON
 "Pumasok",PERSON
@@ -2151,36 +1968,42 @@
 "Pumirma",PERSON
 "Pumunta",PERSON
 "Pupunta",PERSON
-"Purchased Power Adjustments",PERSON
+"Purchased",PERSON
 "Puro",PERSON
 "Puspusan",PERSON
 "Putok",PERSON
 "Puwede",PERSON
 "Puwedeng",PERSON
-"QC; Franching",PERSON
-"Quezon City Regional Trial Court",PERSON
-"Quezon City",PERSON
-"Quezon City? Ito",PERSON
+"QC;",PERSON
+"Quejada",PERSON
 "Quezon!",PERSON
 "Quezon",PERSON
+"Quirino;",PERSON
 "RC",PERSON
-"Ramon Magsaysay",PERSON
+"RTC",PERSON
+"Ramon",PERSON
 "Ramon?",PERSON
 "Ramos",PERSON
-"Regional Intelligence",PERSON
+"Raul",PERSON
+"Razon",PERSON
+"Region",PERSON
+"Regional",PERSON
 "Regular",PERSON
 "Reina",PERSON
 "Remember",PERSON
 "Remulla",PERSON
 "Rene Cayetano",PERSON
 "Rene",PERSON
-"Rent-to-Own Program ng Pag-IBIG",PERSON
-"Rent-to-Own Program",PERSON
 "Rent-to-Own",PERSON
 "Resulta",PERSON
+"Return",PERSON
+"Reuter",PERSON
 "Rev. Fr. Joselito",PERSON
 "Revamp",PERSON
+"Rex",PERSON
 "Rey",PERSON
+"Reyes",PERSON
+"Reynaldo",PERSON
 "Reynold Mina",PERSON
 "Reynold",PERSON
 "Ricardo",PERSON
@@ -2188,11 +2011,10 @@
 "Rich",PERSON
 "Rico T.",PERSON
 "Rivera",PERSON
-"Riyadh Saudi Arabia",PERSON
 "Riyadh",PERSON
 "Rizal",PERSON
-"Robert Barbers",PERSON
-"Rodolfo Macha",PERSON
+"Robert",PERSON
+"Rodolfo",PERSON
 "Roel",PERSON
 "Rolando Patiño",PERSON
 "Rolex",PERSON
@@ -2200,7 +2022,7 @@
 "Rolly",PERSON
 "Ronald Pine ng Pine",PERSON
 "Ros",PERSON
-"Rosa Laguna",PERSON
+"Rosa",PERSON
 "Rossi?",PERSON
 "Roxas",PERSON
 "Roy",PERSON
@@ -2210,47 +2032,31 @@
 "SA",PERSON
 "SALAMAT",PERSON
 "SAMPUNG",PERSON
-"SAMU?T SARING",PERSON
+"SAMU?T",PERSON
 "SB",PERSON
-"SI Donna",PERSON
-"SI Gerry",PERSON
-"SI Jesus",PERSON
-"SI Jorge",PERSON
-"SI Mr. Lee",PERSON
-"SI Tata Poloniong",PERSON
+"SI",PERSON
+"SIBOL",PERSON
 "SK Chairman Weepee Balasa",PERSON
-"SK Election",PERSON
 "SK",PERSON
+"SPECIAL",PERSON
 "SPO-10",PERSON
-"SPO1 Antonio",PERSON
-"SPO1 Arnold Sandoval ng District",PERSON
-"SPO1 Danilo Monte",PERSON
-"SPO1 Danilo Sibal ng Station",PERSON
+"SPO1 Arnold Sandoval",PERSON
+"SPO1 Danilo Sibal",PERSON
 "SPO1 Jess Balakid",PERSON
-"SPO1 Joseph",PERSON
 "SPO1 Tom Bio",PERSON
-"SPO1's Sandoval",PERSON
-"SPO2 Charlie",PERSON
+"SPO1",PERSON
+"SPO1's",PERSON
+"SPO2",PERSON
 "SPO3 Jorge",PERSON
 "SPO3 Rod Villaruel",PERSON
 "SPO4 Norberto",PERSON
 "SSS",PERSON
 "STM",PERSON
-"STO LANG",PERSON
+"STO",PERSON
 "SUMAPIT",PERSON
 "SWAK",PERSON
 "SWAT",PERSON
-"SYON NGAYON",PERSON
-"Sa AFP",PERSON
-"Sa Azucena",PERSON
-"Sa Eastern Metro Manila",PERSON
-"Sa Golden City",PERSON
-"Sa MPL",PERSON
-"Sa Marikina",PERSON
-"Sa May 2003",PERSON
-"Sa Maynila",PERSON
-"Sa Northern Metro Manila",PERSON
-"Sa Western Police District",PERSON
+"SYON",PERSON
 "Sa",PERSON
 "Saad",PERSON
 "Saan",PERSON
@@ -2270,25 +2076,21 @@
 "Sakit",PERSON
 "Sakop",PERSON
 "Salamat",PERSON
-"Sale of Mortgage Rights",PERSON
-"Saligang Batas",PERSON
+"Sale",PERSON
+"Saligang",PERSON
 "Salinlahi",PERSON
+"Salvacion",PERSON
 "Samantala",PERSON
 "Sampaloc",PERSON
 "Sampu",PERSON
 "Sampung",PERSON
 "San Bernardo:",PERSON
-"San Juan",PERSON
-"San Nicolas",PERSON
 "San",PERSON
 "Sana",PERSON
 "Sana?y",PERSON
-"Sandoval Shipyards",PERSON
-"Sandoval ng Palawan",PERSON
 "Sandoval",PERSON
 "Sandoval? Ewan",PERSON
 "Sang-ayon",PERSON
-"Sangguniang Kabataan",PERSON
 "Sangguniang",PERSON
 "Sangkot",PERSON
 "Santiago",PERSON
@@ -2299,91 +2101,41 @@
 "Sari-sari",PERSON
 "Sarip",PERSON
 "Sasabihing",PERSON
-"Saudi Arabia",PERSON
 "Saudi",PERSON
 "Sayang",PERSON
+"Sayyaf!",PERSON
 "Sayyaf",PERSON
-"Scout Rangers",PERSON
-"Sea of Galilee",PERSON
+"Science",PERSON
+"Scout",PERSON
 "Sea",PERSON
-"Sec. Lina",PERSON
-"Sec. Lina?",PERSON
 "Sec. Mike Defensor",PERSON
-"Sec. Raul",PERSON
 "Second",PERSON
-"Secretary Heherson Alvarez ng Department",PERSON
+"Secretary Heherson Alvarez",PERSON
 "Secretary Joey",PERSON
-"Secretary Renato",PERSON
-"Secretary of Environment",PERSON
 "Secretary",PERSON
 "Securities",PERSON
 "Security",PERSON
 "Senado",PERSON
 "Senado?",PERSON
-"Senador Panfilo",PERSON
-"Senate Bill 1834",PERSON
-"Senate Bill 2132",PERSON
-"Senate Committee",PERSON
-"Senate President Frank",PERSON
+"Senador",PERSON
 "Senate President Franklin Drilon",PERSON
 "Senate President Franklin",PERSON
-"Senate President Pro",PERSON
-"Senate President",PERSON
-"Senate Report",PERSON
 "Senate",PERSON
-"Senior Police Officer 1",PERSON
-"Senior Supt. Jose Antonio Salvacion",PERSON
-"Senior Supt. Leonilo",PERSON
+"Senators",PERSON
+"Senior",PERSON
 "September",PERSON
 "Serge O.",PERSON
 "Serge Osmeña",PERSON
-"Sewerage System",PERSON
+"Service",PERSON
+"Services",PERSON
+"Setyembre",PERSON
+"Sewerage",PERSON
 "Sex",PERSON
 "Sexy",PERSON
-"Shabu Lab",PERSON
+"Shabu",PERSON
 "Sharon",PERSON
 "She",PERSON
 "Shiela Tabuniag",PERSON
-"Si Abalos",PERSON
-"Si Benipayo",PERSON
-"Si Blas",PERSON
-"Si Burnham",PERSON
-"Si Congressman",PERSON
-"Si Deputy Director Gen. Hermogenes",PERSON
-"Si Ebdane",PERSON
-"Si Ed",PERSON
-"Si Ediborah",PERSON
-"Si Ejercito",PERSON
-"Si FPJ",PERSON
-"Si Father James",PERSON
-"Si Fr. Nacorda",PERSON
-"Si Fr. Reuter",PERSON
-"Si Gary",PERSON
-"Si Gracia Burnham",PERSON
-"Si Gracia",PERSON
-"Si Guingona",PERSON
-"Si Itay! Dumating",PERSON
-"Si John",PERSON
-"Si Level",PERSON
-"Si Lina",PERSON
-"Si Lucio Tan",PERSON
-"Si Martin",PERSON
-"Si Mayor Fresnedi",PERSON
-"Si Mendoza",PERSON
-"Si Minority Leader Nene",PERSON
-"Si Montayre",PERSON
-"Si Mr. Ching",PERSON
-"Si Oreta",PERSON
-"Si Panfilo",PERSON
-"Si Pimentel",PERSON
-"Si Sabaya",PERSON
-"Si Simbulan",PERSON
-"Si Simon",PERSON
-"Si Sobero",PERSON
-"Si Steve",PERSON
-"Si Tancangco",PERSON
-"Si Tata Poloniong",PERSON
-"Si Velasco",PERSON
 "Si",PERSON
 "Siapno",PERSON
 "Sibakan",PERSON
@@ -2403,9 +2155,7 @@
 "Simong",PERSON
 "Simula",PERSON
 "Simulan",PERSON
-"Sina Robert Jaworski",PERSON
-"Sina Tabuniag",PERSON
-"Sina Villaruel",PERSON
+"Sina",PERSON
 "Sinabi",PERSON
 "Sinalungat",PERSON
 "Sinasabi",PERSON
@@ -2423,38 +2173,34 @@
 "Sinulatan",PERSON
 "Sinungaling",PERSON
 "Sir Pasinos",PERSON
-"Sir! Magbago",PERSON
 "Sir!",PERSON
 "Sir",PERSON
-"Sir? Mapabuo",PERSON
-"Sir? Naubos",PERSON
 "Sir?",PERSON
 "Siraan",PERSON
 "Sirang-sira",PERSON
 "Sir??",PERSON
 "Sison",PERSON
+"Site",PERSON
 "Siya",PERSON
 "Siya?y",PERSON
 "Siyempre",PERSON
 "Smart",PERSON
 "So",PERSON
+"Social",PERSON
 "Sonny Li Bog",PERSON
 "Sonny Li",PERSON
 "Sonny",PERSON
 "Soriano",PERSON
+"South",PERSON
 "Southcom",PERSON
-"Southern Command",PERSON
-"Southern Police",PERSON
+"Southern",PERSON
+"Spaniard",PERSON
 "Speaker Joe",PERSON
-"Special Forces",PERSON
-"Special Operations Office",PERSON
-"Special Purpose Asset",PERSON
-"Special Weapons",PERSON
-"Sr. Supt. Francisco Villaroman",PERSON
+"Special",PERSON
 "Sr. Supt. Oca Calderon",PERSON
-"St. Theresa?s Parish Church",PERSON
-"State of the Nation Address",PERSON
-"Station Commander ng WPD-PS8",PERSON
+"Staff",PERSON
+"State",PERSON
+"Station",PERSON
 "Stephen",PERSON
 "Steve",PERSON
 "Still?s",PERSON
@@ -2467,17 +2213,13 @@
 "Sumulat",PERSON
 "Sumuway",PERSON
 "Superville",PERSON
-"Supreme Court",PERSON
+"Support",PERSON
 "Supreme",PERSON
-"Supt. Bun",PERSON
 "Supt. De",PERSON
 "Supt. Eddie",PERSON
 "Supt. Eduardo",PERSON
-"Supt. John",PERSON
-"Supt. Mulong",PERSON
 "Supt. Noel",PERSON
-"Supt. Rafael Cardeño ng YOU",PERSON
-"Supt. Reynaldo Berroya ng Region",PERSON
+"Supt. Rafael Cardeño",PERSON
 "Supt. Rodrigo",PERSON
 "Supt. Roland Navarro",PERSON
 "Sure",PERSON
@@ -2485,9 +2227,11 @@
 "Susubaybayan",PERSON
 "Susunod",PERSON
 "Sy",PERSON
-"Sylvia La",PERSON
+"Sylvia",PERSON
+"Syndrome",PERSON
 "S?ya",PERSON
 "TANDANG-TANDA",PERSON
+"TAPOS",PERSON
 "TAV",PERSON
 "TIYAK",PERSON
 "TNT",PERSON
@@ -2496,7 +2240,6 @@
 "TRABAHO",PERSON
 "TUKOY",PERSON
 "TV",PERSON
-"Taal Lake",PERSON
 "Tactics",PERSON
 "Tadeo;",PERSON
 "Takang-taka",PERSON
@@ -2511,16 +2254,16 @@
 "Talvo",PERSON
 "Tama",PERSON
 "Tan",PERSON
+"Tancangco",PERSON
 "Tandaan",PERSON
 "Tandaan:",PERSON
-"Tanging Navotas",PERSON
 "Tanging",PERSON
 "Tanong",PERSON
+"Tao",PERSON
 "Tapat",PERSON
 "Tapos",PERSON
 "Tapusin",PERSON
-"Task Force Jericho",PERSON
-"Task Force",PERSON
+"Task",PERSON
 "Tata Poloniong",PERSON
 "Tata",PERSON
 "Tatawag",PERSON
@@ -2529,22 +2272,24 @@
 "Tate",PERSON
 "Tatlo",PERSON
 "Tatlong",PERSON
-"Tato Macalalag",PERSON
+"Tato",PERSON
 "Taumbayan",PERSON
 "Tayo?y",PERSON
-"Teresita Lazaro",PERSON
-"Tessie Aquino Oreta",PERSON
+"Team??",PERSON
+"Templo",PERSON
+"Teresita",PERSON
 "Tessie",PERSON
-"Thailand? Pero",PERSON
+"Thailand?",PERSON
 "Thanks",PERSON
-"Thanksgiving Day",PERSON
 "The",PERSON
 "There",PERSON
-"Third Secretary ng Korean",PERSON
-"Third Secretary ng South Korean",PERSON
+"Theresa?s",PERSON
+"Third",PERSON
 "This",PERSON
 "Tiangco",PERSON
 "Tig-tatlo",PERSON
+"Tiga!",PERSON
+"Tiga",PERSON
 "Tigilan",PERSON
 "Tila",PERSON
 "Times",PERSON
@@ -2568,16 +2313,16 @@
 "Tisya"",PERSON
 "Tita Cory",PERSON
 "Tita",PERSON
+"Titanium",PERSON
 "Tiyak",PERSON
 "Tiyaking",PERSON
+"Toledo",PERSON
 "Tomas",PERSON
 "Tondo",PERSON
 "Tony Santos",PERSON
 "Tony",PERSON
-"Torres Memorial",PERSON
 "Torres",PERSON
-"Total Accumulated Value",PERSON
-"Toto ng Makati",PERSON
+"Total",PERSON
 "Toto",PERSON
 "Totoo",PERSON
 "Totoong",PERSON
@@ -2585,7 +2330,10 @@
 "Tourism Sec. Richard Gordon",PERSON
 "Trabaho",PERSON
 "Trabahong",PERSON
-"Transplant Institute",PERSON
+"Trade",PERSON
+"Transit",PERSON
+"Transplant",PERSON
+"Transportation",PERSON
 "Tsinoy",PERSON
 "Tulad",PERSON
 "Tulog",PERSON
@@ -2601,18 +2349,16 @@
 "Tutol",PERSON
 "Tuwang-tuwa",PERSON
 "Tuwing",PERSON
-"Tyron Medina ng Titanium",PERSON
+"Tyron",PERSON
 "UMANDAR",PERSON
 "UMANGAT",PERSON
 "UNICEF",PERSON
-"UP Manila",PERSON
+"UP",PERSON
 "US Defense Secreatry Paul",PERSON
-"US Embassy",PERSON
 "US President George Bush",PERSON
 "US",PERSON
 "US$20",PERSON
 "US$5",PERSON
-"USADA Ni Dante",PERSON
 "USADA",PERSON
 "USAP-USAPAN",PERSON
 "Ubusin",PERSON
@@ -2632,33 +2378,34 @@
 "Unahin",PERSON
 "Unang",PERSON
 "Unang-una",PERSON
+"Unilab;",PERSON
 "Union",PERSON
-"United Arab",PERSON
 "United",PERSON
+"Uno",PERSON
 "Unos",PERSON
 "Unti-unti",PERSON
 "Upang",PERSON
-"Urban Development Coordinating",PERSON
-"Urban Development",PERSON
 "Urban",PERSON
 "Urdaneta",PERSON
 "Uso",PERSON
 "Utang",PERSON
-"V. Francisco",PERSON
 "VACC",PERSON
-"Valderama St.",PERSON
 "Valenzuela",PERSON
-"Vera ng E-Just",PERSON
+"Value",PERSON
+"Vera",PERSON
 "Vice President Teofisto Guingona",PERSON
-"Vice President",PERSON
-"Vicente Sandoval",PERSON
+"Vice",PERSON
+"Vicente",PERSON
+"Victor",PERSON
 "Villaluz",PERSON
 "Villaruel",PERSON
+"Virtus",PERSON
 "Visayas",PERSON
-"Visiting Forces Agreement",PERSON
+"Visiting",PERSON
 "WALA",PERSON
 "WALANG",PERSON
 "WPD",PERSON
+"WPD-PS8",PERSON
 "Wagas",PERSON
 "Wahab",PERSON
 "Wala",PERSON
@@ -2667,36 +2414,32 @@
 "We",PERSON
 "Weepee",PERSON
 "Welfare",PERSON
-"Wenceslao Agnir Jr. ng RTC",PERSON
-"Western Police District",PERSON
 "Western",PERSON
 "What",PERSON
 "Whether",PERSON
 "White",PERSON
 "Wilhelm",PERSON
 "William",PERSON
-"Willie Cruz",PERSON
+"Willie",PERSON
 "Wilm's",PERSON
 "Wilm?s",PERSON
-"Workmen?s Compensation Act",PERSON
-"Workmen?s Compensation",PERSON
-"World Environment Day",PERSON
-"World Environment Day?",PERSON
-"World Environment",PERSON
-"World Health Organization",PERSON
-"World Summit",PERSON
-"World War II",PERSON
-"YES! Kailangang",PERSON
+"Workmen?s",PERSON
+"World",PERSON
+"YES!",PERSON
 "YOU",PERSON
 "Yamang",PERSON
 "Yan",PERSON
 "Yap",PERSON
 "You",PERSON
+"Young",PERSON
 "Younger",PERSON
-"Your Honor!",PERSON
 "Your",PERSON
 "Yun",PERSON
 "Yung",PERSON
 "Zamboanga",PERSON
+"Zapata",PERSON
 "Zebedeo;",PERSON
 "Zena",PERSON
+"o Dengue Hemorrhagic Fever",PERSON
+"? Individual Payor",PERSON
+"? Office of the Chairman",PERSON
