@@ -44,8 +44,8 @@ public class NGramIterator {
 		for (i = cursorIndex; i < cursorIndex + n; i++) {
 			// Encountered a token that should not be considered anymore. So
 			// stop appending to the n-gram
-			// if (isTokenAlreadyNamedEntity[i])
-			// break;
+			if (isTokenAlreadyNamedEntity[i])
+				break;
 
 			nextStringBuilder.append(tokens[i] + " ");
 		}
