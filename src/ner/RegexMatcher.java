@@ -67,16 +67,16 @@ public class RegexMatcher {
 
 		// matcher.regexList.add("[A-Z].*");
 
-		String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
 		String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
-		String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
-		String articles = "(ng|mga|ni|at|of|on|the|an?)";
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
 
 		// 1-5 Consecutive Capitals
 
-		String first = "((^.\\s)[A-Z][^(\\s|\\.|,)]+)";
+		String first = capitalizedStart;
 		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
 		String end = " (" + capitalizedStart + "|" + number + ")";
 		String regex = first + middle + end;
@@ -84,6 +84,7 @@ public class RegexMatcher {
 		matcher.regexList.add(capitalizedWord);
 		matcher.regexList.add(regex);
 
+		// System.out.println(capitalizedStart);
 		System.out.println(regex + "|" + capitalizedWord);
 
 		//
