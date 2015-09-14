@@ -18,9 +18,9 @@ public class Driver {
 
 		// Read files
 		// articleFiles = io.process("data");
-		// articleFiles = io.process("data/News/2001/April.xml");
-		// articleFiles = io.process("data/Opinyon/2001/June.xml");
-		articleFiles = io.process("data/News/2001/April.xml");
+		// articleFiles = io.process("data/News/2004/May.xml");
+		articleFiles = io.process("data/Opinyon/2002/June.xml");
+		// articleFiles = io.process("data");
 
 		// Categorize Recognized Entities
 		ArticleNamedEntityExtractor articleNamedEntityExtractor = new ArticleNamedEntityExtractor();

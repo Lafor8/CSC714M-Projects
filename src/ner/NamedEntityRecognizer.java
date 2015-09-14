@@ -5,7 +5,7 @@ public class NamedEntityRecognizer {
 	RegexMatcher namedEntityRegexMatcher;
 
 	public NamedEntityRecognizer() {
-		namedEntityRegexMatcher = RegexMatcher.getPersonOrLocationRegexMatcher();
+		namedEntityRegexMatcher = RegexMatcher.getNamedEntityRegexMatcher();
 	}
 
 	public boolean isNamedEntity(String string) {

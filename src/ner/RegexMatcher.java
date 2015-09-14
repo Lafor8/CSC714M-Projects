@@ -41,9 +41,20 @@ public class RegexMatcher {
 	 */
 
 	public static RegexMatcher getDateRegexMatcher() {
-		// TODO add the date regexes here
+		RegexMatcher matcher = new RegexMatcher();
 
-		return new RegexMatcher();
+		// matcher.regexList.add("[A-Z].*");
+
+		// 1-5 Consecutive Capitals
+		matcher.regexList.add("[A-Z][A-z]+ [0-9]{1,2}([,]?[ ]?[0-9]{2,4})?");
+		matcher.regexList.add("[0-9]{1,2}[/.-][0-9]{1,2}([/.-]([0-9][0-9]){1,2})?");
+		matcher.regexList.add("[Ii]ka-[0-9]{1,2} ng [A-z][a-z]+");
+		matcher.regexList.add("[0-9]{4}");
+		matcher.regexList.add("[Dd]ekada '[0-9]{2}");
+
+		// Capital first but with 1 or more small intermediate
+
+		return matcher;
 	}
 
 	/*
@@ -56,8 +67,29 @@ public class RegexMatcher {
 
 		// matcher.regexList.add("[A-Z].*");
 
-		matcher.regexList.add("([A-Z][]+ ){0,4}[A-Z][A-z']+");
-		matcher.regexList.add("([A-Z][A-z']+ ){0,4}[A-Z][A-z']+");
+		String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|at|of|on|the|an?)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = "((^.\\s)[A-Z][^(\\s|\\.|,)]+)";
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
+		matcher.regexList.add(capitalizedWord);
+		matcher.regexList.add(regex);
+
+		System.out.println(regex + "|" + capitalizedWord);
+
+		//
+		// // Capital first but with 1 or more small intermediate
+		// matcher.regexList.add("([A-Z][^\\s]+ )([A-z][^\\s]+ ){0,3}([A-Z][^\\s]+)");
+
 		return matcher;
 	}
 
@@ -70,6 +102,14 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getLocationKeywordsRegexMatcher() {
 		// TODO add the location keywords here
+		RegexMatcher locationKeywords = new RegexMatcher();
+
+		String genericKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo).*";
+		String actualPlaceNames = "";
+
+		locationKeywords.regexList.add("**");
+		locationKeywords.regexList.add("*[lL]ungsod*");
+
 		return new RegexMatcher();
 	}
 
