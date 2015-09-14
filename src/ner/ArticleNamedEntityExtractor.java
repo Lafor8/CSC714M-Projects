@@ -79,7 +79,7 @@ public class ArticleNamedEntityExtractor {
 
 					// Add the newly recognized and categorized Named
 					// Entity to the set
-					namedEntities.add(new NamedEntity(currNGram, category));
+					namedEntities.add(new NamedEntity("\"" + currNGram + "\"", category));
 
 					// Move the cursor after the current n-gram
 					// This also invalidates the current n-gram tokens

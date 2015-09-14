@@ -14,6 +14,9 @@ public class NGramIterator {
 	private int n;
 
 	public NGramIterator(String text) {
+		if (text == null)
+			text = "";
+
 		this.text = text.trim();
 		this.tokens = this.text.split("\\s");
 

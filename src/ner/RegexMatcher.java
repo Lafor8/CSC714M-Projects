@@ -42,6 +42,7 @@ public class RegexMatcher {
 
 	public static RegexMatcher getDateRegexMatcher() {
 		// TODO add the date regexes here
+
 		return new RegexMatcher();
 	}
 
@@ -53,8 +54,10 @@ public class RegexMatcher {
 		// TODO add the person or location regexes here
 		RegexMatcher matcher = new RegexMatcher();
 
-		matcher.regexList.add("[A-Z].*");
+		// matcher.regexList.add("[A-Z].*");
 
+		matcher.regexList.add("([A-Z][]+ ){0,4}[A-Z][A-z']+");
+		matcher.regexList.add("([A-Z][A-z']+ ){0,4}[A-Z][A-z']+");
 		return matcher;
 	}
 
