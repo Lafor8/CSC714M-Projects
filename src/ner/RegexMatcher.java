@@ -85,7 +85,7 @@ public class RegexMatcher {
 		matcher.regexList.add(regex);
 
 		// System.out.println(capitalizedStart);
-		System.out.println(regex + "|" + capitalizedWord);
+		// System.out.println(regex + "|" + capitalizedWord);
 
 		//
 		// // Capital first but with 1 or more small intermediate
