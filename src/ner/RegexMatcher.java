@@ -71,7 +71,7 @@ public class RegexMatcher {
 
 	public static RegexMatcher getPersonRegexMatcher() {
 		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
-		String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
@@ -95,9 +95,8 @@ public class RegexMatcher {
 	}
 
 	public static RegexMatcher getLocationRegexMatcher() {
-		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
-		String capitalizedWord = "([A-Z][^(\\s|\\.|,|!|?|;)]+)";
-		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|?|;)]+)";
+		String capitalizedStart = "(\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
 		String articles = "(ng|mga|ni|of|on|the|an?|for)";
@@ -113,7 +112,11 @@ public class RegexMatcher {
 
 		String pantukoy = "(sa)";
 
+		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
 		matcher.regexList.add(pantukoy + "\\s" + regex);
+		// matcher.regexList
+		// .add("( ((\"([A-Z][^(\\s|\\.|,|!|?|;)]+)\"|([A-Z][^(\\s|\\.|,|!|?|;)]+))|(ng|mga|ni|of|on|the|an?|for)))*");
+		// System.out.println(pantukoy + "\\s" + regex);
 
 		return matcher;
 	}
@@ -123,13 +126,27 @@ public class RegexMatcher {
 	 * person/location.
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|,|!|?|;)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
 		// TODO add the person or location regexes here
 		RegexMatcher matcher = new RegexMatcher();
 
 		// matcher.regexList.add("[A-Z].*");
 
 		matcher.regexList.add(capitalizedWord);
-		matcher.regexList.add(neRegex);
+		matcher.regexList.add(regex);
 
 		// System.out.println(neRegex + "|" + capitalizedWord);
 
