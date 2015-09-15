@@ -51,16 +51,14 @@ public class RegexMatcher {
 		matcher.regexList.add("[Dd]ekada '[0-9]{2}");
 
 		// In numeric format
-		matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
+		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
 
 		// Year only
 		matcher.regexList.add("(['][0-9]{2})|([1-2][0-9]{3})");
 
 		// Days of the week
-		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
-				"[Ll]inggo" };
-		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?",
-				"[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
+		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado", "[Ll]inggo" };
+		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?", "[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
 
 		for (String s : araw) {
 			matcher.regexList.add(s);
@@ -70,10 +68,8 @@ public class RegexMatcher {
 		}
 
 		// In the format: MONTH [DAY][,] ['][YEAR]
-		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?", "[Hh]u[nl](yo)?",
-				"[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?", "[Dd]is(yembre)?" };
-		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?",
-				"[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
+		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?", "[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?", "[Dd]is(yembre)?" };
+		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?", "[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
 
 		String dayYear = "( ([0-2]?[0-9][,]?))?(([1-2][0-9]{3})|(['][0-9]{2})?)?";
 		// TODO: test
