@@ -23,6 +23,9 @@ public class NamedEntityRecognizer {
 		String personRegex = convertToString(personRegexMatcher.regexList);
 		String locationRegex = convertToString(locationRegexMatcher.regexList);
 		String dateRegex = convertToString(dateRegexMatcher.regexList);
+
+		// System.out.println(locationRegex);
+
 		// return locationRegex;
 		return "(" + locationRegex + ")|(" + dateRegex + ")|(" + personRegex + ")";
 	}

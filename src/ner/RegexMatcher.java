@@ -55,23 +55,68 @@ public class RegexMatcher {
 	public static RegexMatcher getDateRegexMatcher() {
 		RegexMatcher matcher = new RegexMatcher();
 
-		// matcher.regexList.add("[A-Z].*");
-
-		// 1-5 Consecutive Capitals
-		matcher.regexList.add("[A-Z][A-z]+ [0-9]{1,2}([,]?[ ]?[0-9]{2,4})?");
-		matcher.regexList.add("[0-9]{1,2}[/.-][0-9]{1,2}([/.-]([0-9][0-9]){1,2})?");
-		matcher.regexList.add("[Ii]ka-[0-9]{1,2} ng [A-z][a-z]+");
-		matcher.regexList.add("[0-9]{4}");
+		// Specific dates/periods/events
+		matcher.regexList.add("([A-z][A-z']+ ){1,4}[Aa]nniversary");
+		matcher.regexList.add("([A-z][A-z']+ ){1,4}[Dd]ay");
+		matcher.regexList.add("[Aa]raw [Nn]g ([A-z][A-z]+ ){0,3}[A-z][A-z]+");
+		matcher.regexList.add("([Ii]ka-[0-9]{1,3} )?[Aa]nibersaryo [Nn]g ([A-z][A-z]+ ){0,3}[A-z][A-z]+");
 		matcher.regexList.add("[Dd]ekada '[0-9]{2}");
 
-		// Capital first but with 1 or more small intermediate
+		// In numeric format
+		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
+
+		// Year only
+		matcher.regexList.add("(['][0-9]{2})|([1-2][0-9]{3})");
+
+		// Days of the week
+		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
+				"[Ll]inggo" };
+		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?",
+				"[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
+
+		for (String s : araw) {
+			matcher.regexList.add(s);
+		}
+		for (String s : day) {
+			matcher.regexList.add(s);
+		}
+
+		// In the format: MONTH [DAY][,] ['][YEAR]
+		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?",
+				"[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?",
+				"[Dd]is(yembre)?" };
+		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?",
+				"[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
+
+		String dayYear = "( ([0-2]?[0-9][,]?))?(([1-2][0-9]{3})|(['][0-9]{2})?)?";
+		// TODO: test
+		// hunyo 12
+		// Nobyembre 4
+		// Enero 20
+		// hulyo 2, 2014
+		// hunyo 2 '13
+		// hulyo '23
+		// hunyo 12,2012
+
+		for (String s : buwan) {
+			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+		}
+		for (String s : month) {
+			matcher.regexList.add(s + dayYear);
+		}
+
+		// TODO:
+		// noong (nakaraang)? WORD
+		// kahapon, bukas
+		// etc.
 
 		return matcher;
 	}
 
 	public static RegexMatcher getPersonRegexMatcher() {
 		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
-		String capitalizedWord = "([A-Z][^(\\s|\\.)]+)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
@@ -89,13 +134,14 @@ public class RegexMatcher {
 		String pantukoy = "(ni|si|nina|sina|kay|kina)";
 
 		matcher.regexList.add(pantukoy + "\\s" + regex);
+		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
 
 		return matcher;
 
 	}
 
 	public static RegexMatcher getLocationRegexMatcher() {
-		String capitalizedWord = "([A-Z][^(\\s|\\.|!|?|;)]+)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
@@ -112,8 +158,8 @@ public class RegexMatcher {
 
 		String pantukoy = "(sa)";
 
-		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
 		matcher.regexList.add(pantukoy + "\\s" + regex);
+		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
 
 		// System.out.println(pantukoy + "\\s" + capitalizedStart);
 		// System.out.println(pantukoy + "\\s" + regex);
@@ -131,7 +177,7 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
 		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
-		String capitalizedWord = "([A-Z][^(\\s|\\.|,|!|?|;)]+)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
