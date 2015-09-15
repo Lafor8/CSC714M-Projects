@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import models.Article;
 import models.ArticleFile;
@@ -59,39 +61,43 @@ public class ArticleNamedEntityExtractor {
 	private HashSet<NamedEntity> processString(String string) {
 		HashSet<NamedEntity> namedEntities = new LinkedHashSet<NamedEntity>();
 
+		if (string == null)
+			return namedEntities;
+
 		NamedEntityRecognizer ner = new NamedEntityRecognizer();
 		NamedEntityCategorizer nec = new NamedEntityCategorizer();
 		NGramIterator nGramIterator = new NGramIterator(string);
 
-		for (int n = N_GRAM_LIMIT; n > 0; n--) {
+		String regex = ner.getMasterRegex();
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(string);
 
-			nGramIterator.restart(n);
+		// System.out.println(regex);
 
-			while (nGramIterator.hasNext()) {
+		while (matcher.find()) {
 
-				String currNGram = nGramIterator.next();
+			String currNGram = matcher.group();
 
-				// Check if the n-gram is a Named Entity
+			// Check if the n-gram is a Named Entity
 
-				NamedEntity ne = ner.isNamedEntity(currNGram);
+			NamedEntity ne = ner.isNamedEntity(currNGram);
 
-				if (ne != null) {
+			if (ne != null) {
 
-					// Categorize the Name Entity
-					Category category = nec.categorize(ne);
+				// Categorize the Name Entity
+				Category category = nec.categorize(ne);
 
-					// Add the newly recognized and categorized Named
-					// Entity to the set
-					namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
+				// Add the newly recognized and categorized Named
+				// Entity to the set
+				namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
 
-					// Move the cursor after the current n-gram
-					// This also invalidates the current n-gram tokens
-					// so that they won't be considered in the next
-					// iteration anymore
-					nGramIterator.markLastNGramAsAlreadyProcessed();
-				}
-
+				// Move the cursor after the current n-gram
+				// This also invalidates the current n-gram tokens
+				// so that they won't be considered in the next
+				// iteration anymore
+				nGramIterator.markLastNGramAsAlreadyProcessed();
 			}
+
 		}
 		return namedEntities;
 	}

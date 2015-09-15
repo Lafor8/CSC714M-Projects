@@ -1,153 +1,672 @@
+"1.5",DATE
+"10-21",DATE
+"10-21-26",DATE
+"10.74",DATE
+"15-35",DATE
+"1834",DATE
+"1898",DATE
+"1946",DATE
+"1948",DATE
+"1960",DATE
+"1961",DATE
+"1965",DATE
+"1973",DATE
+"1977",DATE
+"1986",DATE
+"1987",DATE
+"1989",DATE
+"1994",DATE
+"1996",DATE
+"1997",DATE
+"1999",DATE
+"2-10",DATE
+"2.2",DATE
+"2000",DATE
 "2001",DATE
-"April 01 2001",DATE
-"April 01",DATE
-"April 03",DATE
+"2002",DATE
+"2004",DATE
+"2132",DATE
+"2361",DATE
+"3.3",DATE
+"3.30",DATE
+"3.8",DATE
+"3.80",DATE
+"3210",DATE
+"35/48",DATE
+"4.21",DATE
+"4.40",DATE
+"4.5",DATE
+"4540",DATE
+"4880",DATE
+"51-58",DATE
+"6150",DATE
+"7.4",DATE
+"7110",DATE
+"8.6",DATE
+"8111",DATE
+"93-15-01",DATE
+"9661",DATE
+"Ang 15",DATE
+"April 1985",DATE
+"April 23, 2000",DATE
+"August 13, 1983",DATE
+"August 1988",DATE
+"Barangay 19",DATE
+"Bill 1834",DATE
+"Bill 2132",DATE
+"Box 4794",DATE
+"Box 94366",DATE
+"DAO 17",DATE
+"Dakong 2",DATE
+"December 1988",DATE
+"December 1999",DATE
+"December 31, 2001",DATE
+"EDSA 2",DATE
+"EO 21",DATE
+"February 1986",DATE
+"Happy 14",DATE
+"Happy 15",DATE
+"Hunyo 11",DATE
+"Hunyo 2001",DATE
+"Inay 2002",DATE
+"January 2000",DATE
+"Jeddah 21412",DATE
+"July 23, 2001",DATE
+"June 01 2002",DATE
+"June 02 2002",DATE
+"June 03 2002",DATE
+"June 04 2002",DATE
+"June 05 2002",DATE
+"June 06 2002",DATE
+"June 07 2002",DATE
+"June 08 2002",DATE
+"June 09 2002",DATE
+"June 10 2002",DATE
+"June 11 2002",DATE
+"June 11, 2002",DATE
+"June 12 2002",DATE
+"June 12",DATE
+"June 12, 2001",DATE
+"June 13 2002",DATE
+"June 13",DATE
+"June 14 2002",DATE
+"June 15 2002",DATE
+"June 16 2002",DATE
+"June 16, 1973",DATE
+"June 17 2002",DATE
+"June 18 2002",DATE
+"June 19 2002",DATE
+"June 1998",DATE
+"June 20 2002",DATE
+"June 21 2002",DATE
+"June 22 2002",DATE
+"June 23 2002",DATE
+"June 24 2002",DATE
+"June 25 2002",DATE
+"June 26 2002",DATE
+"June 27 2002",DATE
+"June 28 2002",DATE
+"June 29 2002",DATE
+"June 30 2002",DATE
+"June 7",DATE
+"June 8, 2002",DATE
+"Mahigit 20",DATE
+"Mahigit 40",DATE
+"March 23, 1986",DATE
+"Marso 2000",DATE
+"May 1",DATE
+"May 1995",DATE
+"May 20",DATE
+"May 2001",DATE
+"May 2003",DATE
+"May 27, 2001",DATE
+"May 31, 2002",DATE
+"May 4,000",DATE
+"Mayo 17",DATE
+"Mayo 18, 1995",DATE
+"Mayo 21",DATE
+"Mayo 22",DATE
+"Mayo 5",DATE
+"Mayo 8",DATE
+"Mayroong 3,200",DATE
+"Nokia 8210",DATE
+"Noong 1964",DATE
+"Noong 1997",DATE
+"Noong 2000",DATE
+"October 1986",DATE
+"October 1996",DATE
+"Office 2",DATE
+"Office 4",DATE
+"Program 6",DATE
+"Region 4",DATE
+"Riyadh 11693",DATE
+"SB 1834",DATE
+"SB 2132",DATE
+"Sa 1988",DATE
+"Sapagkat 24",DATE
+"September 11",DATE
+"Setyembre 9, 1990",DATE
+"Zone 20",DATE
+"Zone 59",DATE
+"AFP",LOCATION
+"ATM",LOCATION
+"Abu",LOCATION
+"Aduana",LOCATION
+"Aguinaldo",LOCATION
+"Alabang",LOCATION
+"America,",LOCATION
+"American",LOCATION
+"Amerika",LOCATION
+"Amerika,",LOCATION
+"Anti-Crime",LOCATION
+"Apelo",LOCATION
+"Armed",LOCATION
+"Asia",LOCATION
+"Asia"",LOCATION
+"Assumption",LOCATION
+"Ate",LOCATION
+"Ateneo",LOCATION
+"Bagong",LOCATION
+"Baguio",LOCATION
+"Barangay",LOCATION
+"Basilan",LOCATION
+"Basilan,",LOCATION
+"Bataan",LOCATION
+"Bibliya",LOCATION
+"Bicutan,",LOCATION
+"Binondo",LOCATION
+"Buhi,",LOCATION
+"Bureau",LOCATION
+"CAMANAVA",LOCATION
+"CIDG",LOCATION
+"Cabinet",LOCATION
+"Caltex",LOCATION
+"Camp",LOCATION
+"Canlubang,",LOCATION
+"Carmel",LOCATION
 "Cavite",LOCATION
-"DOJ",LOCATION
-"Dacer",LOCATION
-"East Triangle, NIA",LOCATION
-"East Triangle,",LOCATION
-"East",LOCATION
-"Indang, Cavite",LOCATION
-"Indang,",LOCATION
-"NPA",LOCATION
-"Pinyahan, Quezon City",LOCATION
-"Pinyahan, Quezon",LOCATION
-"Pinyahan,",LOCATION
-"Southern Tagalog",LOCATION
-"Southern",LOCATION
-"Alex Diloy",PERSON
-"Alex",PERSON
-"Amargo",PERSON
-"Angelo",PERSON
-"April",PERSON
-"Armed Forces of the Philippines",PERSON
-"Armed Forces",PERSON
-"Armed",PERSON
-"Chato",PERSON
-"Chris Hermida,",PERSON
-"Chris",PERSON
-"Corbito",PERSON
-"Dacer Grace Amargo",PERSON
-"Dacer Grace",PERSON
-"Dacer? Delon Porcalla April",PERSON
-"Dacer? Delon Porcalla",PERSON
-"Dacer? Delon",PERSON
-"Defense Secretary Angelo Reyes",PERSON
-"Defense Secretary",PERSON
-"Defense",PERSON
-"Delon Porcalla",PERSON
-"Delon",PERSON
-"Department of Social Welfare",PERSON
-"Department of Social",PERSON
-"Department",PERSON
-"Development",PERSON
-"Diloy  NBI Director Reynaldo",PERSON
-"Diloy  NBI Director",PERSON
-"Diloy  NBI",PERSON
-"Diloy",PERSON
-"Director Samuel Ong",PERSON
-"Director Samuel",PERSON
-"Director",PERSON
-"Doris Franche April 01",PERSON
-"Doris Franche April",PERSON
-"Doris Franche",PERSON
-"Doris",PERSON
-"Ebdane  Ebdane",PERSON
-"Ebdane",PERSON
-"Eduardo",PERSON
-"Emmanuel",PERSON
-"Enrile",PERSON
-"Ermita",PERSON
-"Forces of the Philippines",PERSON
-"Grace Amargo",PERSON
-"Grace",PERSON
-"Gunigundo",PERSON
-"Hermida",PERSON
-"Hermogenes Ebdane",PERSON
-"Hernando",PERSON
-"Huwebes",PERSON
-"Jimmy Lopez",PERSON
-"Jimmy",PERSON
-"Joy Cantos April 01",PERSON
-"Joy Cantos April",PERSON
-"Joy Cantos",PERSON
-"Joy",PERSON
-"Juan Ponce Enrile  Enrile",PERSON
-"Juan Ponce Enrile",PERSON
-"Juan Ponce",PERSON
-"Juan",PERSON
-"Justice Secretary Hernando Perez",PERSON
-"Justice Secretary Hernando",PERSON
-"Justice Secretary",PERSON
-"Justice",PERSON
-"Lilia Tolentino April 01",PERSON
-"Lilia Tolentino April",PERSON
-"Lilia Tolentino",PERSON
-"Lilia",PERSON
-"Liwayway Vinzons Chato",PERSON
-"Liwayway Vinzons",PERSON
-"Liwayway",PERSON
-"Lopez",PERSON
-"Luis Jalando  Ermita",PERSON
-"Luis Jalandoni",PERSON
-"Luis",PERSON
-"Macapagal-Arroyo",PERSON
-"Magtanggol",PERSON
-"Malou Rongalerios April 03",PERSON
-"Malou Rongalerios April",PERSON
-"Malou Rongalerios",PERSON
-"Malou",PERSON
-"Masa",PERSON
-"NBI Director Reynaldo",PERSON
-"NBI Director",PERSON
-"NBI",PERSON
-"NBI-National Capital Region Director",PERSON
-"NBI-National Capital Region",PERSON
-"NBI-National Capital",PERSON
-"NBI-National",PERSON
-"NIA",PERSON
-"Ong",PERSON
-"PAOCTF Chief Director Hermogenes",PERSON
-"PAOCTF Chief Director",PERSON
-"PAOCTF Chief",PERSON
-"PAOCTF",PERSON
-"PAOCTF-Visayas Chief Sr. Supt.",PERSON
-"PAOCTF-Visayas Chief Sr.",PERSON
-"PAOCTF-Visayas Chief",PERSON
-"PAOCTF-Visayas",PERSON
-"PPC",PERSON
-"Pangulo",PERSON
-"Pangulong Gloria Macapagal-Arroyo  Malou",PERSON
-"Pangulong Gloria Macapagal-Arroyo",PERSON
-"Pangulong Gloria",PERSON
-"Pangulong",PERSON
-"Peace Process Eduardo",PERSON
-"Peace Process",PERSON
-"Peace",PERSON
-"Perez",PERSON
-"Philippines  Ermita",PERSON
-"Philippines",PERSON
-"Ponce Enrile  Enrile",PERSON
-"Presidential Adviser on Peace",PERSON
-"Presidential Adviser",PERSON
-"Presidential",PERSON
-"Puwersa ng Masa",PERSON
-"Puwersa",PERSON
-"Quezon",PERSON
-"Region",PERSON
-"Reynaldo",PERSON
-"Salvador "Bubby" Dacer",PERSON
-"Salvador "Bubby"",PERSON
-"Salvador",PERSON
-"Samuel",PERSON
-"Social Welfare",PERSON
-"Social",PERSON
-"Supt. Teofilo Vina",PERSON
-"Supt. Teofilo",PERSON
-"Teofilo",PERSON
-"Valenzuela Congressman Magtanggol Gunigundo",PERSON
-"Valenzuela Congressman Magtanggol",PERSON
-"Valenzuela Congressman",PERSON
-"Valenzuela",PERSON
-"Wycoco",PERSON
+"Cebu,",LOCATION
+"Center",LOCATION
+"Central",LOCATION
+"Channel",LOCATION
+"Club",LOCATION
+"Comelec",LOCATION
+"Committee",LOCATION
+"Commonwealth",LOCATION
+"Cotabato",LOCATION
+"Crame",LOCATION
+"Customs",LOCATION
+"DAO",LOCATION
+"DENR,",LOCATION
+"DOH",LOCATION
+"DOTC",LOCATION
+"DPWH",LOCATION
+"Dagupan",LOCATION
+"Deed",LOCATION
+"Department",LOCATION
+"Dinagat",LOCATION
+"Diyos",LOCATION
+"Dos",LOCATION
+"Dubai",LOCATION
+"Dubai,",LOCATION
+"EDSA",LOCATION
+"Ecleo",LOCATION
+"Elap",LOCATION
+"Estados",LOCATION
+"Estrada",LOCATION
+"Europe",LOCATION
+"Fisheries",LOCATION
+"Gabinete",LOCATION
+"Ghia",LOCATION
+"Golden",LOCATION
+"HUDCC",LOCATION
+"Hong",LOCATION
+"House",LOCATION
+"Hulyo",LOCATION
+"Hulyo,",LOCATION
+"Hunyo",LOCATION
+"IPPs",LOCATION
+"Inambansa",LOCATION
+"Independent",LOCATION
+"Indonesia",LOCATION
+"Internet",LOCATION
+"Israel",LOCATION
+"Japan",LOCATION
+"Japan,",LOCATION
+"Jawasat",LOCATION
+"Jeddah",LOCATION
+"Jose",LOCATION
+"July",LOCATION
+"June",LOCATION
+"KB",LOCATION
+"Kalabisan",LOCATION
+"Kansas",LOCATION
+"Kataas-taasang",LOCATION
+"Katwiran",LOCATION
+"Kongreso",LOCATION
+"Korean",LOCATION
+"Korte",LOCATION
+"Kuratong",LOCATION
+"Laguna",LOCATION
+"Lake",LOCATION
+"Lamitan",LOCATION
+"Lamitan,",LOCATION
+"Las",LOCATION
+"Lumang",LOCATION
+"Lunes",LOCATION
+"Luzon",LOCATION
+"MICP",LOCATION
+"MMDA",LOCATION
+"MNLF",LOCATION
+"MWSI",LOCATION
+"MWSS",LOCATION
+"Makati",LOCATION
+"Malacañang",LOCATION
+"Malacañang,",LOCATION
+"Manila",LOCATION
+"Marcos",LOCATION
+"Marikina",LOCATION
+"Marikina,",LOCATION
+"Martes",LOCATION
+"Martes,",LOCATION
+"Maynila",LOCATION
+"Medical",LOCATION
+"Membership",LOCATION
+"Meralco",LOCATION
+"Meralco,",LOCATION
+"Metro",LOCATION
+"Mindanao",LOCATION
+"Mindanao,",LOCATION
+"Mothers",LOCATION
+"Muntilupa",LOCATION
+"Muntinlupa",LOCATION
+"NAIA",LOCATION
+"NAIA,",LOCATION
+"NAPOCOR",LOCATION
+"NBI",LOCATION
+"NHMFC",LOCATION
+"NKTI",LOCATION
+"Naktaf",LOCATION
+"Napocor",LOCATION
+"National",LOCATION
+"New",LOCATION
+"Nida",LOCATION
+"Nilagdaang",LOCATION
+"Noypi",LOCATION
+"OFW",LOCATION
+"OWWA",LOCATION
+"Office",LOCATION
+"Omnibus",LOCATION
+"On",LOCATION
+"Oposisyon",LOCATION
+"P150",LOCATION
+"P2,700",LOCATION
+"P40,000",LOCATION
+"P45,000-buwanang",LOCATION
+"PBMA",LOCATION
+"PE",LOCATION
+"PICC",LOCATION
+"PIN",LOCATION
+"PMA",LOCATION
+"PNB",LOCATION
+"PNP",LOCATION
+"PNP,",LOCATION
+"POP",LOCATION
+"POP,",LOCATION
+"PPA",LOCATION
+"PR",LOCATION
+"PSN",LOCATION
+"Pag-IBIG",LOCATION
+"Pag-IBIG,",LOCATION
+"Palasyo",LOCATION
+"Palawan",LOCATION
+"Pampanga",LOCATION
+"Pangasinan",LOCATION
+"Parañaque",LOCATION
+"Parcel",LOCATION
+"Paris",LOCATION
+"Pasay",LOCATION
+"Pasig",LOCATION
+"Payatas",LOCATION
+"Philippine",LOCATION
+"Philtranco",LOCATION
+"Pilipinas",LOCATION
+"Pilipinas,",LOCATION
+"Pilipino",LOCATION
+"Poong",LOCATION
+"Puerto",LOCATION
+"Quezon",LOCATION
+"Rent-to-Own",LOCATION
+"Riyadh",LOCATION
+"Riyadh,",LOCATION
+"SB",LOCATION
+"SK",LOCATION
+"SSS",LOCATION
+"STM",LOCATION
+"Sale",LOCATION
+"San",LOCATION
+"Sangguniang",LOCATION
+"Saudi",LOCATION
+"Saudi,",LOCATION
+"Sayyaf",LOCATION
+"Sea",LOCATION
+"Second",LOCATION
+"Senado",LOCATION
+"Senado,",LOCATION
+"Senado,??",LOCATION
+"Senate",LOCATION
+"Sibuco",LOCATION
+"Sibuco-Siraway,",LOCATION
+"Simbahan",LOCATION
+"Sipadan,",LOCATION
+"Siraway,",LOCATION
+"Sta",LOCATION
+"Stop",LOCATION
+"Subic",LOCATION
+"Superville",LOCATION
+"Supreme",LOCATION
+"Surigao",LOCATION
+"Taal",LOCATION
+"Tate",LOCATION
+"Thailand",LOCATION
+"Thanksgiving",LOCATION
+"UNICEF",LOCATION
+"UNICEF,",LOCATION
+"UP",LOCATION
+"US",LOCATION
+"US$20",LOCATION
+"United",LOCATION
+"Urdaneta",LOCATION
+"Valderama",LOCATION
+"Valenzuela",LOCATION
+"Visayas",LOCATION
+"WPD",LOCATION
+"WPD,",LOCATION
+"Wagas",LOCATION
+"Western",LOCATION
+"Woodstock,",LOCATION
+"Workmen?s",LOCATION
+"Zamboanga",LOCATION
+"Abu Sabaya",PERSON
+"Abu Sabaya,",PERSON
+"Abu Sayyaf",PERSON
+"Acting Press Secretary Silvestre Afable,",PERSON
+"Ador Mawanay",PERSON
+"Aglipay, Berroya",PERSON
+"Al G. Pedroche",PERSON
+"Alex Mabasa",PERSON
+"Alfredo Benipayo",PERSON
+"Aling Tisya",PERSON
+"Alona Bacolod",PERSON
+"Ana Fe Carbajosa",PERSON
+"Ara Mina",PERSON
+"Ara Mina,",PERSON
+"Ate Glo",PERSON
+"Atty. Jose C. Sison",PERSON
+"Atty. Jose Sison",PERSON
+"Atty. Leonard",PERSON
+"Atty. Molly ng Customs",PERSON
+"Atty. Sison",PERSON
+"Baron Cervantes",PERSON
+"Basil Valdez",PERSON
+"Baya Fernando",PERSON
+"Bening Batuigas",PERSON
+"Bin Laden",PERSON
+"Bobby Dacer",PERSON
+"Brig. Gen. M.",PERSON
+"Butch Albarracin",PERSON
+"Butch M. Quejada",PERSON
+"Butch Quejada",PERSON
+"COMELEC Chairman Benjamin Abalos",PERSON
+"Caloocan Ciy 1",PERSON
+"Caren P. Abobo",PERSON
+"Celia ng 10",PERSON
+"Charmaine Ong,",PERSON
+"Chief Inspector Ferdinand Divina, Senior Police Officer 1",PERSON
+"Chief Kuwago",PERSON
+"Chief Supt. Manuel Cabigon",PERSON
+"Chief Supt. Nick Pasinos, He-he-he! Kaya",PERSON
+"Chief Supt. Reynaldo Acop, Sr. Supt. Francisco Villaroman",PERSON
+"Chief Supt. Rowlando Sacramento",PERSON
+"China Mae Cardona",PERSON
+"Chung Young Ho, Third Secretary ng South Korean Embassy",PERSON
+"Chung Young Ho,",PERSON
+"Chung Young-Ho",PERSON
+"Cielito "Mahal" Del Mundo",PERSON
+"Cielito "Mahal" Del MundoPATULOY",PERSON
+"Cielito "Mahal"",PERSON
+"Col. Jess Cardona, Police Chief ng Urdaneta, Pangasinan PNP",PERSON
+"Col. Victor Corpus, ng ISAFP, Malacañang",PERSON
+"Col. Victor Corpuz ng ISAFP",PERSON
+"Col. Villareal",PERSON
+"Commissioner Bernardo",PERSON
+"Commissioners Luzviminda Tancangco",PERSON
+"Commissioners Resureccion Borra",PERSON
+"Congressman Gilbert Remulla",PERSON
+"Congressman Ricky Sandoval",PERSON
+"Congressman S.",PERSON
+"Customs Commissioner Antonio Bernardo",PERSON
+"DAR Sec. Herna Braganza",PERSON
+"DENR Sec. Heherson Alvarez:",PERSON
+"DILG Secretary Joey Lina",PERSON
+"DOTC Sec. Pantaleon Alvarez",PERSON
+"Dadong Matinik",PERSON
+"Danny Macabuhay",PERSON
+"Dante L.",PERSON
+"Dante LA",PERSON
+"De Vera,",PERSON
+"Deborah Yap",PERSON
+"Denver Trinidad ng IBC-13",PERSON
+"Deo Macalma",PERSON
+"Deomides Talbo",PERSON
+"Deputy Dir. Gen. Hermogenes Ebdane",PERSON
+"Deputy Dir. Hermogenes Ebdane Jr.",PERSON
+"Deputy Director Gen. Hermogenes Ebdane Jr.",PERSON
+"Deputy Director Gen. Hermogenes Ebdane",PERSON
+"Deputy Director General Edgardo Aglipay ng National Capital Region, Chief Supt. Reynaldo Berroya ng Region III, Director Avelino Razon ng Central Visayas Region, Director Domingo Reyes ng Region IV, Senior Supt. Leonilo",PERSON
+"Development Authority",PERSON
+"Dexter Balala",PERSON
+"Dexter Balala, 4",PERSON
+"Dexter Balala,",PERSON
+"Dexter: Leksiyon",PERSON
+"Dingdong Dantes",PERSON
+"Diomedes Talbo",PERSON
+"Diomedes Talvo",PERSON
+"Dir. Gualberto ng CIDG?",PERSON
+"Dir. Lucas Managuelod,",PERSON
+"Dir. Managuelod",PERSON
+"Dir. Nestorio Gualberto,",PERSON
+"Dir. Reynaldo Wycoco, ng National Bureau of Investigation",PERSON
+"Direk Heidi O. Sison",PERSON
+"Don Eugenio Lopez",PERSON
+"Don Eugenio",PERSON
+"Dr. Tambunting",PERSON
+"Dr. Tranquilino Elicaño, Jr.",PERSON
+"Dulce,?? Don?t Rain On My Parade,?? Independent Woman,??",PERSON
+"Ecleo: Justice",PERSON
+"Ed Angara",PERSON
+"Eddie Caro ng Mari City",PERSON
+"Edgar Sangel",PERSON
+"Ediborah Yap",PERSON
+"Ediborah Yap,",PERSON
+"Edison Sy,",PERSON
+"Editha Lumami",PERSON
+"Egay Galis",PERSON
+"Egay Galis"",PERSON
+"Egay Galis,"",PERSON
+"Elap; Richard Nganga ng Mari City",PERSON
+"Engr. Ador Andrada ng DPWH,",PERSON
+"Ex-Marine Sgt",PERSON
+"Faizal Marohombsar",PERSON
+"Faizal Marohomsar",PERSON
+"Feling, Buboy",PERSON
+"Ferdinand E. Marcos",PERSON
+"Fernando Alipunga",PERSON
+"Fernando Poe Jr.",PERSON
+"Fr. Cirilo Nacorda",PERSON
+"Fr. Guiseppe Pierantoni",PERSON
+"Fr. Jesus",PERSON
+"Fr. Jose C. Blanco, S.",PERSON
+"Fr. Jose C. Blanco,S",PERSON
+"Fr. Reuter",PERSON
+"Fr. Ruel Gallardo",PERSON
+"Frank Drilon",PERSON
+"Fresnedi, Navarro",PERSON
+"Gary San Luis",PERSON
+"Gat Andres Bonifacio",PERSON
+"Gen. Hermogenes Ebdane",PERSON
+"Gen. Leandro Mendoza",PERSON
+"General Ebdane",PERSON
+"Geny Lopez,",PERSON
+"Gerra Ejercito",PERSON
+"Gracia Burnham",PERSON
+"Greggy Aranteta III",PERSON
+"Gringo Honasan",PERSON
+"Guillermo Sobero",PERSON
+"Guillermo Sobero,",PERSON
+"Han Ling",PERSON
+"Han Ling,",PERSON
+"Heherson Alvarez",PERSON
+"Hutch Acedillo, Mahine Acuna, Chriszel Balasa, Paulo Balasa, Merlyza Castillo, Oyie Guerra",PERSON
+"Inay? Hindi",PERSON
+"Inspector Intia,",PERSON
+"Interior Sec. Jose Lina",PERSON
+"Interior Secretary Joey Lina",PERSON
+"Jarius Bondoc",PERSON
+"Jay Anthony, 18",PERSON
+"Joel Palacios",PERSON
+"John O. Bantayan",PERSON
+"John O.",PERSON
+"John Osmeña",PERSON
+"Jonathan, 22",PERSON
+"Jopet Sison",PERSON
+"Jose Mari Chan, Apo Hiking Society, Ariel Rivera, Jolina Magdangal, Geneva Cruz, Jamie Rivera, Imelda Papin, Nanette Inventor, Janet Basco,",PERSON
+"Judas Iscariote,",PERSON
+"Judge Zenaida Laguilles",PERSON
+"Julie Baba",PERSON
+"Jun Soller,",PERSON
+"Kaye Torres",PERSON
+"Kim Wong",PERSON
+"Kumander Robot",PERSON
+"Labor Sec.",PERSON
+"Labor Secretary Patricia Sto",PERSON
+"Lacson: Kidnapping,",PERSON
+"Lawrence William, 6",PERSON
+"Lt. Col. Reynato Padua,",PERSON
+"Lucio Tan",PERSON
+"MMDA Chairman Benjamin Abalos",PERSON
+"Mang Joe",PERSON
+"Manila Mayor Lito Atienza, Governors Lito Lapid ng Pampanga; Pablo Garcia ng Cebu",PERSON
+"Martin Burnham",PERSON
+"Mary Ann, 16",PERSON
+"Marylou Sandoval Pe Tiu Lim",PERSON
+"Mayor A. ng Southern Tagalog",PERSON
+"Mayor Baya Fernando",PERSON
+"Mayor Fernando",PERSON
+"Mayor Fresnedi",PERSON
+"Mayor JV Ejercito",PERSON
+"Mayor Jaime Fresnedi",PERSON
+"Mega Star Sharon Cuneta,",PERSON
+"Mendoza ng Commission on Appointments",PERSON
+"Mendoza? Tanong",PERSON
+"Michael Hennequin",PERSON
+"Miguel Belmonte",PERSON
+"Milo Samson,",PERSON
+"Mr. Ching",PERSON
+"Mr. Ely Lopez, Nilo Valderama",PERSON
+"Mr. Lee",PERSON
+"Mr. Lee?",PERSON
+"Mr. Leonides",PERSON
+"Mr. R.",PERSON
+"Mr. S.",PERSON
+"Mrs. Arroyo",PERSON
+"Mrs. Burnham",PERSON
+"Mrs. Gracia Burnham",PERSON
+"Ms. Korina Sanchez",PERSON
+"Ms. Mimi Arietta, Area Manager Laguna Collection Group II ng NHMFC",PERSON
+"NAIA Customs Collector Celso Templo",PERSON
+"Narcotics Group Chief Dir. Efren Fernandez",PERSON
+"National Capital Region Police Office",PERSON
+"Navotas Mayor Toby Tiangco",PERSON
+"Negros Oriental Rep",PERSON
+"Neneng? Baka",PERSON
+"Nida Blanca",PERSON
+"Nida ng Nobyembre",PERSON
+"Ninong? S?ya",PERSON
+"PCSO Chairperson Honeygirl Singson-de Leon,",PERSON
+"PNP Col. Raffy Cardeño",PERSON
+"PO3 Rolando",PERSON
+"PO3 Simbulan, SPO1's Sandoval",PERSON
+"Palawan Rep",PERSON
+"Pantaleon Alvarez",PERSON
+"Pasay City Chief of Police Supt. Eduardo",PERSON
+"Patty Santiago, Joey Marquez, Cesar Hulleza, Charlie Lising",PERSON
+"Pendaton Ramos Sarip,",PERSON
+"Philippine National Police",PERSON
+"Piad, NCRPO",PERSON
+"Ping Lacson, Ed Angara",PERSON
+"Pope John Paul II",PERSON
+"President Gloria Arroyo",PERSON
+"President Gloria Macapagal- Arroyo",PERSON
+"President Gloria Macapagal-Arroyo",PERSON
+"President Gloria Macapagal-Arroyo? Ayon",PERSON
+"Presidente Arroyo",PERSON
+"Presidente Arroyo, Energy Regulatory Commission",PERSON
+"Presidente Arroyo,",PERSON
+"Presidente Gloria Macapagal-Arroyo",PERSON
+"Prez GMA",PERSON
+"Rene Cayetano",PERSON
+"Rev. Fr. Joselito Jopson, Celia Goduco",PERSON
+"Reynold Mina",PERSON
+"Rico T. Gulumon,",PERSON
+"Rolando Patiño",PERSON
+"Ronald Pine ng Pine",PERSON
+"Ruben Ecleo Jr. Ang",PERSON
+"Ruben Ecleo Jr.",PERSON
+"SK Chairman Weepee Balasa",PERSON
+"SPO1 Arnold Sandoval ng District Police Intelligence Unit",PERSON
+"SPO1 Danilo Sibal ng Station 11",PERSON
+"SPO1 Jess Balakid",PERSON
+"SPO1 Tom Bio",PERSON
+"SPO3 Jorge Urdaneta,",PERSON
+"SPO3 Rod Villaruel",PERSON
+"SPO4 Norberto Lozada, SPO2 Charlie Cosam, SPO1 Danilo Monte",PERSON
+"Sabaya: To",PERSON
+"Sabaya? Sari-sari",PERSON
+"Sabaya? Totoo",PERSON
+"Sacramento? Ang",PERSON
+"San Bernardo:",PERSON
+"Sandoval? Ewan",PERSON
+"Sec. Mike Defensor",PERSON
+"Secretary Heherson Alvarez ng Department of Environment",PERSON
+"Secretary Joey Lina",PERSON
+"Senate President Frank Drilon",PERSON
+"Senate President Franklin Drilon",PERSON
+"Serge O.",PERSON
+"Serge Osmeña",PERSON
+"Sharon Cuneta,",PERSON
+"Shiela Tabuniag",PERSON
+"Sir Pasinos",PERSON
+"Sonny Li Bog",PERSON
+"Speaker Joe",PERSON
+"Sr. Supt. Oca Calderon",PERSON
+"Supt. De Gracia,",PERSON
+"Supt. Eddie",PERSON
+"Supt. Eduardo",PERSON
+"Supt. Noel Estanislao",PERSON
+"Supt. Rafael Cardeño ng YOU",PERSON
+"Supt. Rodrigo",PERSON
+"Supt. Roland Navarro",PERSON
+"TONGressman Mandarambong",PERSON
+"Tata Poloniong",PERSON
+"Tita Cory",PERSON
+"Tony Santos",PERSON
+"Tony Santos, Augusto",PERSON
+"Tony Santos,",PERSON
+"Tourism Sec. Richard Gordon",PERSON
+"US Defense Secreatry Paul Wolfowitz",PERSON
+"US President George Bush",PERSON
+"Vice President Teofisto Guingona",PERSON
+"Wahab Pangadaman,",PERSON
+"Wilhelm Soriano,",PERSON
+"William Oy-oy,",PERSON

@@ -1,5 +1,7 @@
 package ner;
 
+import java.util.List;
+
 import models.NamedEntity;
 import models.NamedEntity.Category;
 
@@ -15,6 +17,29 @@ public class NamedEntityRecognizer {
 		personRegexMatcher = RegexMatcher.getPersonRegexMatcher();
 		locationRegexMatcher = RegexMatcher.getLocationRegexMatcher();
 		dateRegexMatcher = RegexMatcher.getDateRegexMatcher();
+	}
+
+	public String getMasterRegex() {
+		String personRegex = convertToString(personRegexMatcher.regexList);
+		String locationRegex = convertToString(locationRegexMatcher.regexList);
+		String dateRegex = convertToString(dateRegexMatcher.regexList);
+		// return locationRegex;
+		return "(" + locationRegex + ")|(" + dateRegex + ")|(" + personRegex + ")";
+	}
+
+	public String convertToString(List<String> regexList) {
+		StringBuilder sb = new StringBuilder();
+		boolean first = true;
+		for (String regex : regexList) {
+			if (!first) {
+				sb.append("|");
+			}
+			first = false;
+			sb.append("(" + regex + ")");
+
+		}
+
+		return sb.toString().trim();
 	}
 
 	public NamedEntity isNamedEntity(String string) {

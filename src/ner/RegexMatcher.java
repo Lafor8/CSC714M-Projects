@@ -114,6 +114,10 @@ public class RegexMatcher {
 
 		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
 		matcher.regexList.add(pantukoy + "\\s" + regex);
+
+		// System.out.println(pantukoy + "\\s" + capitalizedStart);
+		// System.out.println(pantukoy + "\\s" + regex);
+
 		// matcher.regexList
 		// .add("( ((\"([A-Z][^(\\s|\\.|,|!|?|;)]+)\"|([A-Z][^(\\s|\\.|,|!|?|;)]+))|(ng|mga|ni|of|on|the|an?|for)))*");
 		// System.out.println(pantukoy + "\\s" + regex);
