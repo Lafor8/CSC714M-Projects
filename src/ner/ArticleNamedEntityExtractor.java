@@ -14,7 +14,7 @@ import models.NamedEntity.Category;
 
 public class ArticleNamedEntityExtractor {
 
-	public static final int N_GRAM_LIMIT = 5;
+	public static final int N_GRAM_LIMIT = 8;
 
 	public List<NamedEntity> process(List<ArticleFile> articleFiles) {
 		HashSet<NamedEntity> namedEntities = new LinkedHashSet<NamedEntity>();

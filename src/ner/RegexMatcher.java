@@ -41,9 +41,60 @@ public class RegexMatcher {
 	 */
 
 	public static RegexMatcher getDateRegexMatcher() {
-		// TODO add the date regexes here
+		RegexMatcher matcher = new RegexMatcher();
 
-		return new RegexMatcher();
+		// Specific dates/periods/events
+		matcher.regexList.add("([A-z][A-z']+ ){1,4}[Aa]nniversary");
+		matcher.regexList.add("([A-z][A-z']+ ){1,4}[Dd]ay");
+		matcher.regexList.add("[Aa]raw [Nn]g ([A-z][A-z]+ ){0,3}[A-z][A-z]+");
+		matcher.regexList.add("([Ii]ka-[0-9]{1,3} )?[Aa]nibersaryo [Nn]g ([A-z][A-z]+ ){0,3}[A-z][A-z]+");
+		matcher.regexList.add("[Dd]ekada '[0-9]{2}");
+
+		// In numeric format
+		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
+
+		// Year only
+		matcher.regexList.add("(['][0-9]{2})|([1-2][0-9]{3})");
+
+		// Days of the week
+		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado", "[Ll]inggo" };
+		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?", "[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
+
+		for (String s : araw) {
+			matcher.regexList.add(s);
+		}
+		for (String s : day) {
+			matcher.regexList.add(s);
+		}
+
+		// In the format: MONTH [DAY][,] ['][YEAR]
+		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?", "[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?", "[Dd]is(yembre)?" };
+		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?", "[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
+
+		String dayYear = "( ([0-2]?[0-9][,]?))?(([1-2][0-9]{3})|(['][0-9]{2})?)?";
+		// TODO: test
+		// hunyo 12
+		// Nobyembre 4
+		// Enero 20
+		// hulyo 2, 2014
+		// hunyo 2 '13
+		// hulyo '23
+		// hunyo 12,2012
+
+		for (String s : buwan) {
+			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+		}
+		for (String s : month) {
+			matcher.regexList.add(s + dayYear);
+		}
+
+		// TODO:
+		// noong (nakaraang)? WORD
+		// kahapon, bukas
+		// etc.
+
+		return matcher;
 	}
 
 	/*
@@ -56,8 +107,31 @@ public class RegexMatcher {
 
 		// matcher.regexList.add("[A-Z].*");
 
-		matcher.regexList.add("([A-Z][]+ ){0,4}[A-Z][A-z']+");
-		matcher.regexList.add("([A-Z][A-z']+ ){0,4}[A-Z][A-z']+");
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|,|;|?|!)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
+		matcher.regexList.add(capitalizedWord);
+		matcher.regexList.add(regex);
+
+		// System.out.println(capitalizedStart);
+		// System.out.println(regex + "|" + capitalizedWord);
+
+		//
+		// // Capital first but with 1 or more small intermediate
+		// matcher.regexList.add("([A-Z][^\\s]+ )([A-z][^\\s]+
+		// ){0,3}([A-Z][^\\s]+)");
+
 		return matcher;
 	}
 
@@ -69,7 +143,17 @@ public class RegexMatcher {
 	 * location keywords.
 	 */
 	public static RegexMatcher getLocationKeywordsRegexMatcher() {
-		// TODO add the location keywords here
+
+		RegexMatcher locationKeywords = new RegexMatcher();
+
+		String genericFilipinoKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo|[lL]ugar|[pP]ook).*";
+		String genericEnglishKeywords = ".*([cC]ity|[cC]ountry|[pP]rovince|[rR]egion|[sS]tate|[rR]epublic|[sS]treet|[sS]t\\.).*";
+		String actualPlaceNames = "[aA]laminos|[aA]ngeles|[aA]ntipolo|[bB]acolod|[bB]acoor|[bB]ago|[bB]aguio|[bB]ais|[bB]alanga|[bB]atac|[bB]atangas|[bB]ayawan|[bB]aybay|[bB]ayugan|[bB]binan|[bB]islig|[bB]ogo|[bB]orongan|[bB]utuan|[cC]abadbaran|[cC]abanatuan|[cC]abuyao|[cC]adiz|[cC]agayan|[cC]alamba[pP]hilippines";
+
+		locationKeywords.regexList.add(genericFilipinoKeywords);
+		locationKeywords.regexList.add(genericEnglishKeywords);
+		locationKeywords.regexList.add(actualPlaceNames);
+
 		return new RegexMatcher();
 	}
 
