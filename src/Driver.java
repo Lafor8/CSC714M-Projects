@@ -20,7 +20,7 @@ public class Driver {
 		// articleFiles = io.process("data");
 		// articleFiles = io.process("data/Opinyon/2002/June.xml");
 		String filePath = "data/";
-		String fileName = "NewsTest1";
+		String fileName = "NewsTest2";
 		articleFiles = io.process(filePath + fileName + ".xml");
 		// articleFiles = io.process("data");
 

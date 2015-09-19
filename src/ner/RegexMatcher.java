@@ -150,6 +150,7 @@ public class RegexMatcher {
 		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
+		String word = "([^(\\s|\\.|!|\\?|;)]+)";
 
 		String articles = "(ng|mga|ni|of|on|the|an?|for|at)";
 
@@ -163,7 +164,7 @@ public class RegexMatcher {
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = PERSON_PANTUKOY;
-		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s" + word + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);
 		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
@@ -177,6 +178,8 @@ public class RegexMatcher {
 		String capitalizedStart = "(\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
+		String word = "([^(\\s|\\.|!|\\?|;)]+)";
+
 		String articles = "(ng|mga|ni|of|on|the|an?|for|at)";
 
 		// 1-5 Consecutive Capitals
@@ -189,7 +192,7 @@ public class RegexMatcher {
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = LOCATION_PANTUKOY;
-		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s" + word + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);
 		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
