@@ -219,7 +219,7 @@ public class RegexMatcher {
 		RegexMatcher locationKeywords = new RegexMatcher();
 
 		String genericKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo).*";
-		String actualPlaceNames = "";
+		String actualPlaceNames = ".*(Manila|Metro|Quezon|Pasay|Alabang|Muntinlupa).*";
 
 		locationKeywords.regexList.add("**");
 		locationKeywords.regexList.add("*[lL]ungsod*");

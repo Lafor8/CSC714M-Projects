@@ -19,7 +19,7 @@ public class Driver {
 		// Read files
 		// articleFiles = io.process("data");
 		// articleFiles = io.process("data/Opinyon/2002/June.xml");
-		articleFiles = io.process("data");
+		articleFiles = io.process("data/Test.xml");
 		// articleFiles = io.process("data");
 
 		// Categorize Recognized Entities
