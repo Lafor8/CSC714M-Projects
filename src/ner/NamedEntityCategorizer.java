@@ -19,8 +19,7 @@ public class NamedEntityCategorizer {
 
 		String string = ne.getCleanString();
 
-		if (dateRegexMatcher.matchesAnyRegex(string)) // override those obtained
-														// with sa Enero ....
+		if (ne.category != null && !ne.category.equals(Category.PERSON) && dateRegexMatcher.matchesAnyRegex(string))
 			return Category.DATE;
 
 		if (ne.category != null)

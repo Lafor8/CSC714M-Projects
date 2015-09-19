@@ -16,10 +16,12 @@ public class RegexMatcher {
 	public boolean matchesAnyRegex(String string) {
 
 		for (String regex : regexList) {
+
 			Pattern pattern = Pattern.compile(regex);
 			Matcher matcher = pattern.matcher(string);
-			while (matcher.find())
+			while (matcher.find()) {
 				return true;
+			}
 		}
 
 		return false;

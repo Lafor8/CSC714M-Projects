@@ -50,12 +50,12 @@ public class NamedEntityRecognizer {
 
 		NamedEntity ne = new NamedEntity(string, null);
 
-		if (dateRegexMatcher.matchesAnyRegex(string))
-			ne.category = Category.DATE;
+		if (personRegexMatcher.matchesAnyRegex(string))
+			ne.category = Category.PERSON;
 		else if (locationRegexMatcher.matchesAnyRegex(string))
 			ne.category = Category.LOCATION;
-		else if (personRegexMatcher.matchesAnyRegex(string))
-			ne.category = Category.PERSON;
+		else if (dateRegexMatcher.matchesAnyRegex(string))
+			ne.category = Category.DATE;
 		else {
 
 			if (namedEntityRegexMatcher.matchesAnyRegex(string))
