@@ -348,6 +348,6 @@ public class RegexMatcher {
 		locationKeywords.regexList.add(genericEnglishKeywords);
 		locationKeywords.regexList.add(actualPlaceNames);
 
-		return new RegexMatcher();
+		return locationKeywords;
 	}
 }
