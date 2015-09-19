@@ -11,7 +11,7 @@ public class NamedEntityCategorizer {
 												// regexes
 
 	public NamedEntityCategorizer() {
-		dateRegexMatcher = RegexMatcher.getDateRegexMatcher();
+		dateRegexMatcher = RegexMatcher.getDateKeywordsRegexMatcher();
 		locationKeywordsRegexMatcher = RegexMatcher.getLocationKeywordsRegexMatcher();
 	}
 

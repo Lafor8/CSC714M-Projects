@@ -24,10 +24,11 @@ public class NamedEntityRecognizer {
 		String locationRegex = convertToString(locationRegexMatcher.regexList);
 		String dateRegex = convertToString(dateRegexMatcher.regexList);
 
+		String defaultRegex = convertToString(namedEntityRegexMatcher.regexList);
 		// System.out.println(locationRegex);
 
 		// return locationRegex;
-		return "(" + locationRegex + ")|(" + dateRegex + ")|(" + personRegex + ")";
+		return "(" + locationRegex + ")|(" + dateRegex + ")|(" + personRegex + "|" + defaultRegex + ")";
 	}
 
 	public String convertToString(List<String> regexList) {
@@ -58,7 +59,7 @@ public class NamedEntityRecognizer {
 		else {
 
 			if (namedEntityRegexMatcher.matchesAnyRegex(string))
-				ne.category = Category.PERSON; // default
+				ne.category = null; // unknown
 			else
 				return null; // not a named entity
 		}

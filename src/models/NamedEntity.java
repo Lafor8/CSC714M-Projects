@@ -24,6 +24,10 @@ public class NamedEntity implements Comparable<NamedEntity> {
 	}
 
 	public String getCleanString() {
+
+		if (category == null)
+			return string;
+
 		if (category.equals(Category.PERSON)) {
 			// remove si/ni/kay/sina/nina/kina
 			return string.replaceAll(RegexMatcher.PERSON_PANTUKOY + "\\s", "").trim();
