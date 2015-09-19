@@ -3,7 +3,6 @@ package ner;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -24,17 +23,20 @@ public class ArticleNamedEntityExtractor {
 		for (ArticleFile articleFile : articleFiles) {
 			for (Article article : articleFile.articles) {
 				// Process Title
-				namedEntities.addAll(processString(article.title));
+				// namedEntities.addAll(processString(article.title));
 
 				// Process Author
-				HashSet<NamedEntity> authorNamedEntities = processString(article.author);
-				// Make sure all the categories here are persons, since this is
-				// the author tag
-				Iterator<NamedEntity> authorIterator = authorNamedEntities.iterator();
-				while (authorIterator.hasNext()) {
-					NamedEntity curr = authorIterator.next();
-					curr.category = Category.PERSON;
-				}
+				// HashSet<NamedEntity> authorNamedEntities =
+				// processString(article.author);
+				// // Make sure all the categories here are persons, since this
+				// is
+				// // the author tag
+				// Iterator<NamedEntity> authorIterator =
+				// authorNamedEntities.iterator();
+				// while (authorIterator.hasNext()) {
+				// NamedEntity curr = authorIterator.next();
+				// curr.category = Category.PERSON;
+				// }
 
 				// namedEntities.addAll(processString(article.author));
 
@@ -66,7 +68,6 @@ public class ArticleNamedEntityExtractor {
 
 		NamedEntityRecognizer ner = new NamedEntityRecognizer();
 		NamedEntityCategorizer nec = new NamedEntityCategorizer();
-		NGramIterator nGramIterator = new NGramIterator(string);
 
 		String regex = ner.getMasterRegex();
 		Pattern pattern = Pattern.compile(regex);
@@ -87,18 +88,28 @@ public class ArticleNamedEntityExtractor {
 				// Categorize the Name Entity
 				Category category = nec.categorize(ne);
 
-				// Add the newly recognized and categorized Named
-				// Entity to the set
-				namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
+				if (category.equals(Category.PERSON) || category.equals(Category.LOCATION)) {
+					ArrayList<NamedEntity> neList = splitAt(ne.getCleanString(), category);
+					for (NamedEntity entity : neList)
+						namedEntities.add(new NamedEntity("\"" + entity.getCleanString() + "\"", category));
+				} else {
 
-				// Move the cursor after the current n-gram
-				// This also invalidates the current n-gram tokens
-				// so that they won't be considered in the next
-				// iteration anymore
-				nGramIterator.markLastNGramAsAlreadyProcessed();
+					// Add the newly recognized and categorized Named
+					// Entity to the set
+					namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
+				}
 			}
 
 		}
 		return namedEntities;
+	}
+
+	private ArrayList<NamedEntity> splitAt(String s, Category category) {
+		ArrayList<NamedEntity> neList = new ArrayList<NamedEntity>();
+		String[] tokens = s.split("at");
+		for (String token : tokens)
+			neList.add(new NamedEntity(token.trim(), category));
+
+		return neList;
 	}
 }
