@@ -38,6 +38,9 @@ public class RegexMatcher {
 	static String end = " (" + capitalizedStart + "|" + number + ")";
 	static String neRegex = first + middle + end;
 
+	public static final String PERSON_PANTUKOY = "(ni|[Ss]i|nina|[Ss]ina|[Kk]ay|[Kk]ina|[Ss]ila|nila)";
+	public static final String LOCATION_PANTUKOY = "([Ss]a)";
+
 	/*
 	 * This RegexMatcher will be used for deciding whether a string is a named
 	 * entity or not. Basically, the date + person/location regex matchers
@@ -159,7 +162,7 @@ public class RegexMatcher {
 
 		RegexMatcher matcher = new RegexMatcher();
 
-		String pantukoy = "(ni|[Ss]i|nina|[Ss]ina|[Kk]ay|[Kk]ina|[Ss]ila|nila)";
+		String pantukoy = PERSON_PANTUKOY;
 		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);
@@ -185,7 +188,7 @@ public class RegexMatcher {
 
 		RegexMatcher matcher = new RegexMatcher();
 
-		String pantukoy = "([Ss]a)";
+		String pantukoy = LOCATION_PANTUKOY;
 		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);

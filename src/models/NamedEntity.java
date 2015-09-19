@@ -1,5 +1,7 @@
 package models;
 
+import ner.RegexMatcher;
+
 public class NamedEntity implements Comparable<NamedEntity> {
 
 	public enum Category {
@@ -24,9 +26,9 @@ public class NamedEntity implements Comparable<NamedEntity> {
 	public String getCleanString() {
 		if (category.equals(Category.PERSON)) {
 			// remove si/ni/kay/sina/nina/kina
-			return string.replaceAll("(si|ni|kay|sina|nina|kina)\\s", "").trim();
+			return string.replaceAll(RegexMatcher.PERSON_PANTUKOY + "\\s", "").trim();
 		} else if (category.equals(Category.LOCATION)) {
-			return string.replaceAll("(sa)\\s", "").trim();
+			return string.replaceAll(RegexMatcher.LOCATION_PANTUKOY + "\\s", "").trim();
 		}
 
 		return string;
