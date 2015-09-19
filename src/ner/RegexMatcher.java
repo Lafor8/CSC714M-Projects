@@ -26,6 +26,18 @@ public class RegexMatcher {
 		return newRegexMatcher;
 	}
 
+	static String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
+	static String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
+	static String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
+	static String number = "[0-9]+";
+
+	static String articles = "(ng|mga|ni|at|of|on|the|an?)";
+
+	static String first = "((^.\\s)[A-Z][^(\\s|\\.|,)]+)";
+	static String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+	static String end = " (" + capitalizedStart + "|" + number + ")";
+	static String neRegex = first + middle + end;
+
 	/*
 	 * This RegexMatcher will be used for deciding whether a string is a named
 	 * entity or not. Basically, the date + person/location regex matchers
@@ -54,11 +66,16 @@ public class RegexMatcher {
 		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
 
 		// Year only
-		matcher.regexList.add("(['][0-9]{2})|([1-2][0-9]{3})");
+		String pantukoy = "(noong|nakaraang)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+
+		matcher.regexList.add(optPantukoy + "(['][0-9]{2})|([1-2][0-9]{3})");
 
 		// Days of the week
-		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado", "[Ll]inggo" };
-		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?", "[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
+		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
+				"[Ll]inggo" };
+		String day[] = { "[Mm]on(day)?", "[Tt]ue(s(day)?)?", "[Ww]ed(nesday)?", "[Tt]hu(rs(day)?)?", "[Ff]ri(day)?",
+				"[Ss]at(urday)?", "[Ss]un(day)?" };
 
 		for (String s : araw) {
 			matcher.regexList.add(s);
@@ -68,8 +85,11 @@ public class RegexMatcher {
 		}
 
 		// In the format: MONTH [DAY][,] ['][YEAR]
-		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?", "[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?", "[Dd]is(yembre)?" };
-		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?", "[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
+		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?",
+				"[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?",
+				"[Dd]is(yembre)?" };
+		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?",
+				"[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
 
 		String dayYear = "( ([0-2]?[0-9][,]?))?(([1-2][0-9]{3})|(['][0-9]{2})?)?";
 		// TODO: test
@@ -97,18 +117,74 @@ public class RegexMatcher {
 		return matcher;
 	}
 
+	public static RegexMatcher getPersonRegexMatcher() {
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
+		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + ")";
+		String regex = first + middle + end;
+
+		RegexMatcher matcher = new RegexMatcher();
+
+		String pantukoy = "(ni|si|nina|sina|kay|kina|sila|nila)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+
+		matcher.regexList.add(optPantukoy + "\\s" + regex);
+		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
+
+		return matcher;
+
+	}
+
+	public static RegexMatcher getLocationRegexMatcher() {
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
+		String capitalizedStart = "(\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
+		String number = "[0-9]+";
+
+		String articles = "(ng|mga|ni|of|on|the|an?|for)";
+
+		// 1-5 Consecutive Capitals
+
+		String first = capitalizedStart;
+		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
+		String end = " (" + capitalizedStart + "|" + number + ")";
+		String regex = first + middle + end;
+
+		RegexMatcher matcher = new RegexMatcher();
+
+		String pantukoy = "(sa)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+
+		matcher.regexList.add(optPantukoy + "\\s" + regex);
+		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
+
+		// System.out.println(pantukoy + "\\s" + capitalizedStart);
+		// System.out.println(pantukoy + "\\s" + regex);
+
+		// matcher.regexList
+		// .add("( ((\"([A-Z][^(\\s|\\.|,|!|?|;)]+)\"|([A-Z][^(\\s|\\.|,|!|?|;)]+))|(ng|mga|ni|of|on|the|an?|for)))*");
+		// System.out.println(pantukoy + "\\s" + regex);
+
+		return matcher;
+	}
+
 	/*
 	 * This RegexMatcher will be used to determine whether a string refers to a
 	 * person/location.
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
-		// TODO add the person or location regexes here
-		RegexMatcher matcher = new RegexMatcher();
-
-		// matcher.regexList.add("[A-Z].*");
 
 		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
-		String capitalizedWord = "([A-Z][^(\\s|\\.|,|;|?|!)]+)";
+		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
+
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
 
@@ -121,11 +197,13 @@ public class RegexMatcher {
 		String end = " (" + capitalizedStart + "|" + number + ")";
 		String regex = first + middle + end;
 
+		// TODO add the person or location regexes here
+		RegexMatcher matcher = new RegexMatcher();
+
+		// matcher.regexList.add("[A-Z].*");
+
 		matcher.regexList.add(capitalizedWord);
 		matcher.regexList.add(regex);
-
-		// System.out.println(capitalizedStart);
-		// System.out.println(regex + "|" + capitalizedWord);
 
 		//
 		// // Capital first but with 1 or more small intermediate
@@ -148,7 +226,7 @@ public class RegexMatcher {
 
 		String genericFilipinoKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo|[lL]ugar|[pP]ook).*";
 		String genericEnglishKeywords = ".*([cC]ity|[cC]ountry|[pP]rovince|[rR]egion|[sS]tate|[rR]epublic|[sS]treet|[sS]t\\.).*";
-		String actualPlaceNames = "[aA]laminos|[aA]ngeles|[aA]ntipolo|[bB]acolod|[bB]acoor|[bB]ago|[bB]aguio|[bB]ais|[bB]alanga|[bB]atac|[bB]atangas|[bB]ayawan|[bB]aybay|[bB]ayugan|[bB]binan|[bB]islig|[bB]ogo|[bB]orongan|[bB]utuan|[cC]abadbaran|[cC]abanatuan|[cC]abuyao|[cC]adiz|[cC]agayan|[cC]alamba[pP]hilippines";
+		String actualPlaceNames = "[aA]laminos|[aA]ngeles|[aA]ntipolo|[bB]acolod|[bB]acoor|[bB]ago|[bB]aguio|[bB]ais|[bB]alanga|[bB]atac|[bB]atangas|[bB]ayawan|[bB]aybay|[bB]ayugan|[bB]binan|[bB]islig|[bB]ogo|[bB]orongan|[bB]utuan|[cC]abadbaran|[cC]abanatuan|[cC]abuyao|[cC]adiz|[cC]agayan|[cC]alamba|[pP]hilippines|Manila|Metro|Quezon|Pasay|Alabang|Muntinlupa";
 
 		locationKeywords.regexList.add(genericFilipinoKeywords);
 		locationKeywords.regexList.add(genericEnglishKeywords);
@@ -156,5 +234,4 @@ public class RegexMatcher {
 
 		return new RegexMatcher();
 	}
-
 }
