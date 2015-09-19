@@ -1,26 +1,25 @@
-"Agosto 14, 2010",DATE
-"sa mula Enero",DATE
-"Central Mindanao",LOCATION
-"DOH,",LOCATION
-"Dengue,",LOCATION
-"Eastern Visayas",LOCATION
-"MANILA, Philippines",LOCATION
-"Malacañang",LOCATION
-"National Capital Region",LOCATION
-"Northern Mindanao",LOCATION
-"Southern Mindanao",LOCATION
-"Western Visayas",LOCATION
-"Aedes Aegypti",PERSON
-"Ayon",PERSON
-"CALABARZON",PERSON
-"DOH",PERSON
-"Dengue",PERSON
-"Department of Health",PERSON
-"Dr. Willie Ong,",PERSON
-"Eric Tayag",PERSON
-"Ito",PERSON
-"Nakatakdang",PERSON
-"P3,000",PERSON
-"Pinakamataas",PERSON
-"Sa",PERSON
-"Secretary Enrique Ona at Usec",PERSON
+"Agosto 14, 2010",DATE,,,Person,Location,Date
+sa mula Enero,DATE,,,Secretary Enrique Ona at Usec. Eric Tayag,"Manila, Philippines",Enero
+Central Mindanao,LOCATION,,,Dr. Willie Ong,Malacanang,"Agosto 14, 2010"
+"DOH,",LOCATION,,,,Western Visayas,
+"Dengue,",LOCATION,,,,Central Mindanao,
+Eastern Visayas,LOCATION,,,,CALABARZON,
+"MANILA, Philippines",LOCATION,,,,Eastern Visayas,
+Malacañang,LOCATION,,,,National Capital Region,
+National Capital Region,LOCATION,,,,Southern Mindanao,
+Northern Mindanao,LOCATION,,,,Northern Mindanao,
+Southern Mindanao,LOCATION,,,,,
+Western Visayas,LOCATION,,,,,
+Aedes Aegypti,PERSON,,,,,
+Ayon,PERSON,,,,,
+CALABARZON,PERSON,,,,,
+DOH,PERSON,,,,,
+Dengue,PERSON,,,,,
+Department of Health,PERSON,,,,,
+"Dr. Willie Ong,",PERSON,,,,,
+Ito,PERSON,,,,,
+Nakatakdang,PERSON,,,,,
+"P3,000",PERSON,,,,,
+Pinakamataas,PERSON,,,,,
+Sa,PERSON,,,,,
+Secretary Enrique Ona at Usec. Eric Tayag,PERSON,,,,,
