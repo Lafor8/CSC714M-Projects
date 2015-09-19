@@ -29,6 +29,8 @@ public class NamedEntity implements Comparable<NamedEntity> {
 			return string.replaceAll(RegexMatcher.PERSON_PANTUKOY + "\\s", "").trim();
 		} else if (category.equals(Category.LOCATION)) {
 			return string.replaceAll(RegexMatcher.LOCATION_PANTUKOY + "\\s", "").trim();
+		} else if (category.equals(Category.DATE)) {
+			return string.replaceAll(RegexMatcher.DATE_PANTUKOY + "\\s", "").trim();
 		}
 
 		return string;

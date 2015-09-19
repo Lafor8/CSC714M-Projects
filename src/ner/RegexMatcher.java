@@ -40,6 +40,7 @@ public class RegexMatcher {
 
 	public static final String PERSON_PANTUKOY = "(ni|[Ss]i|nina|[Ss]ina|[Kk]ay|[Kk]ina|[Ss]ila|nila)";
 	public static final String LOCATION_PANTUKOY = "([Ss]a)";
+	public static final String DATE_PANTUKOY = "([Nn]oong|[Nn]akaraang)";
 
 	/*
 	 * This RegexMatcher will be used for deciding whether a string is a named
@@ -69,7 +70,7 @@ public class RegexMatcher {
 		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
 
 		// Year only
-		String pantukoy = "(noong|nakaraang)";
+		String pantukoy = DATE_PANTUKOY;
 		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
 		matcher.regexList.add(optPantukoy + "(['][0-9]{2})|([1-2][0-9]{3})");
