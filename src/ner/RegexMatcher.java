@@ -129,7 +129,7 @@ public class RegexMatcher {
 
 		String first = capitalizedStart;
 		String middle = "( (" + capitalizedStart + "|" + articles + "))*";
-		String end = " (" + capitalizedStart + "|" + number + ")";
+		String end = " (" + capitalizedStart + ")";
 		String regex = first + middle + end;
 
 		RegexMatcher matcher = new RegexMatcher();

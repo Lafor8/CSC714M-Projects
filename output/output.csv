@@ -1,13 +1,8 @@
 "2001",DATE
 "April 01",DATE
 "April 03",DATE
-"Fr",DATE
 "Huwebes",DATE
-"We",DATE
 "mar",DATE
-"sa",DATE
-"th",DATE
-"tu",DATE
 "Cavite",LOCATION
 "DOJ",LOCATION
 "Dacer",LOCATION
@@ -17,7 +12,7 @@
 "Pinyahan, Quezon City",LOCATION
 "Southern Tagalog",LOCATION
 "Alex Diloy",PERSON
-"Chris Hermida, 31",PERSON
+"Chris Hermida,",PERSON
 "Defense Secretary Angelo Reyes",PERSON
 "Delon Porcalla",PERSON
 "Doris Franche",PERSON
