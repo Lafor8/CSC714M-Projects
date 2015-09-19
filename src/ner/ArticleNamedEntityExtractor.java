@@ -36,10 +36,10 @@ public class ArticleNamedEntityExtractor {
 					curr.category = Category.PERSON;
 				}
 
-				namedEntities.addAll(processString(article.author));
+				// namedEntities.addAll(processString(article.author));
 
 				// Process Date
-				namedEntities.addAll(processString(article.date));
+				// namedEntities.addAll(processString(article.date));
 
 				// Process Body
 				namedEntities.addAll(processString(article.body));
