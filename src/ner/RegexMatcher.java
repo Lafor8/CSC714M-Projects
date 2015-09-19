@@ -159,7 +159,7 @@ public class RegexMatcher {
 
 		RegexMatcher matcher = new RegexMatcher();
 
-		String pantukoy = "(ni|si|nina|sina|kay|kina|sila|nila)";
+		String pantukoy = "(ni|[Ss]i|nina|[Ss]ina|[Kk]ay|[Kk]ina|[Ss]ila|nila)";
 		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);
@@ -185,7 +185,7 @@ public class RegexMatcher {
 
 		RegexMatcher matcher = new RegexMatcher();
 
-		String pantukoy = "(sa)";
+		String pantukoy = "([Ss]a)";
 		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
 		matcher.regexList.add(optPantukoy + "\\s" + regex);
