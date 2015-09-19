@@ -19,7 +19,9 @@ public class Driver {
 		// Read files
 		// articleFiles = io.process("data");
 		// articleFiles = io.process("data/Opinyon/2002/June.xml");
-		articleFiles = io.process("data/Test.xml");
+		String filePath = "data/";
+		String fileName = "Test";
+		articleFiles = io.process(filePath + fileName + ".xml");
 		// articleFiles = io.process("data");
 
 		// Categorize Recognized Entities
@@ -28,7 +30,8 @@ public class Driver {
 
 		// Write the output to a file
 
-		CSVWriter.write("output.csv", namedEntityList); // TODO: Improve
+		CSVWriter.write(fileName + ".csv", namedEntityList); // TODO:
+																// Improve
 		// Write Output if
 		// needed
 

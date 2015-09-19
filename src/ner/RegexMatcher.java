@@ -72,10 +72,10 @@ public class RegexMatcher {
 		matcher.regexList.add(optPantukoy + "(['][0-9]{2})|([1-2][0-9]{3})");
 
 		// Days of the week
-		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
-				"[Ll]inggo" };
-		String day[] = { "[Mm]on(day)?", "[Tt]ue(s(day)?)?", "[Ww]ed(nesday)?", "[Tt]hu(rs(day)?)?", "[Ff]ri(day)?",
-				"[Ss]at(urday)?", "[Ss]un(day)?" };
+		String araw[] = { "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado", "Linggo" };
+		String day[] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+		String dayAbbreviations[] = { "Mon\\.?", "Tue(s)?\\.?", "Wed\\.?", "Thu(rs)?\\.?", "Fri\\.?", "Sat\\.?",
+				"Sun\\.?" };
 
 		for (String s : araw) {
 			matcher.regexList.add(s);
@@ -83,15 +83,25 @@ public class RegexMatcher {
 		for (String s : day) {
 			matcher.regexList.add(s);
 		}
+		for (String s : dayAbbreviations) {
+			matcher.regexList.add("\\s" + s + "\\s");
+		}
 
 		// In the format: MONTH [DAY][,] ['][YEAR]
-		String buwan[] = { "[Ee]ne(ro)?", "[Pp]eb(rero)?", "[Mm]ar(so)?", "[Aa]br(il)?", "[Mm]ay(o)?",
-				"[Hh]u[nl](yo)?", "[Aa]go(sto)?", "[Ss]et(yembre)?", "[Oo]kt(ubre)?", "[Nn]ob(yembre)?",
-				"[Dd]is(yembre)?" };
-		String month[] = { "[Jj]an(uary)?", "[Ff]eb(ruary)?", "[Mm]ar(ch)?", "[Aa]pr(il)?", "[Mm]ay", "[Jj]un(e)?",
-				"[Jj]ul(y)?", "[Ss]ep(t(ember)?)?", "[Oo]ct(ober)?", "[Dd]ec(ember)?" };
+		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre",
+				"Nobyembre", "Disyembre" };
+		String month[] = { "January", "February", "March", "April", "May", "June", "July", "September", "October",
+				"November", "December" };
 
-		String dayYear = "( ([0-2]?[0-9][,]?))?(([1-2][0-9]{3})|(['][0-9]{2})?)?";
+		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?",
+				"Nob\\.?", "Dis\\.?" };
+		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "Jun\\.?", "Jul\\.?",
+				"Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
+
+		String year = "(([1-2][0-9]{3})|(['][0-9]{2}))";
+		String dayYear = "( ([0-3]?[0-9][,]? ?))?(" + year + ")?"; // includes
+																	// just day
+
 		// TODO: test
 		// hunyo 12
 		// Nobyembre 4
@@ -102,11 +112,26 @@ public class RegexMatcher {
 		// hunyo 12,2012
 
 		for (String s : buwan) {
+			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add(s);
 			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
 		}
 		for (String s : month) {
+			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add(s);
+		}
+		for (String s : buwanAbbreviations) {
+			matcher.regexList.add(s + year);
+			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add("\\s" + s + "\\s");
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+		}
+		for (String s : monthAbbreviations) {
+			matcher.regexList.add(s + year);
+			matcher.regexList.add(s + dayYear);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 
 		// TODO:
