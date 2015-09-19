@@ -66,7 +66,10 @@ public class RegexMatcher {
 		// matcher.regexList.add("([0-3][0-9]([0-9]{2})?[/.- ])?([0-3][0-9])[/.- ]([0-3][0-9]([0-9]{2})?)");
 
 		// Year only
-		matcher.regexList.add("(['][0-9]{2})|([1-2][0-9]{3})");
+		String pantukoy = "(noong|nakaraang)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
+
+		matcher.regexList.add(optPantukoy + "(['][0-9]{2})|([1-2][0-9]{3})");
 
 		// Days of the week
 		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
@@ -132,9 +135,10 @@ public class RegexMatcher {
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = "(ni|si|nina|sina|kay|kina|sila|nila)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
-		matcher.regexList.add(pantukoy + "\\s" + regex);
-		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
+		matcher.regexList.add(optPantukoy + "\\s" + regex);
+		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
 
 		return matcher;
 
@@ -157,9 +161,10 @@ public class RegexMatcher {
 		RegexMatcher matcher = new RegexMatcher();
 
 		String pantukoy = "(sa)";
+		String optPantukoy = "(" + pantukoy + "|(" + pantukoy + "\\s.*\\s" + "))";
 
-		matcher.regexList.add(pantukoy + "\\s" + regex);
-		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
+		matcher.regexList.add(optPantukoy + "\\s" + regex);
+		matcher.regexList.add(optPantukoy + "\\s" + capitalizedStart);
 
 		// System.out.println(pantukoy + "\\s" + capitalizedStart);
 		// System.out.println(pantukoy + "\\s" + regex);
