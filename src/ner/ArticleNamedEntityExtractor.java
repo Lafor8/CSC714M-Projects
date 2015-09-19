@@ -88,16 +88,19 @@ public class ArticleNamedEntityExtractor {
 				// Categorize the Name Entity
 				Category category = nec.categorize(ne);
 
-				if (category.equals(Category.PERSON) || category.equals(Category.LOCATION)) {
-					ArrayList<NamedEntity> neList = splitAt(ne.getCleanString(), category);
-					for (NamedEntity entity : neList)
-						namedEntities.add(new NamedEntity("\"" + entity.getCleanString() + "\"", category));
-				} else {
+				// if (category.equals(Category.PERSON) ||
+				// category.equals(Category.LOCATION)) {
+				// ArrayList<NamedEntity> neList = splitAt(ne.getCleanString(),
+				// category);
+				// for (NamedEntity entity : neList)
+				// namedEntities.add(new NamedEntity("\"" +
+				// entity.getCleanString() + "\"", category));
+				// } else {
 
-					// Add the newly recognized and categorized Named
-					// Entity to the set
-					namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
-				}
+				// Add the newly recognized and categorized Named
+				// Entity to the set
+				namedEntities.add(new NamedEntity("\"" + ne.getCleanString() + "\"", category));
+				// }
 			}
 
 		}
