@@ -106,7 +106,7 @@ public class ArticleNamedEntityExtractor {
 
 	private ArrayList<NamedEntity> splitAt(String s, Category category) {
 		ArrayList<NamedEntity> neList = new ArrayList<NamedEntity>();
-		String[] tokens = s.split("at");
+		String[] tokens = s.split("\\sat\\s");
 		for (String token : tokens)
 			neList.add(new NamedEntity(token.trim(), category));
 
