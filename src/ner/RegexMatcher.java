@@ -71,8 +71,8 @@ public class RegexMatcher {
 		// Days of the week
 		String araw[] = { "[Ll]unes", "[Mm]artes", "[Mm]iyerkules", "[Hh]uwebes", "[Bb]iyernes", "[Ss]abado",
 				"[Ll]inggo" };
-		String day[] = { "[Mm]o(n(day)?)?", "[Tt]u(e(s(day)?)?)?", "[Ww]e(d(nesday)?)?", "[Tt]h(u(rs(day)?)?)?",
-				"[Ff]r(i(day)?)?", "[Ss]a(tur(day)?)?", "[Ss]u(n(day)?)?" };
+		String day[] = { "[Mm]on(day)?", "[Tt]ue(s(day)?)?", "[Ww]ed(nesday)?", "[Tt]hu(rs(day)?)?", "[Ff]ri(day)?",
+				"[Ss]at(urday)?", "[Ss]un(day)?" };
 
 		for (String s : araw) {
 			matcher.regexList.add(s);
@@ -131,7 +131,7 @@ public class RegexMatcher {
 
 		RegexMatcher matcher = new RegexMatcher();
 
-		String pantukoy = "(ni|si|nina|sina|kay|kina)";
+		String pantukoy = "(ni|si|nina|sina|kay|kina|sila|nila)";
 
 		matcher.regexList.add(pantukoy + "\\s" + regex);
 		matcher.regexList.add(pantukoy + "\\s" + capitalizedStart);
