@@ -51,17 +51,14 @@ public class RegexMatcher {
 	public static final String DATE_PANTUKOY = "([Nn]oong|[Nn]akaraang)";
 
 	/*
-	 * This RegexMatcher will be used for deciding whether a string is a named
-	 * entity or not. Basically, the date + person/location regex matchers
-	 * merged into one.
+	 * This RegexMatcher will be used for deciding whether a string is a named entity or not. Basically, the date + person/location regex matchers merged into one.
 	 */
 	public static RegexMatcher getNamedEntityRegexMatcher() {
 		return getDateRegexMatcher().mergeWith(getPersonOrLocationRegexMatcher());
 	}
 
 	/*
-	 * This RegexMatcher will be used to determine whether a string is a date or
-	 * not.
+	 * This RegexMatcher will be used to determine whether a string is a date or not.
 	 */
 
 	public static RegexMatcher getDateRegexMatcher() {
@@ -86,34 +83,28 @@ public class RegexMatcher {
 		// Days of the week
 		String araw[] = { "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado", "Linggo" };
 		String day[] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-		String dayAbbreviations[] = { "Mon\\.?", "Tue(s)?\\.?", "Wed\\.?", "Thu(rs)?\\.?", "Fri\\.?", "Sat\\.?",
-				"Sun\\.?" };
+		String dayAbbreviations[] = { "Mon\\.?", "Tue(s)?\\.?", "Wed\\.?", "Thu(rs)?\\.?", "Fri\\.?", "Sat\\.?", "Sun\\.?" };
 
 		for (String s : araw) {
-			matcher.regexList.add("\\s" + s + "\\s");
+			matcher.regexList.add(s);
 		}
 		for (String s : day) {
-			matcher.regexList.add("\\s" + s + "\\s");
+			matcher.regexList.add(s);
 		}
 		for (String s : dayAbbreviations) {
 			matcher.regexList.add("\\s" + s + "\\s");
 		}
 
 		// In the format: MONTH [DAY][,] ['][YEAR]
-		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre",
-				"Nobyembre", "Disyembre" };
-		String month[] = { "January", "February", "March", "April", "June", "July", "September", "October",
-				"November", "December" };
+		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre" };
+		String month[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
-		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?",
-				"Nob\\.?", "Dis\\.?" };
-		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?",
-				"Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
+		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?", "Nob\\.?", "Dis\\.?" };
+		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?", "Aug\\.", "Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
 
-		String year = "(([1-2][0-9]{3})|(['][0-9]{2}))";
-		String dayYear = "( ([0-3]?[0-9][,]? ?))(" + year + ")?"; // includes
+		String year = "(\\s(([1-2][0-9]{3})|(['][0-9]{2})))";
+		String dayYear = "(\\s([0-3]?[0-9][,]?))?" + year + "?\\s"; // includes
 																	// just day
-
 		// TODO: test
 		// hunyo 12
 		// Nobyembre 4
@@ -126,24 +117,20 @@ public class RegexMatcher {
 		for (String s : buwan) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
-			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s + year + "?");
 		}
 		for (String s : month) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : buwanAbbreviations) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
-			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s + year + "?");
 		}
 		for (String s : monthAbbreviations) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
 		}
 
 		// TODO:
@@ -217,8 +204,7 @@ public class RegexMatcher {
 	}
 
 	/*
-	 * This RegexMatcher will be used to determine whether a string refers to a
-	 * person/location.
+	 * This RegexMatcher will be used to determine whether a string refers to a person/location.
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
 
@@ -263,34 +249,28 @@ public class RegexMatcher {
 		// Days of the week
 		String araw[] = { "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado", "Linggo" };
 		String day[] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-		String dayAbbreviations[] = { "Mon\\.?", "Tue(s)?\\.?", "Wed\\.?", "Thu(rs)?\\.?", "Fri\\.?", "Sat\\.?",
-				"Sun\\.?" };
+		String dayAbbreviations[] = { "Mon\\.?", "Tue(s)?\\.?", "Wed\\.?", "Thu(rs)?\\.?", "Fri\\.?", "Sat\\.?", "Sun\\.?" };
 
 		for (String s : araw) {
-			matcher.regexList.add("\\s" + s + "\\s");
+			matcher.regexList.add(s);
 		}
 		for (String s : day) {
-			matcher.regexList.add("\\s" + s + "\\s");
+			matcher.regexList.add(s);
 		}
 		for (String s : dayAbbreviations) {
 			matcher.regexList.add("\\s" + s + "\\s");
 		}
 
 		// In the format: MONTH [DAY][,] ['][YEAR]
-		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre",
-				"Nobyembre", "Disyembre" };
-		String month[] = { "January", "February", "March", "April", "June", "July", "September", "October",
-				"November", "December" };
+		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre" };
+		String month[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
-		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?",
-				"Nob\\.?", "Dis\\.?" };
-		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?",
-				"Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
+		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?", "Nob\\.?", "Dis\\.?" };
+		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?", "Aug\\.", "Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
 
-		String year = "(([1-2][0-9]{3})|(['][0-9]{2}))";
-		String dayYear = "( ([0-3]?[0-9][,]? ?))(" + year + ")?"; // includes
+		String year = "(\\s(([1-2][0-9]{3})|(['][0-9]{2})))";
+		String dayYear = "(\\s([0-3]?[0-9][,]?))?" + year + "?\\s"; // includes
 																	// just day
-
 		// TODO: test
 		// hunyo 12
 		// Nobyembre 4
@@ -303,24 +283,20 @@ public class RegexMatcher {
 		for (String s : buwan) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
-			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s + year + "?");
 		}
 		for (String s : month) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : buwanAbbreviations) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
-			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
+			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s + year + "?");
 		}
 		for (String s : monthAbbreviations) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add("\\s" + s + "\\s");
 		}
 
 		// TODO:
@@ -332,11 +308,9 @@ public class RegexMatcher {
 	}
 
 	/*
-	 * This RegexMatcher will be used for categorizing an already recognized
-	 * Named Entity.
+	 * This RegexMatcher will be used for categorizing an already recognized Named Entity.
 	 * 
-	 * The regexes here won't actually be regexes; they'll most likely be
-	 * location keywords.
+	 * The regexes here won't actually be regexes; they'll most likely be location keywords.
 	 */
 	public static RegexMatcher getLocationKeywordsRegexMatcher() {
 
