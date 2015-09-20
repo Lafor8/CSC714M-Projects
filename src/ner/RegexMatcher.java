@@ -34,7 +34,7 @@ public class RegexMatcher {
 		return newRegexMatcher;
 	}
 
-	static String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.)";
+	static String abbreviations = "(([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bgy|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Gov|Hon|J|Jr|Ma|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sen|Sr|St|Supt)\\.)";
 	static String capitalizedWord = "([A-Z][^(\\s|\\.|,)]+)";
 	static String capitalizedStart = "(" + abbreviations + "|\"?" + capitalizedWord + "\"?)";
 	static String number = "[0-9]+";
@@ -90,10 +90,10 @@ public class RegexMatcher {
 				"Sun\\.?" };
 
 		for (String s : araw) {
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : day) {
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : dayAbbreviations) {
 			matcher.regexList.add("\\s" + s + "\\s");
@@ -102,16 +102,16 @@ public class RegexMatcher {
 		// In the format: MONTH [DAY][,] ['][YEAR]
 		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre",
 				"Nobyembre", "Disyembre" };
-		String month[] = { "January", "February", "March", "April", "May", "June", "July", "September", "October",
+		String month[] = { "January", "February", "March", "April", "June", "July", "September", "October",
 				"November", "December" };
 
 		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?",
 				"Nob\\.?", "Dis\\.?" };
-		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "Jun\\.?", "Jul\\.?",
+		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?",
 				"Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
 
 		String year = "(([1-2][0-9]{3})|(['][0-9]{2}))";
-		String dayYear = "( ([0-3]?[0-9][,]? ?))?(" + year + ")?"; // includes
+		String dayYear = "( ([0-3]?[0-9][,]? ?))(" + year + ")?"; // includes
 																	// just day
 
 		// TODO: test
@@ -126,13 +126,13 @@ public class RegexMatcher {
 		for (String s : buwan) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
 		}
 		for (String s : month) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : buwanAbbreviations) {
 			matcher.regexList.add(s + year);
@@ -155,7 +155,7 @@ public class RegexMatcher {
 	}
 
 	public static RegexMatcher getPersonRegexMatcher() {
-		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt|Usec)\\.";
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Gov|Hon|J|Jr|Ma|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sen|Sr|St|Supt|Usec)\\.";
 		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
@@ -222,7 +222,7 @@ public class RegexMatcher {
 	 */
 	public static RegexMatcher getPersonOrLocationRegexMatcher() {
 
-		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Hon|J|Jr|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sr|St|Supt)\\.";
+		String abbreviations = "([A-Z]|[0-9]?Lt|Ar|Archt?|Atty|Bb|Bgy|Bp|Br|Brig|Col|Di?r|Dra|Dn|Engg|Engr|Fr|G|Gen|Gng|Gov|Hon|J|Jr|Ma|Mr|Mr?s|Pr|Pres|Prof|Ptr|Rev|Sec|Sen|Sr|St|Supt)\\.";
 		String capitalizedWord = "([A-Z][^(\\s|\\.|!|\\?|;)]+)";
 		String capitalizedStart = "(" + abbreviations + "|\"" + capitalizedWord + "\"|" + capitalizedWord + ")";
 		String number = "[0-9]+";
@@ -267,10 +267,10 @@ public class RegexMatcher {
 				"Sun\\.?" };
 
 		for (String s : araw) {
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : day) {
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : dayAbbreviations) {
 			matcher.regexList.add("\\s" + s + "\\s");
@@ -279,16 +279,16 @@ public class RegexMatcher {
 		// In the format: MONTH [DAY][,] ['][YEAR]
 		String buwan[] = { "Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hu[nl]yo?", "Agosto", "Setyembre", "Oktubre",
 				"Nobyembre", "Disyembre" };
-		String month[] = { "January", "February", "March", "April", "May", "June", "July", "September", "October",
+		String month[] = { "January", "February", "March", "April", "June", "July", "September", "October",
 				"November", "December" };
 
 		String buwanAbbreviations[] = { "Ene\\.?", "Peb\\.?", "Abr\\.?", "Hu[nl]\\.?", "Ago\\.?", "Set\\.?", "Okt\\.?",
 				"Nob\\.?", "Dis\\.?" };
-		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "Jun\\.?", "Jul\\.?",
+		String monthAbbreviations[] = { "Jan\\.?", "Feb\\.?", "Mar\\.?", "Apr\\.?", "May\\.?", "Jun\\.?", "Jul\\.?",
 				"Sep(t)?\\.?", "Oct\\.?", "Nov\\.?", "Dec\\.?" };
 
 		String year = "(([1-2][0-9]{3})|(['][0-9]{2}))";
-		String dayYear = "( ([0-3]?[0-9][,]? ?))?(" + year + ")?"; // includes
+		String dayYear = "( ([0-3]?[0-9][,]? ?))(" + year + ")?"; // includes
 																	// just day
 
 		// TODO: test
@@ -303,13 +303,13 @@ public class RegexMatcher {
 		for (String s : buwan) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 			matcher.regexList.add("[Ii]ka-[0-3]?[0-9] [Nn]g " + s);
 		}
 		for (String s : month) {
 			matcher.regexList.add(s + year);
 			matcher.regexList.add(s + dayYear);
-			matcher.regexList.add(s);
+			matcher.regexList.add("\\s" + s + "\\s");
 		}
 		for (String s : buwanAbbreviations) {
 			matcher.regexList.add(s + year);
@@ -342,8 +342,8 @@ public class RegexMatcher {
 
 		RegexMatcher locationKeywords = new RegexMatcher();
 
-		String genericFilipinoKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo|[lL]ugar|[pP]ook).*";
-		String genericEnglishKeywords = ".*([cC]ity|[cC]ountry|[pP]rovince|[rR]egion|[sS]tate|[rR]epublic|[sS]treet|[sS]t\\.).*";
+		String genericFilipinoKeywords = ".*([lL]ungsod|[sS]i?yudad|[lL]alawigan|[mM]unisipyo|[lL]ugar|[pP]ook|[sS]ta\\.).*";
+		String genericEnglishKeywords = ".*([cC]ity|[cC]ountry|[pP]rovince|[rR]egion|[sS]tate|[rR]epublic|[sS]treet|[sS]t\\.|[bB]ldg\\.).*";
 		String actualPlaceNames = "[aA]laminos|[aA]ngeles|[aA]ntipolo|[bB]acolod|[bB]acoor|[bB]ago|[bB]aguio|[bB]ais|[bB]alanga|[bB]atac|[bB]atangas|[bB]ayawan|[bB]aybay|[bB]ayugan|[bB]binan|[bB]islig|[bB]ogo|[bB]orongan|[bB]utuan|[cC]abadbaran|[cC]abanatuan|[cC]abuyao|[cC]adiz|[cC]agayan|[cC]alamba|[pP]hilippines|Manila|Metro|Quezon|Pasay|Alabang|Muntinlupa|[cC]alabarzon|[vV]isayas|[Ll]uzon|[Mm]indanao";
 
 		locationKeywords.regexList.add(genericFilipinoKeywords);

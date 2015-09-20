@@ -20,7 +20,10 @@ public class Driver {
 		// articleFiles = io.process("data");
 		// articleFiles = io.process("data/Opinyon/2002/June.xml");
 		String filePath = "data/";
-		String fileName = "NewsTest3";
+
+		// String fileName = "NewsTest3";
+		String fileName = "OpinionTest5";
+
 		articleFiles = io.process(filePath + fileName + ".xml");
 		// articleFiles = io.process("data");
 
@@ -41,10 +44,7 @@ public class Driver {
 /*
  * Notes:
  * 
- * > XMLFileIO's process function can take either directory or filepath > Only
- * .xml files will be processed. > Given other data, the program may fail if it
- * encounters an entity that isn't coded in (See XMLFileReader's expandHeader) >
- * Some files don't have a closing </data> tag > Some files don't escape
- * characters that are supposed to be escaped in XML (& in Opinyon/2001/June.xml
- * > http://www.w3.org/TR/html4/sgml/entities.html
+ * > XMLFileIO's process function can take either directory or filepath > Only .xml files will be processed. > Given other data, the program may fail if it encounters an entity
+ * that isn't coded in (See XMLFileReader's expandHeader) > Some files don't have a closing </data> tag > Some files don't escape characters that are supposed to be escaped in XML
+ * (& in Opinyon/2001/June.xml > http://www.w3.org/TR/html4/sgml/entities.html
  */
