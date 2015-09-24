@@ -21,14 +21,17 @@ public class Driver {
 		
 		String filePath = "data/";
 		String fileName = "NewsTest1";
+		//String fileName = "OpinionTest";
 
 		articleFiles = io.process(filePath + fileName + ".xml");
 
 		// STEP 02 - PROCESS DATA
 		ArticleConverter converter = new ArticleConverter();
+		//TODO:
 		ArrayList<String> words = converter.convertArticleFilesToWordList(articleFiles);
 		
 		TagalogStemmer tagalogStemmer = new TagalogStemmer();
+		//TODO:
 		ArrayList<TagalogStemmerResult> results = tagalogStemmer.stemWordsFromList(words);
 
 		// STEP 03 - OUTPUT RESULTS TO FILE / DISPLAY RESULTS TO CONSOLE
