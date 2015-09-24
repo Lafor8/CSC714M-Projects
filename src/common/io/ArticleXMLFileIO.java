@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import common.models.ArticleFile;
 
 
-public class XMLFileIO {
+public class ArticleXMLFileIO {
 
-	XMLFileReader xfr;
+	ArticleXMLFileReader xfr;
 	ArrayList<ArticleFile> articleFiles;
 
-	public XMLFileIO() {
-		xfr = new XMLFileReader();
+	public ArticleXMLFileIO() {
+		xfr = new ArticleXMLFileReader();
 	}
 
 	public ArrayList<ArticleFile> process(String path) throws IOException {
