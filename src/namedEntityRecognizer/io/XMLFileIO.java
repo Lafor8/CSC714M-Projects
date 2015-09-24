@@ -1,10 +1,10 @@
-package io;
+package namedEntityRecognizer.io;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import models.ArticleFile;
+import namedEntityRecognizer.models.ArticleFile;
 
 public class XMLFileIO {
 
