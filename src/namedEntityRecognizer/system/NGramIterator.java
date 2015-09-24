@@ -1,4 +1,4 @@
-package ner;
+package namedEntityRecognizer.system;
 
 public class NGramIterator {
 

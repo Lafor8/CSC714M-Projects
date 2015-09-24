@@ -1,9 +1,9 @@
-package ner;
+package namedEntityRecognizer.system;
 
 import java.util.List;
 
-import models.NamedEntity;
-import models.NamedEntity.Category;
+import namedEntityRecognizer.models.NamedEntity;
+import namedEntityRecognizer.models.NamedEntity.Category;
 
 public class NamedEntityRecognizer {
 
@@ -25,9 +25,7 @@ public class NamedEntityRecognizer {
 		String dateRegex = convertToString(dateRegexMatcher.regexList);
 
 		String defaultRegex = convertToString(namedEntityRegexMatcher.regexList);
-		// System.out.println(locationRegex);
-
-		// return locationRegex;
+		
 		return "(" + locationRegex + ")|(" + dateRegex + ")|(" + personRegex + "|" + defaultRegex + ")";
 	}
 

@@ -1,13 +1,14 @@
-import io.CSVWriter;
-import io.XMLFileIO;
+package namedEntityRecognizer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import models.ArticleFile;
-import models.NamedEntity;
-import ner.ArticleNamedEntityExtractor;
+import namedEntityRecognizer.io.CSVWriter;
+import namedEntityRecognizer.io.XMLFileIO;
+import namedEntityRecognizer.models.ArticleFile;
+import namedEntityRecognizer.models.NamedEntity;
+import namedEntityRecognizer.system.ArticleNamedEntityExtractor;
 
 public class Driver {
 

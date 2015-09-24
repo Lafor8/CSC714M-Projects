@@ -1,10 +1,10 @@
-package io;
+package namedEntityRecognizer.io;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import models.NamedEntity;
+import namedEntityRecognizer.models.NamedEntity;
 
 public class CSVWriter {
 

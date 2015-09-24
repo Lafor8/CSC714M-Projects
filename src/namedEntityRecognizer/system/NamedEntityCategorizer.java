@@ -1,7 +1,7 @@
-package ner;
+package namedEntityRecognizer.system;
 
-import models.NamedEntity;
-import models.NamedEntity.Category;
+import namedEntityRecognizer.models.NamedEntity;
+import namedEntityRecognizer.models.NamedEntity.Category;
 
 public class NamedEntityCategorizer {
 

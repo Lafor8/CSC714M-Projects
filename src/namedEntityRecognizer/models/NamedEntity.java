@@ -1,6 +1,6 @@
-package models;
+package namedEntityRecognizer.models;
 
-import ner.RegexMatcher;
+import namedEntityRecognizer.system.RegexMatcher;
 
 public class NamedEntity implements Comparable<NamedEntity> {
 

@@ -1,4 +1,4 @@
-package io;
+package namedEntityRecognizer.io;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import models.ArticleFile;
+import namedEntityRecognizer.models.ArticleFile;
 
 public class XMLFileReader {
 

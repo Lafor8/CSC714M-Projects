@@ -1,4 +1,4 @@
-package ner;
+package namedEntityRecognizer.system;
 
 import java.util.ArrayList;
 import java.util.List;

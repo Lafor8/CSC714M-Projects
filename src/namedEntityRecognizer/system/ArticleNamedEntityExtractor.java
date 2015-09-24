@@ -1,4 +1,4 @@
-package ner;
+package namedEntityRecognizer.system;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import models.Article;
-import models.ArticleFile;
-import models.NamedEntity;
-import models.NamedEntity.Category;
+import namedEntityRecognizer.models.Article;
+import namedEntityRecognizer.models.ArticleFile;
+import namedEntityRecognizer.models.NamedEntity;
+import namedEntityRecognizer.models.NamedEntity.Category;
 
 public class ArticleNamedEntityExtractor {
 
