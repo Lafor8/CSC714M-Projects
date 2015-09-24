@@ -1,4 +1,4 @@
-package namedEntityRecognizer.models;
+package common.models;
 
 public class Article {
 	public String title;

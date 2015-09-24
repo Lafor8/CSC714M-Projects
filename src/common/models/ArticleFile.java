@@ -1,4 +1,4 @@
-package namedEntityRecognizer.models;
+package common.models;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -4,9 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import common.io.XMLFileIO;
+import common.models.ArticleFile;
+
 import namedEntityRecognizer.io.CSVWriter;
-import namedEntityRecognizer.io.XMLFileIO;
-import namedEntityRecognizer.models.ArticleFile;
 import namedEntityRecognizer.models.NamedEntity;
 import namedEntityRecognizer.system.ArticleNamedEntityExtractor;
 
