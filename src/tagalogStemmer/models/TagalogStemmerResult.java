@@ -3,37 +3,48 @@ package tagalogStemmer.models;
 import java.util.ArrayList;
 
 public class TagalogStemmerResult {
-	
+
+	private String word;
 	private ArrayList<String> segments;
 	private int rootIndex;
 	private boolean isRootFound;
-	
-	public TagalogStemmerResult(ArrayList<String> segments, int rootIndex){
+
+	public TagalogStemmerResult(String word, ArrayList<String> segments, int rootIndex) {
 		isRootFound = true;
-		this.segments= segments;
+		this.word = word;
+		this.segments = segments;
 		this.rootIndex = rootIndex;
 	}
-	
-	public TagalogStemmerResult(){
+
+	public TagalogStemmerResult(String word) {
 		isRootFound = false;
+		this.word = word;
 	}
-	
-	public static TagalogStemmerResult getNullResult(){
-		return new TagalogStemmerResult();
+
+	public static TagalogStemmerResult getNullResult(String word) {
+		return new TagalogStemmerResult(word);
 	}
 
 	public String toString() {
-		if(!isRootFound)
-			return "Error: No Root Found";
 		StringBuilder sb = new StringBuilder();
 
-		for (int i = 0; i < segments.size(); ++i) {
-			if (i != 0)
-				sb.append(" + ");
-			if (i == rootIndex)
-				sb.append("(" + segments.get(i) + ")");
-			else
-				sb.append(segments.get(i));
+		if (!isRootFound) {
+			sb.append("Error: No Root Found for ");
+			sb.append(this.word);
+		} else {
+			sb.append(this.word);
+			sb.append(" = ");
+
+			for (int i = 0; i < segments.size(); ++i) {
+				if (i != 0)
+					sb.append(" + ");
+				if (i == rootIndex) {
+					sb.append("(");
+					sb.append(segments.get(i));
+					sb.append(")");
+				} else
+					sb.append(segments.get(i));
+			}
 		}
 
 		return sb.toString();

@@ -28,6 +28,6 @@ public class TagalogStemmer {
 		
 		//TODO: Stem word
 		
-		return TagalogStemmerResult.getNullResult();
+		return TagalogStemmerResult.getNullResult(word);
 	}
 }
