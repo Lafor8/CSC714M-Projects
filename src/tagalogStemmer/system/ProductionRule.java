@@ -15,11 +15,13 @@ public class ProductionRule implements Rule {
 	private String pattern;
 	private String replacement;
 	private int type;
+	private boolean checkAcceptability;
 
-	public ProductionRule(String pattern, String replacement, int type) {
+	public ProductionRule(String pattern, String replacement, int type, boolean checkAcceptability) {
 		this.pattern = pattern;
 		this.replacement = replacement;
 		this.type = type;
+		this.checkAcceptability = checkAcceptability;
 	}
 
 	@Override
@@ -59,7 +61,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			// System.out.println(word);
+			System.out.println(word);
 
 			affix = this.pattern;
 
@@ -69,12 +71,28 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			// Acceptability Test
+			if (this.checkAcceptability) {
+				boolean acceptable;
 
-			// System.out.println(word);
-			// System.out.println();
+				acceptable = WordUtilities.runAcceptabilityTest(word);
+
+				if (acceptable) {
+					System.out.println("Accepted: " + word);
+					// System.out.println();
+
+					// Add changes
+					input.applyChanges(word, history);
+				} else {
+					System.out.println("Not Accepted: " + word);
+					// System.out.println();
+				}
+			} else {// Add changes
+				input.applyChanges(word, history);
+			}
+
+			System.out.println(word);
+			System.out.println();
 		}
 
 		return input;
@@ -88,7 +106,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			// System.out.println(word);
+			System.out.println(word);
 
 			affix = this.pattern;
 
@@ -98,12 +116,28 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			// Acceptability Test
+			if (this.checkAcceptability) {
+				boolean acceptable;
 
-			// System.out.println(word);
-			// System.out.println();
+				acceptable = WordUtilities.runAcceptabilityTest(word);
+
+				if (acceptable) {
+					System.out.println("Accepted: " + word);
+					// System.out.println();
+
+					// Add changes
+					input.applyChanges(word, history);
+				} else {
+					System.out.println("Not Accepted: " + word);
+					// System.out.println();
+				}
+			} else {// Add changes
+				input.applyChanges(word, history);
+			}
+
+			System.out.println(word);
+			System.out.println();
 		}
 
 		return input;
@@ -112,13 +146,13 @@ public class ProductionRule implements Rule {
 	private Word applyInfix(Word input) {
 		String word = input.currWord;
 
-		String trimmed;
-		trimmed = word.substring(1, word.length() - 1);
-
-		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(trimmed).matches();
+		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(word).matches();
 
 		if (isRuleApplicable) {
 			String infix;
+
+			String trimmed;
+			trimmed = word.substring(1, word.length() - 1);
 
 			// System.out.println(word);
 
@@ -126,9 +160,24 @@ public class ProductionRule implements Rule {
 			trimmed = trimmed.replaceFirst(infix, "0");
 			String ends[] = trimmed.split("0");
 
-			String history = "ROUTINE 3: ";
-			history += word.charAt(0) + ends[0] + "(" + infix + ")" + ends[1] + word.charAt(word.length() - 1);
-			word = word.charAt(0) + ends[0] + ends[1] + word.charAt(word.length() - 1);
+			// oh my gosh this is horrible
+			String history;
+
+			if (infix.equals("in"))
+				history = "ROUTINE 3: ";
+			else if (infix.equals("um"))
+				history = "ROUTINE 5: ";
+			else
+				history = "ROUTINE ???: ";
+
+			if (ends.length == 2) {
+				history += word.charAt(0) + ends[0] + "(" + infix + ")" + ends[1] + word.charAt(word.length() - 1);
+				word = word.charAt(0) + ends[0] + ends[1] + word.charAt(word.length() - 1);
+			} else if (ends.length == 1) {
+				history += word.charAt(0) + "(" + infix + ")" + ends[0] + word.charAt(word.length() - 1);
+				word = word.charAt(0) + ends[0] + word.charAt(word.length() - 1);
+			}
+
 			history += " = " + word;
 
 			input.addToHistory(history);
