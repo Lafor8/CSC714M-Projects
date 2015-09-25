@@ -10,25 +10,25 @@ import java.nio.file.Paths;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import common.models.ArticleFile;
+import common.models.DictionaryFile;
 
 
-public class ArticleXMLFileReader {
+public class DictionaryHTMFileReader {
 
 	String defaultHeader = null;
 
 	public static void main(String[] args) {
-		File file = new File("data/News/2001/April.xml");
-		ArticleFile articles;
+		File file = new File("data/diction.htm");
+		DictionaryFile dictionaryFile;
 
-		ArticleXMLFileReader xfr = new ArticleXMLFileReader();
-		articles = xfr.readFile(file);
+		DictionaryHTMFileReader hfr = new DictionaryHTMFileReader();
+		dictionaryFile = hfr.readFile(file);
 
-		System.out.println(articles.toString(10));
+		System.out.println(dictionaryFile.toString(10));
 	}
 
-	public ArticleFile readFile(File file) {
-		ArticleFile articleFile = new ArticleFile(file);
+	public DictionaryFile readFile(File file) {
+		DictionaryFile dictionaryFile = new DictionaryFile(file);
 
 		try {
 			// Preprocess file content
@@ -37,7 +37,7 @@ public class ArticleXMLFileReader {
 			// Setting up parser
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
-			FNOCHandler handler = new FNOCHandler(articleFile);
+			TagDictHandler handler = new TagDictHandler(dictionaryFile);
 
 			// Call parser
 			saxParser.parse(new ByteArrayInputStream(text.getBytes(Charset.defaultCharset())), handler);
@@ -46,7 +46,7 @@ public class ArticleXMLFileReader {
 			e.printStackTrace();
 		}
 
-		return articleFile;
+		return dictionaryFile;
 	}
 
 	private String preprocessContent(File file) {
@@ -65,15 +65,6 @@ public class ArticleXMLFileReader {
 			// Escape unescaped characters
 			text = text.replaceAll(" & ", "&amp;");
 
-			// Append data
-			sb.append(text.substring(text.indexOf("<data>")));
-
-			// Affix closing data tag if it doesn't exist
-			int ind = text.indexOf("</data>");
-			// System.out.println("INDEX: " + ind + "\n");
-			if (ind == -1) {
-				sb.append("</data>");
-			}
 		} catch (IOException io) {
 			io.printStackTrace();
 		}
