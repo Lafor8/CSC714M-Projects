@@ -52,13 +52,61 @@ public class ProductionRule implements Rule {
 	}
 
 	private Word applySuffix(Word input) {
-		// TODO Auto-generated method stub
-		return null;
+		String word = input.currWord;
+
+		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
+
+		if (isRuleApplicable) {
+			String affix;
+
+			// System.out.println(word);
+
+			affix = this.pattern;
+
+			String history = "ROUTINE 7: ";
+			history += word.substring(0, word.length() - affix.length()) + "(" + affix + ")";
+
+			word = word.replaceFirst(affix, this.replacement);
+			history += " = " + word;
+
+			input.addToHistory(history);
+			input.history.add(word);
+			input.currWord = word;
+
+			// System.out.println(word);
+			// System.out.println();
+		}
+
+		return input;
 	}
 
 	private Word applyPrefix(Word input) {
-		// TODO Auto-generated method stub
-		return null;
+		String word = input.currWord;
+
+		boolean isRuleApplicable = Pattern.compile(this.pattern + ".+").matcher(word).matches();
+
+		if (isRuleApplicable) {
+			String affix;
+
+			// System.out.println(word);
+
+			affix = this.pattern;
+
+			String history = "ROUTINE 4: ";
+			history += "(" + affix + ")" + word.substring(affix.length());
+
+			word = word.replaceFirst(affix, this.replacement);
+			history += " = " + word;
+
+			input.addToHistory(history);
+			input.history.add(word);
+			input.currWord = word;
+
+			// System.out.println(word);
+			// System.out.println();
+		}
+
+		return input;
 	}
 
 	private Word applyInfix(Word input) {
@@ -66,28 +114,29 @@ public class ProductionRule implements Rule {
 
 		String trimmed;
 		trimmed = word.substring(1, word.length() - 1);
-		
-		boolean isRuleApplicable = Pattern.compile(this.pattern).matcher(trimmed).matches();
-		
+
+		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(trimmed).matches();
+
 		if (isRuleApplicable) {
 			String infix;
 
-			System.out.println(word);
+			// System.out.println(word);
 
-			infix = this.pattern.substring(2, this.pattern.length() - 2);
+			infix = this.pattern;
 			trimmed = trimmed.replaceFirst(infix, "0");
 			String ends[] = trimmed.split("0");
 
 			String history = "ROUTINE 3: ";
 			history += word.charAt(0) + ends[0] + "(" + infix + ")" + ends[1] + word.charAt(word.length() - 1);
 			word = word.charAt(0) + ends[0] + ends[1] + word.charAt(word.length() - 1);
-			
+			history += " = " + word;
+
 			input.addToHistory(history);
 			input.history.add(word);
 			input.currWord = word;
 
-			System.out.println(word);
-			System.out.println();
+			// System.out.println(word);
+			// System.out.println();
 		}
 
 		return input;
