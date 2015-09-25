@@ -27,7 +27,6 @@ public class Driver {
 
 		// STEP 02 - PROCESS DATA
 		ArticleConverter converter = new ArticleConverter();
-		//TODO:
 		ArrayList<String> words = converter.convertArticleFilesToWordList(articleFiles);
 		
 		TagalogStemmer tagalogStemmer = new TagalogStemmer();
@@ -42,14 +41,16 @@ public class Driver {
 
 /* TODO:
 
-Dictionary Loader:
-	HTML File Reader
-	Word Models
+* NOT NEEDED ANYMORE
+
+*Dictionary Loader:
+*	HTML File Reader
+*	Word Models
 
 Tagalog Stemmer:
 	Build Rule Tables
-	Routine 1
-	Routine 2
+*	Routine 1
+*	Routine 2
 	Routine 3
 	Routine 4
 	Routine 5
