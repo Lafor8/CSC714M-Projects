@@ -1,11 +1,12 @@
-package namedEntityRecognizer.io;
+package common.io;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import namedEntityRecognizer.models.Article;
-import namedEntityRecognizer.models.ArticleFile;
+import common.models.Article;
+import common.models.ArticleFile;
+
 
 /// A handler for the Filipino News and Opinyon Corpus
 public class FNOCHandler extends DefaultHandler {

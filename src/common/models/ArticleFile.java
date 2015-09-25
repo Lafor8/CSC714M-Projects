@@ -1,17 +1,17 @@
-package namedEntityRecognizer.models;
+package common.models;
 
 import java.io.File;
 import java.util.ArrayList;
 
-public class ArticleFile {
+public class ArticleFile extends CustomFile{
 	public ArrayList<Article> articles = new ArrayList<Article>();
-	public File file;
 
 	public ArticleFile(File file) {
-		this.file = file;
+		super(file);
 	}
+	
 	public ArticleFile(String filePath) {
-		this.file = new File(filePath);
+		super(filePath);
 	}
 
 	public String toString() {

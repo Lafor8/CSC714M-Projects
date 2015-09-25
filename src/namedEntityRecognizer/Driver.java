@@ -4,16 +4,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import common.io.ArticleXMLFileIO;
+import common.models.ArticleFile;
+
 import namedEntityRecognizer.io.CSVWriter;
-import namedEntityRecognizer.io.XMLFileIO;
-import namedEntityRecognizer.models.ArticleFile;
 import namedEntityRecognizer.models.NamedEntity;
 import namedEntityRecognizer.system.ArticleNamedEntityExtractor;
 
 public class Driver {
 
 	public static void main(String[] args) throws IOException {
-		XMLFileIO io = new XMLFileIO();
+		ArticleXMLFileIO io = new ArticleXMLFileIO();
 
 		ArrayList<ArticleFile> articleFiles;
 

@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import namedEntityRecognizer.models.Article;
-import namedEntityRecognizer.models.ArticleFile;
+import common.models.Article;
+import common.models.ArticleFile;
+
 import namedEntityRecognizer.models.NamedEntity;
 import namedEntityRecognizer.models.NamedEntity.Category;
 

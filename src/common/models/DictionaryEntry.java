@@ -1,13 +1,13 @@
-package namedEntityRecognizer.models;
+package common.models;
 
-public class Article {
+public class DictionaryEntry {
 	public String title;
 	public String author;
 	public String date;
 	public String body;
 	public String link;
 
-	public Article(String title, String author, String date, String body, String link) {
+	public DictionaryEntry(String title, String author, String date, String body, String link) {
 		this.title = title;
 		this.author = author;
 		this.date = date;
@@ -15,7 +15,7 @@ public class Article {
 		this.link = link;
 	}
 
-	public Article() {
+	public DictionaryEntry() {
 	}
 
 	public String toString() {
