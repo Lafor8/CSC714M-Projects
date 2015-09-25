@@ -3,6 +3,9 @@ package tagalogStemmer.system;
 import java.util.ArrayList;
 
 import tagalogStemmer.models.Word;
+import tagalogStemmer.rulebase.ProductionRule;
+import tagalogStemmer.rulebase.ReduplicationRule;
+import tagalogStemmer.rulebase.Routine;
 
 public class TagalogStemmer {
 

@@ -60,7 +60,7 @@ Tagalog Stemmer:
 D	Routine 3
 P	Routine 4
 D	Routine 5
-	Routine 6
+P	Routine 6
 P	Routine 7
 	Routine 8
 D	Acceptability Conditions

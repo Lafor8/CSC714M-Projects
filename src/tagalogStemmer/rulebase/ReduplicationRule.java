@@ -1,10 +1,11 @@
-package tagalogStemmer.system;
+package tagalogStemmer.rulebase;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
+import tagalogStemmer.system.WordUtilities;
 
 public class ReduplicationRule implements Rule {
 
@@ -54,6 +55,11 @@ public class ReduplicationRule implements Rule {
 				// TODO: confirm if the only syllable format for vowels as first letter is just (V) 
 				if(word.charAt(0) == word.charAt(1)){
 					// Apply Changes
+					history += "("+word.substring(0,1)+")"+word.substring(1);
+					word = word.substring(1);
+					history += " = "+word;
+					
+					input.applyChanges(word, history);
 				}
 			} else {
 				// RULE 2

@@ -1,10 +1,11 @@
-package tagalogStemmer.system;
+package tagalogStemmer.rulebase;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
+import tagalogStemmer.system.WordUtilities;
 
 public class ProductionRule implements Rule {
 
