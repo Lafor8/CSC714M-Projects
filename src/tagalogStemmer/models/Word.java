@@ -43,7 +43,7 @@ public class Word {
 			// sb.append("\n");
 		} else {
 			sb.append(this.baseWord);
-			sb.append(" = ");
+			sb.append(" => ");
 			sb.append(this.currWord);
 			sb.append("\n");
 		}
