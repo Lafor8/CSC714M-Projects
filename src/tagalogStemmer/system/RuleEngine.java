@@ -2,6 +2,7 @@ package tagalogStemmer.system;
 
 import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
+import tagalogStemmer.rulebase.Routine;
 
 public class RuleEngine {
 	

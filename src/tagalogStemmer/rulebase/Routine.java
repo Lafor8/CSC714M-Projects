@@ -1,4 +1,4 @@
-package tagalogStemmer.system;
+package tagalogStemmer.rulebase;
 
 import java.util.ArrayList;
 
