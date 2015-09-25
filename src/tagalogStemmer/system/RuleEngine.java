@@ -1,5 +1,6 @@
 package tagalogStemmer.system;
 
+import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
 
 public class RuleEngine {

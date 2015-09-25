@@ -2,6 +2,8 @@ package tagalogStemmer.system;
 
 import java.util.ArrayList;
 
+import tagalogStemmer.models.Rule;
+
 
 public class Routine {
 	private ArrayList<Rule> ruleList;
@@ -10,8 +12,8 @@ public class Routine {
 		ruleList = new ArrayList<Rule>();
 	}
 	
-	public void addRule(ProductionRule productionRule) {
-		ruleList.add(productionRule);
+	public void addRule(Rule rule) {
+		ruleList.add(rule);
 	}
 	
 	public ArrayList<Rule> getRules(){

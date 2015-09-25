@@ -3,6 +3,7 @@ package tagalogStemmer.system;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
 
 public class ProductionRule implements Rule {
@@ -180,9 +181,7 @@ public class ProductionRule implements Rule {
 
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			input.applyChanges(word, history);
 
 			// System.out.println(word);
 			// System.out.println();

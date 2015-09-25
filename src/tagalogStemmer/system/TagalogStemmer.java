@@ -62,7 +62,10 @@ public class TagalogStemmer {
 
 		ruleEngine.apply(routine5);
 		// ROUTINE 6: Partial Reduplication
-		// TODO:
+		Routine routine6 = new Routine();
+		routine6.addRule(new ReduplicationRule(ReduplicationRule.RULE_TYPE_PARTIAL_REDUPLICATION));
+
+		ruleEngine.apply(routine6);
 
 		// ROUTINE 7: Suffix Removal
 		Routine routine7 = new Routine();
