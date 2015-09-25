@@ -3,14 +3,13 @@ package common.models;
 import java.io.File;
 import java.util.ArrayList;
 
-public class ArticleFile extends CustomFile{
+public class DictionaryFile extends CustomFile {
 	public ArrayList<Article> articles = new ArrayList<Article>();
 
-	public ArticleFile(File file) {
+	public DictionaryFile(File file) {
 		super(file);
 	}
-	
-	public ArticleFile(String filePath) {
+	public DictionaryFile(String filePath) {
 		super(filePath);
 	}
 

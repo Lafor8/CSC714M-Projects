@@ -4,42 +4,42 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import common.models.ArticleFile;
+import common.models.DictionaryFile;
 
 
-public class XMLFileIO {
+public class DictionaryHTMFileIO {
 
-	XMLFileReader xfr;
-	ArrayList<ArticleFile> articleFiles;
+	DictionaryHTMFileReader hfr;
+	ArrayList<DictionaryFile> dictionaryFiles;
 
-	public XMLFileIO() {
-		xfr = new XMLFileReader();
+	public DictionaryHTMFileIO() {
+		hfr = new DictionaryHTMFileReader();
 	}
 
-	public ArrayList<ArticleFile> process(String path) throws IOException {
-		articleFiles = new ArrayList<ArticleFile>();
+	public ArrayList<DictionaryFile> process(String path) throws IOException {
+		dictionaryFiles = new ArrayList<DictionaryFile>();
 
 		File file = new File(path);
 		System.out.println(file.getAbsolutePath());
 		if (file.isFile()) {
-			if (file.getName().toUpperCase().indexOf(".XML") != -1)
+			if (file.getName().toUpperCase().indexOf(".HTM") != -1)
 				processFile(file.getAbsolutePath());
 		} else if (file.isDirectory()) {
 			crawlFolder(file.getAbsolutePath());
 		} else
 			throw new IOException();
 		
-		return articleFiles;
+		return dictionaryFiles;
 	}
 
 	public void processFile(String path) {
 		File file = new File(path);
 
-		ArticleFile articles;
+		DictionaryFile articles;
 
-		articles = xfr.readXMLFile(file);
+		articles = hfr.readFile(file);
 
-		articleFiles.add(articles);
+		dictionaryFiles.add(articles);
 		// System.out.print(articles.toString(0));
 	}
 

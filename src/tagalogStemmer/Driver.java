@@ -7,13 +7,13 @@ import tagalogStemmer.io.ArticleConverter;
 import tagalogStemmer.models.TagalogStemmerResult;
 import tagalogStemmer.system.TagalogStemmer;
 
-import common.io.XMLFileIO;
+import common.io.ArticleXMLFileIO;
 import common.models.ArticleFile;
 
 public class Driver {
 
 	public static void main(String[] args) throws IOException {
-		XMLFileIO io = new XMLFileIO();
+		ArticleXMLFileIO io = new ArticleXMLFileIO();
 
 		ArrayList<ArticleFile> articleFiles;
 

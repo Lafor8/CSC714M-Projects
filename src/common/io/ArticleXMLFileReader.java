@@ -13,7 +13,7 @@ import javax.xml.parsers.SAXParserFactory;
 import common.models.ArticleFile;
 
 
-public class XMLFileReader {
+public class ArticleXMLFileReader {
 
 	String defaultHeader = null;
 
@@ -21,13 +21,13 @@ public class XMLFileReader {
 		File file = new File("data/News/2001/April.xml");
 		ArticleFile articles;
 
-		XMLFileReader xfr = new XMLFileReader();
-		articles = xfr.readXMLFile(file);
+		ArticleXMLFileReader xfr = new ArticleXMLFileReader();
+		articles = xfr.readFile(file);
 
 		System.out.println(articles.toString(10));
 	}
 
-	public ArticleFile readXMLFile(File file) {
+	public ArticleFile readFile(File file) {
 		ArticleFile articleFile = new ArticleFile(file);
 
 		try {
