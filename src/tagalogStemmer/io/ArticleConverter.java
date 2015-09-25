@@ -1,6 +1,7 @@
 package tagalogStemmer.io;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import common.models.Article;
 import common.models.ArticleFile;
@@ -49,18 +50,22 @@ public class ArticleConverter {
 
 	public ArrayList<String> convertArticleToWordList(Article article) {
 		ArrayList<String> wordList = new ArrayList<>();
-
+		HashSet<String> wordSet = new HashSet<>();
+		
 		// TODO: Confirm if other sections of the article will be processed
 		// for now, only the body is processed
 		String list[];
 
 		list = article.body.split(this.WORD_SPLIT_REGEX);
 
+		System.out.println("Size before duplicate removal: " + list.length);
 		for (String word : list) {
 			if (word.length() >= this.MIN_WORD_SIZE)
-				wordList.add(word);
+				wordSet.add(word);
 		}
-
+		System.out.println("Size after duplicate removal: " + wordSet.size());
+		
+		wordList.addAll(wordSet);
 		return wordList;
 	}
 }
