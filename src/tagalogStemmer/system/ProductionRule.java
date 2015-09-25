@@ -15,6 +15,7 @@ public class ProductionRule implements Rule {
 	private String pattern;
 	private String replacement;
 	private int type;
+	private boolean checkAcceptability;
 
 	public ProductionRule(String pattern, String replacement, int type) {
 		this.pattern = pattern;
@@ -59,7 +60,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			// System.out.println(word);
+			System.out.println(word);
 
 			affix = this.pattern;
 
@@ -69,12 +70,26 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			// Acceptability Test
+			boolean acceptable;
 
-			// System.out.println(word);
-			// System.out.println();
+			acceptable = WordUtilities.runAcceptabilityTest(word);
+
+			if (acceptable) {
+				System.out.println("Accepted: " + word);
+				// System.out.println();
+
+				// Add changes
+				input.addToHistory(history);
+				input.history.add(word);
+				input.currWord = word;
+			} else {
+				System.out.println("Not Accepted: " + word);
+				// System.out.println();
+			}
+
+			System.out.println(word);
+			System.out.println();
 		}
 
 		return input;
@@ -88,7 +103,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			// System.out.println(word);
+			System.out.println(word);
 
 			affix = this.pattern;
 
@@ -98,12 +113,26 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			// Acceptability Test
+			boolean acceptable;
 
-			// System.out.println(word);
-			// System.out.println();
+			acceptable = WordUtilities.runAcceptabilityTest(word);
+
+			if (acceptable) {
+				System.out.println("Accepted: " + word);
+				// System.out.println();
+
+				// Add changes
+				input.addToHistory(history);
+				input.history.add(word);
+				input.currWord = word;
+			} else {
+				System.out.println("Not Accepted: " + word);
+				// System.out.println();
+			}
+
+			System.out.println(word);
+			System.out.println();
 		}
 
 		return input;

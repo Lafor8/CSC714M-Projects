@@ -34,6 +34,10 @@ public class Driver {
 		ArrayList<Word> resultingWords = tagalogStemmer.stemWordsFromList(inputWords);
 
 		// STEP 03 - OUTPUT RESULTS TO FILE / DISPLAY RESULTS TO CONSOLE
+		System.out.println();
+		System.out.println("##### PRINTING RESULTS #####");
+		System.out.println();
+		
 		for(Word result : resultingWords)
 			System.out.print(result.getPrintableWordHistory());
 	}
