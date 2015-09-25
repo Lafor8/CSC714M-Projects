@@ -1,7 +1,7 @@
 package tagalogStemmer.system;
 
-import tagalogStemmer.models.StemmerResult;
+import tagalogStemmer.models.Word;
 
 public interface Rule {
-	public StemmerResult apply(StemmerResult result);
+	public Word apply(Word word);
 }

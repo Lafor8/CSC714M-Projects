@@ -1,29 +1,27 @@
 package tagalogStemmer.system;
 
-import java.util.ArrayList;
-
-import tagalogStemmer.models.StemmerResult;
+import tagalogStemmer.models.Word;
 
 public class RuleEngine {
 	
-	private StemmerResult result;
+	private Word word;
 
 	
 	public RuleEngine(){
 	}
 	
 	public void initializeWithWord(String word){
-		this.result = StemmerResult.getNullResult(word);
+		this.word = new Word(word);
 	}
 	
-	public StemmerResult getResult(){
-		return result;
+	public Word getResult(){
+		return word;
 	}
 
 	public void apply(Routine routine) {
-		StemmerResult tempResult;
+		Word tempWord;
 		for(Rule rule : routine.getRules()){
-			tempResult = rule.apply(result);
+			tempWord = rule.apply(word);
 			
 			// TODO: Checking conditions to see if rule application is valid
 		}

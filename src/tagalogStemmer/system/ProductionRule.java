@@ -3,7 +3,7 @@ package tagalogStemmer.system;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-import tagalogStemmer.models.StemmerResult;
+import tagalogStemmer.models.Word;
 
 public class ProductionRule implements Rule {
 
@@ -23,8 +23,8 @@ public class ProductionRule implements Rule {
 	}
 
 	@Override
-	public StemmerResult apply(StemmerResult input) {
-		StemmerResult result = input;
+	public Word apply(Word input) {
+		Word result = input;
 
 		switch (type) {
 		case RULE_TYPE_INFIX:
@@ -46,56 +46,98 @@ public class ProductionRule implements Rule {
 		return result;
 	}
 
-	private StemmerResult applyCircumfix(StemmerResult input) {
+	private Word applyCircumfix(Word input) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	private StemmerResult applySuffix(StemmerResult input) {
-		// TODO Auto-generated method stub
-		return null;
+	private Word applySuffix(Word input) {
+		String word = input.currWord;
+
+		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
+
+		if (isRuleApplicable) {
+			String affix;
+
+			// System.out.println(word);
+
+			affix = this.pattern;
+
+			String history = "ROUTINE 7: ";
+			history += word.substring(0, word.length() - affix.length()) + "(" + affix + ")";
+
+			word = word.replaceFirst(affix, this.replacement);
+			history += " = " + word;
+
+			input.addToHistory(history);
+			input.history.add(word);
+			input.currWord = word;
+
+			// System.out.println(word);
+			// System.out.println();
+		}
+
+		return input;
 	}
 
-	private StemmerResult applyPrefix(StemmerResult input) {
-		// TODO Auto-generated method stub
-		return null;
+	private Word applyPrefix(Word input) {
+		String word = input.currWord;
+
+		boolean isRuleApplicable = Pattern.compile(this.pattern + ".+").matcher(word).matches();
+
+		if (isRuleApplicable) {
+			String affix;
+
+			// System.out.println(word);
+
+			affix = this.pattern;
+
+			String history = "ROUTINE 4: ";
+			history += "(" + affix + ")" + word.substring(affix.length());
+
+			word = word.replaceFirst(affix, this.replacement);
+			history += " = " + word;
+
+			input.addToHistory(history);
+			input.history.add(word);
+			input.currWord = word;
+
+			// System.out.println(word);
+			// System.out.println();
+		}
+
+		return input;
 	}
 
-	private StemmerResult applyInfix(StemmerResult input) {
-		ArrayList<String> segments = input.getSegments();
-		String word = input.getRoot();
+	private Word applyInfix(Word input) {
+		String word = input.currWord;
 
 		String trimmed;
 		trimmed = word.substring(1, word.length() - 1);
-		boolean applicable = Pattern.compile(this.pattern).matcher(trimmed).matches();
-		if (applicable) {
+
+		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(trimmed).matches();
+
+		if (isRuleApplicable) {
 			String infix;
 
-			System.out.println(word);
-			// System.out.println(trimmed);
+			// System.out.println(word);
 
-			infix = this.pattern.substring(2, this.pattern.length() - 2);
+			infix = this.pattern;
 			trimmed = trimmed.replaceFirst(infix, "0");
 			String ends[] = trimmed.split("0");
 
-			System.out.println(word.charAt(0) + ends[0] + " + " + infix + " + " + ends[1] + word.charAt(word.length() - 1));
-
+			String history = "ROUTINE 3: ";
+			history += word.charAt(0) + ends[0] + "(" + infix + ")" + ends[1] + word.charAt(word.length() - 1);
 			word = word.charAt(0) + ends[0] + ends[1] + word.charAt(word.length() - 1);
-			String segment = word.charAt(0) + ends[0] + "(" + infix + ")" + ends[1] + word.charAt(word.length() - 1);
-			input.setRoot(word);
+			history += " = " + word;
 
-			System.out.println(word);
-			System.out.println();
+			input.addToHistory(history);
+			input.history.add(word);
+			input.currWord = word;
 
-			//TODO: temp
-			input.setFinished(true);
-			
-			int rootIndex = input.getRootIndex();
-			segments.remove(rootIndex);
-			segments.add(rootIndex, segment);
-			
+			// System.out.println(word);
+			// System.out.println();
 		}
-		
 
 		return input;
 	}
