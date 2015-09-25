@@ -3,6 +3,7 @@ package tagalogStemmer.system;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
 
 public class ProductionRule implements Rule {
@@ -61,7 +62,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			System.out.println(word);
+			// System.out.println(word);
 
 			affix = this.pattern;
 
@@ -78,21 +79,21 @@ public class ProductionRule implements Rule {
 				acceptable = WordUtilities.runAcceptabilityTest(word);
 
 				if (acceptable) {
-					System.out.println("Accepted: " + word);
+					// System.out.println("Accepted: " + word);
 					// System.out.println();
 
 					// Add changes
 					input.applyChanges(word, history);
 				} else {
-					System.out.println("Not Accepted: " + word);
+					// System.out.println("Not Accepted: " + word);
 					// System.out.println();
 				}
 			} else {// Add changes
 				input.applyChanges(word, history);
 			}
 
-			System.out.println(word);
-			System.out.println();
+			// System.out.println(word);
+			// System.out.println();
 		}
 
 		return input;
@@ -106,7 +107,7 @@ public class ProductionRule implements Rule {
 		if (isRuleApplicable) {
 			String affix;
 
-			System.out.println(word);
+			// System.out.println(word);
 
 			affix = this.pattern;
 
@@ -123,21 +124,21 @@ public class ProductionRule implements Rule {
 				acceptable = WordUtilities.runAcceptabilityTest(word);
 
 				if (acceptable) {
-					System.out.println("Accepted: " + word);
+					// System.out.println("Accepted: " + word);
 					// System.out.println();
 
 					// Add changes
 					input.applyChanges(word, history);
 				} else {
-					System.out.println("Not Accepted: " + word);
+					// System.out.println("Not Accepted: " + word);
 					// System.out.println();
 				}
 			} else {// Add changes
 				input.applyChanges(word, history);
 			}
 
-			System.out.println(word);
-			System.out.println();
+			// System.out.println(word);
+			// System.out.println();
 		}
 
 		return input;
@@ -180,9 +181,7 @@ public class ProductionRule implements Rule {
 
 			history += " = " + word;
 
-			input.addToHistory(history);
-			input.history.add(word);
-			input.currWord = word;
+			input.applyChanges(word, history);
 
 			// System.out.println(word);
 			// System.out.println();
