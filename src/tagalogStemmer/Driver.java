@@ -62,7 +62,7 @@ P	Routine 4
 D	Routine 5
 P	Routine 6
 P	Routine 7
-P	Routine 8
+	Routine 8
 D	Acceptability Conditions
 	Assimilatory Conditions
 	Phoneme Change Rules
