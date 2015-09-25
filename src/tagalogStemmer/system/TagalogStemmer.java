@@ -2,7 +2,7 @@ package tagalogStemmer.system;
 
 import java.util.ArrayList;
 
-import tagalogStemmer.models.StemmerResult;
+import tagalogStemmer.models.Word;
 
 public class TagalogStemmer {
 	
@@ -10,21 +10,21 @@ public class TagalogStemmer {
 		//TODO: Load Dictionary
 	}
 
-	public ArrayList<StemmerResult> stemWordsFromList(ArrayList<String> words) {
-		ArrayList<StemmerResult> results = new ArrayList<>();
+	public ArrayList<Word> stemWordsFromList(ArrayList<String> inputWords) {
+		ArrayList<Word> words = new ArrayList<>();
 	
-		for(String word : words){
-			StemmerResult result;
+		for(String inputWord : inputWords){
+			Word word;
 			
-			result = this.stemWord(word);
+			word = this.stemWord(inputWord);
 			
-			results.add(result);
+			words.add(word);
 		}
 		
-		return results;
+		return words;
 	}
 	
-	public StemmerResult stemWord(String word){
+	public Word stemWord(String word){
 		
 		//TODO: Stem word
 		RuleEngine ruleEngine = new RuleEngine();

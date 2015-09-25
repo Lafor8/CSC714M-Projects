@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import tagalogStemmer.io.ArticleConverter;
-import tagalogStemmer.models.StemmerResult;
+import tagalogStemmer.models.Word;
 import tagalogStemmer.system.TagalogStemmer;
 
 import common.io.ArticleXMLFileIO;
@@ -27,15 +27,15 @@ public class Driver {
 
 		// STEP 02 - PROCESS DATA
 		ArticleConverter converter = new ArticleConverter();
-		ArrayList<String> words = converter.convertArticleFilesToWordList(articleFiles);
+		ArrayList<String> inputWords = converter.convertArticleFilesToWordList(articleFiles);
 		
 		TagalogStemmer tagalogStemmer = new TagalogStemmer();
 		//TODO:
-		ArrayList<StemmerResult> results = tagalogStemmer.stemWordsFromList(words);
+		ArrayList<Word> resultingWords = tagalogStemmer.stemWordsFromList(inputWords);
 
 		// STEP 03 - OUTPUT RESULTS TO FILE / DISPLAY RESULTS TO CONSOLE
-		for(StemmerResult result : results)
-			System.out.println(result);
+		for(Word result : resultingWords)
+			System.out.print(result.getPrintableWordHistory());
 	}
 }
 
