@@ -21,6 +21,12 @@ public class Word {
 		this.printHistory.append(word);
 		this.printHistory.append("\n");
 	}
+	
+	public void applyChanges(String newWord, String printHistory){
+		this.addToHistory(printHistory);
+		this.history.add(newWord);
+		this.currWord = newWord;
+	}
 
 	public void addToHistory(String text) {
 		this.printHistory.append(text);

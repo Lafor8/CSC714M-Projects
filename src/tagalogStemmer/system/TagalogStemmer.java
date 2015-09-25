@@ -36,40 +36,48 @@ public class TagalogStemmer {
 
 		// ROUTINE 3: /-in-/ Removal
 		Routine routine3 = new Routine();
-		routine3.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_INFIX));
+		routine3.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_INFIX, false));
 
 		ruleEngine.apply(routine3);
 
 		// ROUTINE 4: Prefix Removal
 		Routine routine4 = new Routine();
-		// routine4.addRule(new ProductionRule("i", "", ProductionRule.RULE_TYPE_PREFIX));
-		// routine4.addRule(new ProductionRule("pag", "", ProductionRule.RULE_TYPE_PREFIX));
-		// routine4.addRule(new ProductionRule("ka", "", ProductionRule.RULE_TYPE_PREFIX));
-		routine4.addRule(new ProductionRule("mag", "", ProductionRule.RULE_TYPE_PREFIX));
+
+		// * Rules from Documentation
+		routine4.addRule(new ProductionRule("mag", "", ProductionRule.RULE_TYPE_PREFIX, true));
+
+		// * Added Custom Rules
+		routine4.addRule(new ProductionRule("ipagka", "", ProductionRule.RULE_TYPE_PREFIX, true));
+		routine4.addRule(new ProductionRule("ipag", "", ProductionRule.RULE_TYPE_PREFIX, true));
+		routine4.addRule(new ProductionRule("pagka", "", ProductionRule.RULE_TYPE_PREFIX, true));
+		routine4.addRule(new ProductionRule("pag", "", ProductionRule.RULE_TYPE_PREFIX, true));
+		routine4.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_PREFIX, true));
+		routine4.addRule(new ProductionRule("ma", "", ProductionRule.RULE_TYPE_PREFIX, true));
 
 		ruleEngine.apply(routine4);
 
 		// ROUTINE 5: /-um-/ Removal
 		Routine routine5 = new Routine();
-		routine5.addRule(new ProductionRule("um", "", ProductionRule.RULE_TYPE_INFIX));
+		routine5.addRule(new ProductionRule("um", "", ProductionRule.RULE_TYPE_INFIX, false));
 
 		ruleEngine.apply(routine5);
 		// ROUTINE 6: Partial Reduplication
 		// TODO:
 
 		// ROUTINE 7: Suffix Removal
-
 		Routine routine7 = new Routine();
-		// routine4.addRule(new ProductionRule("i", "", ProductionRule.RULE_TYPE_PREFIX));
-		// routine4.addRule(new ProductionRule("pag", "", ProductionRule.RULE_TYPE_PREFIX));
-		// routine4.addRule(new ProductionRule("ka", "", ProductionRule.RULE_TYPE_PREFIX));
-		routine7.addRule(new ProductionRule("hin", "", ProductionRule.RULE_TYPE_SUFFIX));
-		routine7.addRule(new ProductionRule("han", "", ProductionRule.RULE_TYPE_SUFFIX));
-		routine7.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_SUFFIX));
-		routine7.addRule(new ProductionRule("an", "", ProductionRule.RULE_TYPE_SUFFIX));
+
+		// * Rules from Documentation
+		routine7.addRule(new ProductionRule("hin", "", ProductionRule.RULE_TYPE_SUFFIX, true));
+		routine7.addRule(new ProductionRule("han", "", ProductionRule.RULE_TYPE_SUFFIX, true));
+		routine7.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_SUFFIX, true));
+		routine7.addRule(new ProductionRule("an", "", ProductionRule.RULE_TYPE_SUFFIX, true));
+
+		// * Added Custom Rules
 
 		ruleEngine.apply(routine7);
-		//TODO: Swap routine 4 and 7
+
+		// TODO: Swap routine 4 and 7 (Swapping inquiry as explained in docu)
 
 		// ROUTINE 8: Full Reduplication/Compounding
 		// TODO:
