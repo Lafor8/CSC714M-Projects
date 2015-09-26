@@ -86,9 +86,15 @@ public class AffixRemovalRule implements Rule {
 
 					// PHONEME CHANGE RULE
 					{
-						
+						if (word.charAt(word.length() - 2) == 'u') {
+							history += "\nROUTINE 7 (PHONEME CHANGE): ";
+							history += word.substring(0, word.length() - 2) + "(u)" + word.substring(word.length() - 1);
+
+							word = word.substring(0, word.length() - 2) + 'o' + word.substring(word.length() - 1);
+							history += " = " + word;
+						}
 					}
-					
+
 					// Add changes
 					input.applyChanges(word, history);
 				} else {
@@ -137,9 +143,25 @@ public class AffixRemovalRule implements Rule {
 
 					// PHONEME CHANGE RULES
 					{
-						
+						boolean cond[] = new boolean[4];
+						cond[0] = word.charAt(0) == 'r';
+						cond[1] = WordUtilities.isCharVowel(affix.charAt(affix.length() - 1) + "");
+						cond[2] = WordUtilities.isCharVowel(word.charAt(1) + "");
+						cond[3] = word.charAt(2) == 'r';
+
+						if (cond[0] && cond[1] && cond[2]) {
+							history += "\nROUTINE 4 (PHONEME CHANGE): ";
+							if (cond[3]) {
+								history += "(r)" + word.substring(1, 2) + "(r)" + word.substring(3);
+								word = 'd' + word.substring(1, 2) + 'd' + word.substring(3);
+							} else {
+								history += "(r)" + word.substring(1);
+								word = 'd' + word.substring(1);
+							}
+							history += " = " + word;
+						}
 					}
-					
+
 					// Add changes
 					input.applyChanges(word, history);
 				} else {

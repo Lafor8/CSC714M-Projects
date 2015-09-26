@@ -45,7 +45,7 @@ public class ReduplicationRule implements Rule {
 		boolean wordStartsWithVowel;
 		int syllables = 3;
 
-		wordStartsWithVowel = WordUtilities.isVowel(word.substring(0, 1));
+		wordStartsWithVowel = WordUtilities.isCharVowel(word.substring(0, 1));
 
 		String history ="ROUTINE 6: ";
 		

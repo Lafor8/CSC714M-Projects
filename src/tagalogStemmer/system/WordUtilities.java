@@ -39,7 +39,7 @@ public class WordUtilities {
 		System.out.println(WordUtilities.runAcceptabilityTest("b") == false);
 	}
 
-	public static boolean isVowel(String c) {
+	public static boolean isCharVowel(String c) {
 		return WordUtilities.vowelPattern.matcher(c).matches();
 	}
 
@@ -47,20 +47,20 @@ public class WordUtilities {
 		boolean verdict = false, isVowel;
 
 		if (word.length() != 0) {
-			isVowel = WordUtilities.isVowel(word.substring(0, 1));
+			isVowel = WordUtilities.isCharVowel(word.substring(0, 1));
 
 			if (isVowel) {
 				if (word.length() >= 3) {
 					for (int i = 0; !verdict && i < word.length(); i++) {
 						String c = word.substring(i, i + 1);
-						verdict = verdict || !WordUtilities.isVowel(c);
+						verdict = verdict || !WordUtilities.isCharVowel(c);
 					}
 				}
 			} else {
 				if (word.length() >= 4) {
 					for (int i = 0; !verdict && i < word.length(); i++) {
 						String c = word.substring(i, i + 1);
-						verdict = verdict || WordUtilities.isVowel(c);
+						verdict = verdict || WordUtilities.isCharVowel(c);
 					}
 				}
 			}
