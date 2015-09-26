@@ -59,7 +59,7 @@ public class AffixRemovalRule implements Rule {
 		String word = input.currWord;
 
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
-
+System.out.println("*"+isRuleApplicable);
 		if (isRuleApplicable) {
 			// AFFIX REMOVAL
 			String affix;
@@ -79,7 +79,8 @@ public class AffixRemovalRule implements Rule {
 				boolean acceptable;
 
 				acceptable = WordUtilities.runAcceptabilityTest(word);
-
+				System.out.println(acceptable);
+				System.out.println();
 				if (acceptable) {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
