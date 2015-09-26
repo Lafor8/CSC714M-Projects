@@ -104,6 +104,11 @@ public class Driver {
  * 	   That, or we can implement the dictionary lookup and pretend we didn't read Matthew's post on not implementing
  * 		the dictionary component.
  * 
+ * > TODO: Assimilatory Conditions, along with Swapping necessitates a multiple solution candidates implementation. 
+ * 		Basically multiple stemmings/manipulation available to a single word.
+ * 		
+ * 	** I have a dirty idea on how to implement it, but I am sleepy so I'll get to it if I get back to a PC before you do :))
+ * 
  * > Although bonus specified the suffix phoneme change rules to apply only when there is a consonant after 'u'
  * 		we applied the phoneme change rule to roots ending with 'u' as we had found cases for it.
  * 			eg. takbuhin, saluhin, talunin
