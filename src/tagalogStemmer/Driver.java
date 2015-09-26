@@ -23,7 +23,7 @@ public class Driver {
 		String fileName;
 
 		// fileName = "NewsTest1";
-		fileName = "StemmerTest";
+		fileName = "BonusTest";
 		// fileName = "OpinionTest";
 
 		articleFiles = io.process(filePath + fileName + ".xml");
@@ -68,9 +68,11 @@ public class Driver {
  * P Routine 6 - need to implement rule 3 and 4 
  * P Routine 7 - need more rules 
  *   Routine 8 
+ *   
  * D Acceptability Conditions 
  *   Assimilatory Conditions 
  * D Phoneme Change Rules
+ * 	 Swapping
  * 
  * 
  * NOTES:
@@ -87,7 +89,28 @@ public class Driver {
  * 		the rule Remove /-an/ would pass the acceptability test and thus the root derived would
  * 		then be "tauh", which is obviously wrong.
  * 
- * 	For more information on how Bonus defined the specifics of a rule, check slide 12 of his slides
+ * 	** For more information on how Bonus defined the specifics of a rule, check slide 12 of his slides
  * 		or the right column of page 65 of bonus' paper.
+ * 
+ * > TODO: Swapping is basically what was detailed in the paper and slides on candidates. basically, due to the
+ * 		complexity of the system as well as the language, 2 runs are made per word, with the first run being with the
+ * 		original setup, and if it doesn't detect a root word via dictionary lookup, then another run will commence
+ * 		though this time, Routines 4 and 7 are swapped, basically the Suffix removal will come before the affix removal
+ * 
+ * 	** Though this might be a crazy idea, I suggest we branch before each routine is applied, as although this will result in 
+ * 		a lot more results (exponential even) we can compensate for the fact that we don't have a dictionary lookup.
+ * 		This will resolve cases wherein our system would accept the application (eg. parating -> paratg ROUTINE 3) but the
+ * 		original TagSA would reject due to it failing the dictionary lookup. 
+ * 	   That, or we can implement the dictionary lookup and pretend we didn't read Matthew's post on not implementing
+ * 		the dictionary component.
+ * 
+ * > Although bonus specified the suffix phoneme change rules to apply only when there is a consonant after 'u'
+ * 		we applied the phoneme change rule to roots ending with 'u' as we had found cases for it.
+ * 			eg. takbuhin, saluhin, talunin
+ * 
+ * > BonusTest contains all words used as examples in the slides
+ * > StemmerTest is just another test file 
+ * > Affixes is a file that list all the affixes I found on the net, I've ignored the wiki page for noun affixes in tagalog though
+ * 		That might be a more orderly made list
  * 
  */

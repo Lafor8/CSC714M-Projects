@@ -57,8 +57,12 @@ public class TagalogStemmer {
 			routine4.addRule(new AffixRemovalRule("ipag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("nag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("sipag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("mang", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("ma", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("ka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 
 			ruleEngine.apply(routine4);
 		}

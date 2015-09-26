@@ -59,7 +59,7 @@ public class AffixRemovalRule implements Rule {
 		String word = input.currWord;
 
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
-System.out.println("*"+isRuleApplicable);
+
 		if (isRuleApplicable) {
 			// AFFIX REMOVAL
 			String affix;
@@ -79,8 +79,7 @@ System.out.println("*"+isRuleApplicable);
 				boolean acceptable;
 
 				acceptable = WordUtilities.runAcceptabilityTest(word);
-				System.out.println(acceptable);
-				System.out.println();
+
 				if (acceptable) {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
@@ -92,6 +91,13 @@ System.out.println("*"+isRuleApplicable);
 							history += word.substring(0, word.length() - 2) + "(u)" + word.substring(word.length() - 1);
 
 							word = word.substring(0, word.length() - 2) + 'o' + word.substring(word.length() - 1);
+							history += " = " + word;
+						}
+						else if(word.charAt(word.length()-1) == 'u' && WordUtilities.stringHasConsonant(affix)){
+							history += "\nROUTINE 7 (CUSTOM PHONEME CHANGE): ";
+							history += word.substring(0, word.length() - 1) + "(u)";
+
+							word = word.substring(0, word.length() - 1) + 'o';
 							history += " = " + word;
 						}
 					}

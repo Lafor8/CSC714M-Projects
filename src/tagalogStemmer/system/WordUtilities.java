@@ -42,6 +42,28 @@ public class WordUtilities {
 	public static boolean isCharVowel(String c) {
 		return WordUtilities.vowelPattern.matcher(c).matches();
 	}
+	
+	public static boolean stringHasConsonant(String str){
+		boolean verdict = false;
+		
+		for (int i = 0; !verdict && i < str.length(); i++) {
+			String c = str.substring(i, i + 1);
+			verdict = verdict || !WordUtilities.isCharVowel(c);
+		}
+		
+		return verdict;
+	}
+	
+	public static boolean stringHasVowel(String str){
+		boolean verdict = false;
+		
+		for (int i = 0; !verdict && i < str.length(); i++) {
+			String c = str.substring(i, i + 1);
+			verdict = verdict || WordUtilities.isCharVowel(c);
+		}
+		
+		return verdict;
+	}
 
 	public static boolean runAcceptabilityTest(String word) {
 		boolean verdict = false, isVowel;
@@ -51,17 +73,11 @@ public class WordUtilities {
 
 			if (isVowel) {
 				if (word.length() >= 3) {
-					for (int i = 0; !verdict && i < word.length(); i++) {
-						String c = word.substring(i, i + 1);
-						verdict = verdict || !WordUtilities.isCharVowel(c);
-					}
+					verdict = verdict || WordUtilities.stringHasConsonant(word);
 				}
 			} else {
 				if (word.length() >= 4) {
-					for (int i = 0; !verdict && i < word.length(); i++) {
-						String c = word.substring(i, i + 1);
-						verdict = verdict || WordUtilities.isCharVowel(c);
-					}
+					verdict = verdict || WordUtilities.stringHasVowel(word);
 				}
 			}
 		}
