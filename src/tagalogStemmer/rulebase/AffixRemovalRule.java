@@ -7,7 +7,7 @@ import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
 import tagalogStemmer.system.WordUtilities;
 
-public class ProductionRule implements Rule {
+public class AffixRemovalRule implements Rule {
 
 	public static final int RULE_TYPE_INFIX = 0;
 	public static final int RULE_TYPE_PREFIX = 1;
@@ -19,7 +19,7 @@ public class ProductionRule implements Rule {
 	private int type;
 	private boolean checkAcceptability;
 
-	public ProductionRule(String pattern, String replacement, int type, boolean checkAcceptability) {
+	public AffixRemovalRule(String pattern, String replacement, int type, boolean checkAcceptability) {
 		this.pattern = pattern;
 		this.replacement = replacement;
 		this.type = type;
@@ -61,6 +61,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String affix;
 
 			// System.out.println(word);
@@ -73,7 +74,7 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			// Acceptability Test
+			// ACCEPTABILITY TEST
 			if (this.checkAcceptability) {
 				boolean acceptable;
 
@@ -83,6 +84,11 @@ public class ProductionRule implements Rule {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
 
+					// PHONEME CHANGE RULE
+					{
+						
+					}
+					
 					// Add changes
 					input.applyChanges(word, history);
 				} else {
@@ -106,6 +112,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(this.pattern + ".+").matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String affix;
 
 			// System.out.println(word);
@@ -118,7 +125,7 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			// Acceptability Test
+			// ACCEPTABILITY TEST
 			if (this.checkAcceptability) {
 				boolean acceptable;
 
@@ -128,6 +135,11 @@ public class ProductionRule implements Rule {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
 
+					// PHONEME CHANGE RULES
+					{
+						
+					}
+					
 					// Add changes
 					input.applyChanges(word, history);
 				} else {
@@ -151,6 +163,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String infix;
 
 			String trimmed;
