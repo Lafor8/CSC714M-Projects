@@ -45,7 +45,7 @@ public class ReduplicationRule implements Rule {
 		boolean wordStartsWithVowel;
 		int syllables = 3;
 
-		wordStartsWithVowel = WordUtilities.isVowel(word.substring(0, 1));
+		wordStartsWithVowel = WordUtilities.isCharVowel(word.substring(0, 1));
 
 		String history ="ROUTINE 6: ";
 		
@@ -89,6 +89,10 @@ public class ReduplicationRule implements Rule {
 
 		// TODO: RULE 3
 		// Unimplemented because I can't understand the rule
+		//	EDIT: I GET IT NOW OMG IT'S SO SIMPLE PALA MAGULO LANG PAGWORD NIYA
+		//	 Basically given multiple consonants as starting (C1 C2 V1), 
+		//	 partial reduplication is possible for 2 ways (C1 V1 C1 C2 V1) or (C1 C2 V1 C1 C2 V1)
+		// 		eg. prito ->  piprito, priprito
 
 		return input;
 	}

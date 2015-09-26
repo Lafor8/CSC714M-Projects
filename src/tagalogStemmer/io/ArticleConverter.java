@@ -2,6 +2,7 @@ package tagalogStemmer.io;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 import common.models.Article;
 import common.models.ArticleFile;
@@ -50,7 +51,7 @@ public class ArticleConverter {
 
 	public ArrayList<String> convertArticleToWordList(Article article) {
 		ArrayList<String> wordList = new ArrayList<>();
-		HashSet<String> wordSet = new HashSet<>();
+		LinkedHashSet<String> wordSet = new LinkedHashSet<>();
 		
 		// TODO: Confirm if other sections of the article will be processed
 		// for now, only the body is processed

@@ -39,29 +39,45 @@ public class WordUtilities {
 		System.out.println(WordUtilities.runAcceptabilityTest("b") == false);
 	}
 
-	public static boolean isVowel(String c) {
+	public static boolean isCharVowel(String c) {
 		return WordUtilities.vowelPattern.matcher(c).matches();
+	}
+	
+	public static boolean stringHasConsonant(String str){
+		boolean verdict = false;
+		
+		for (int i = 0; !verdict && i < str.length(); i++) {
+			String c = str.substring(i, i + 1);
+			verdict = verdict || !WordUtilities.isCharVowel(c);
+		}
+		
+		return verdict;
+	}
+	
+	public static boolean stringHasVowel(String str){
+		boolean verdict = false;
+		
+		for (int i = 0; !verdict && i < str.length(); i++) {
+			String c = str.substring(i, i + 1);
+			verdict = verdict || WordUtilities.isCharVowel(c);
+		}
+		
+		return verdict;
 	}
 
 	public static boolean runAcceptabilityTest(String word) {
 		boolean verdict = false, isVowel;
 
 		if (word.length() != 0) {
-			isVowel = WordUtilities.isVowel(word.substring(0, 1));
+			isVowel = WordUtilities.isCharVowel(word.substring(0, 1));
 
 			if (isVowel) {
 				if (word.length() >= 3) {
-					for (int i = 0; !verdict && i < word.length(); i++) {
-						String c = word.substring(i, i + 1);
-						verdict = verdict || !WordUtilities.isVowel(c);
-					}
+					verdict = verdict || WordUtilities.stringHasConsonant(word);
 				}
 			} else {
 				if (word.length() >= 4) {
-					for (int i = 0; !verdict && i < word.length(); i++) {
-						String c = word.substring(i, i + 1);
-						verdict = verdict || WordUtilities.isVowel(c);
-					}
+					verdict = verdict || WordUtilities.stringHasVowel(word);
 				}
 			}
 		}

@@ -3,7 +3,7 @@ package tagalogStemmer.system;
 import java.util.ArrayList;
 
 import tagalogStemmer.models.Word;
-import tagalogStemmer.rulebase.ProductionRule;
+import tagalogStemmer.rulebase.AffixRemovalRule;
 import tagalogStemmer.rulebase.ReduplicationRule;
 import tagalogStemmer.rulebase.Routine;
 
@@ -40,7 +40,7 @@ public class TagalogStemmer {
 		// ROUTINE 3: /-in-/ Removal
 		{
 			Routine routine3 = new Routine();
-			routine3.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_INFIX, false));
+			routine3.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_INFIX, false));
 
 			ruleEngine.apply(routine3);
 		}
@@ -50,15 +50,19 @@ public class TagalogStemmer {
 			Routine routine4 = new Routine();
 
 			// * Rules from Documentation
-			routine4.addRule(new ProductionRule("mag", "", ProductionRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("mag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 
 			// * Added Custom Rules
-			routine4.addRule(new ProductionRule("ipagka", "", ProductionRule.RULE_TYPE_PREFIX, true));
-			routine4.addRule(new ProductionRule("ipag", "", ProductionRule.RULE_TYPE_PREFIX, true));
-			routine4.addRule(new ProductionRule("pagka", "", ProductionRule.RULE_TYPE_PREFIX, true));
-			routine4.addRule(new ProductionRule("pag", "", ProductionRule.RULE_TYPE_PREFIX, true));
-			routine4.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_PREFIX, true));
-			routine4.addRule(new ProductionRule("ma", "", ProductionRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("ipagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("ipag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("pagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("pag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("nag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("sipag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("mang", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("ma", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("ka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 
 			ruleEngine.apply(routine4);
 		}
@@ -66,7 +70,7 @@ public class TagalogStemmer {
 		// ROUTINE 5: /-um-/ Removal
 		{
 			Routine routine5 = new Routine();
-			routine5.addRule(new ProductionRule("um", "", ProductionRule.RULE_TYPE_INFIX, false));
+			routine5.addRule(new AffixRemovalRule("um", "", AffixRemovalRule.RULE_TYPE_INFIX, false));
 
 			ruleEngine.apply(routine5);
 		}
@@ -84,10 +88,10 @@ public class TagalogStemmer {
 			Routine routine7 = new Routine();
 
 			// * Rules from Documentation
-			routine7.addRule(new ProductionRule("hin", "", ProductionRule.RULE_TYPE_SUFFIX, true));
-			routine7.addRule(new ProductionRule("han", "", ProductionRule.RULE_TYPE_SUFFIX, true));
-			routine7.addRule(new ProductionRule("in", "", ProductionRule.RULE_TYPE_SUFFIX, true));
-			routine7.addRule(new ProductionRule("an", "", ProductionRule.RULE_TYPE_SUFFIX, true));
+			routine7.addRule(new AffixRemovalRule("hin", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
+			routine7.addRule(new AffixRemovalRule("han", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
+			routine7.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
+			routine7.addRule(new AffixRemovalRule("an", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
 
 			// * Added Custom Rules
 

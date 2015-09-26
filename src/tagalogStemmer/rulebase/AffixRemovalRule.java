@@ -7,7 +7,7 @@ import tagalogStemmer.models.Rule;
 import tagalogStemmer.models.Word;
 import tagalogStemmer.system.WordUtilities;
 
-public class ProductionRule implements Rule {
+public class AffixRemovalRule implements Rule {
 
 	public static final int RULE_TYPE_INFIX = 0;
 	public static final int RULE_TYPE_PREFIX = 1;
@@ -19,7 +19,7 @@ public class ProductionRule implements Rule {
 	private int type;
 	private boolean checkAcceptability;
 
-	public ProductionRule(String pattern, String replacement, int type, boolean checkAcceptability) {
+	public AffixRemovalRule(String pattern, String replacement, int type, boolean checkAcceptability) {
 		this.pattern = pattern;
 		this.replacement = replacement;
 		this.type = type;
@@ -61,6 +61,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern).matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String affix;
 
 			// System.out.println(word);
@@ -73,7 +74,7 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			// Acceptability Test
+			// ACCEPTABILITY TEST
 			if (this.checkAcceptability) {
 				boolean acceptable;
 
@@ -82,6 +83,24 @@ public class ProductionRule implements Rule {
 				if (acceptable) {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
+
+					// PHONEME CHANGE RULE
+					{
+						if (word.charAt(word.length() - 2) == 'u') {
+							history += "\nROUTINE 7 (PHONEME CHANGE): ";
+							history += word.substring(0, word.length() - 2) + "(u)" + word.substring(word.length() - 1);
+
+							word = word.substring(0, word.length() - 2) + 'o' + word.substring(word.length() - 1);
+							history += " = " + word;
+						}
+						else if(word.charAt(word.length()-1) == 'u' && WordUtilities.stringHasConsonant(affix)){
+							history += "\nROUTINE 7 (CUSTOM PHONEME CHANGE): ";
+							history += word.substring(0, word.length() - 1) + "(u)";
+
+							word = word.substring(0, word.length() - 1) + 'o';
+							history += " = " + word;
+						}
+					}
 
 					// Add changes
 					input.applyChanges(word, history);
@@ -106,6 +125,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(this.pattern + ".+").matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String affix;
 
 			// System.out.println(word);
@@ -118,7 +138,7 @@ public class ProductionRule implements Rule {
 			word = word.replaceFirst(affix, this.replacement);
 			history += " = " + word;
 
-			// Acceptability Test
+			// ACCEPTABILITY TEST
 			if (this.checkAcceptability) {
 				boolean acceptable;
 
@@ -127,6 +147,27 @@ public class ProductionRule implements Rule {
 				if (acceptable) {
 					// System.out.println("Accepted: " + word);
 					// System.out.println();
+
+					// PHONEME CHANGE RULES
+					{
+						boolean cond[] = new boolean[4];
+						cond[0] = word.charAt(0) == 'r';
+						cond[1] = WordUtilities.isCharVowel(affix.charAt(affix.length() - 1) + "");
+						cond[2] = WordUtilities.isCharVowel(word.charAt(1) + "");
+						cond[3] = word.charAt(2) == 'r';
+
+						if (cond[0] && cond[1] && cond[2]) {
+							history += "\nROUTINE 4 (PHONEME CHANGE): ";
+							if (cond[3]) {
+								history += "(r)" + word.substring(1, 2) + "(r)" + word.substring(3);
+								word = 'd' + word.substring(1, 2) + 'd' + word.substring(3);
+							} else {
+								history += "(r)" + word.substring(1);
+								word = 'd' + word.substring(1);
+							}
+							history += " = " + word;
+						}
+					}
 
 					// Add changes
 					input.applyChanges(word, history);
@@ -151,6 +192,7 @@ public class ProductionRule implements Rule {
 		boolean isRuleApplicable = Pattern.compile(".+" + this.pattern + ".+").matcher(word).matches();
 
 		if (isRuleApplicable) {
+			// AFFIX REMOVAL
 			String infix;
 
 			String trimmed;
