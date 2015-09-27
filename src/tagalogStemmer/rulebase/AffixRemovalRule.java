@@ -1,6 +1,5 @@
 package tagalogStemmer.rulebase;
 
-import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import tagalogStemmer.models.Rule;
@@ -71,7 +70,8 @@ public class AffixRemovalRule implements Rule {
 			String history = "ROUTINE 7: ";
 			history += word.substring(0, word.length() - affix.length()) + "(" + affix + ")";
 
-			word = word.replaceFirst(affix, this.replacement);
+			word = word.substring(0, word.length() - affix.length()) + this.replacement;// word.replace(affix,
+																						// this.replacement);
 			history += " = " + word;
 
 			// ACCEPTABILITY TEST
@@ -92,8 +92,7 @@ public class AffixRemovalRule implements Rule {
 
 							word = word.substring(0, word.length() - 2) + 'o' + word.substring(word.length() - 1);
 							history += " = " + word;
-						}
-						else if(word.charAt(word.length()-1) == 'u' && WordUtilities.stringHasConsonant(affix)){
+						} else if (word.charAt(word.length() - 1) == 'u' && WordUtilities.stringHasConsonant(affix)) {
 							history += "\nROUTINE 7 (CUSTOM PHONEME CHANGE): ";
 							history += word.substring(0, word.length() - 1) + "(u)";
 

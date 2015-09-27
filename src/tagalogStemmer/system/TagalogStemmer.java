@@ -18,7 +18,6 @@ public class TagalogStemmer {
 
 		for (String inputWord : inputWords) {
 			Word word;
-
 			word = this.stemWord(inputWord);
 
 			words.add(word);
@@ -53,6 +52,7 @@ public class TagalogStemmer {
 			routine4.addRule(new AffixRemovalRule("mag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 
 			// * Added Custom Rules
+			routine4.addRule(new AffixRemovalRule("paka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("ipagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("ipag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
@@ -74,7 +74,7 @@ public class TagalogStemmer {
 
 			ruleEngine.apply(routine5);
 		}
-		
+
 		// ROUTINE 6: Partial Reduplication
 		{
 			Routine routine6 = new Routine();
@@ -83,7 +83,7 @@ public class TagalogStemmer {
 			ruleEngine.apply(routine6);
 		}
 
-		// ROUTINE 7: Suffix Removal
+		// ROUTINE 7: Suffix Remova l
 		{
 			Routine routine7 = new Routine();
 
@@ -101,7 +101,14 @@ public class TagalogStemmer {
 		// TODO: Swap routine 4 and 7 (Swapping inquiry as explained in docu)
 
 		// ROUTINE 8: Full Reduplication/Compounding
-		// TODO:
+		{
+			Routine routine8 = new Routine();
+
+			routine8.addRule(new ReduplicationRule(ReduplicationRule.RULE_TYPE_FULL_REDUPLICATION));
+
+			ruleEngine.apply(routine8);
+
+		}
 
 		return ruleEngine.getResult();
 	}
