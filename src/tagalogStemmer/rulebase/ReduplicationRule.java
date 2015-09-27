@@ -116,9 +116,36 @@ public class ReduplicationRule implements Rule {
 						input.applyChanges(word, history);
 					}
 				}
-			} else if (syllables == 4) {
-				// RULE 4
+
 				// TODO: Find out how to syllabize a word
+				if (syllables == 3) {
+					// RULE 4
+
+					String patterns[] = { "v", "cv", "vc", "cvc", "vcv", "cvcc", "ccvc" };
+
+					int totalLength;
+					for (int i = 0; i < patterns.length; ++i) {
+						for (int j = 0; j < patterns.length; ++j) {
+							totalLength = patterns[i].length() + patterns[j].length();
+
+							if (totalLength * 2 + 1 <= word.length()) {
+
+								boolean cond[] = new boolean[2];
+
+								cond[0] = word.substring(0, totalLength).equals(word.substring(totalLength, totalLength * 2));
+								cond[1] = WordUtilities.stringFollowsCVPattern(word.substring(0, totalLength), patterns[i] + patterns[j]);
+
+								if (cond[0] && cond[1]) {
+									history += "(" + word.substring(0, totalLength) + ")" + word.substring(totalLength);
+									word = word.substring(totalLength);
+									history += " = " + word;
+
+									input.applyChanges(word, history);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		return input;
