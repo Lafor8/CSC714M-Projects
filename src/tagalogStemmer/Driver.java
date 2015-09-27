@@ -65,7 +65,7 @@ public class Driver {
  * D Routine 3 
  * P Routine 4 - need more rules 
  * D Routine 5 
- * P Routine 6 - need to implement rule 3 and 4 
+ * D Routine 6 
  * P Routine 7 - need more rules 
  *   Routine 8 
  *   
