@@ -20,7 +20,7 @@ public class WordUtilities {
 		System.out.println(WordUtilities.runAcceptabilityTest("aa") == false);
 		System.out.println(WordUtilities.runAcceptabilityTest("ab") == false);
 		System.out.println(WordUtilities.runAcceptabilityTest("a") == false);
-		
+
 		// consonant
 		System.out.println(WordUtilities.runAcceptabilityTest("bbbbb") == false);
 		System.out.println(WordUtilities.runAcceptabilityTest("babbb") == true);
@@ -37,31 +37,57 @@ public class WordUtilities {
 		System.out.println(WordUtilities.runAcceptabilityTest("bb") == false);
 		System.out.println(WordUtilities.runAcceptabilityTest("ba") == false);
 		System.out.println(WordUtilities.runAcceptabilityTest("b") == false);
+		
+		System.out.println(WordUtilities.stringFollowsCVPattern("tahi","cvcv"));
+		System.out.println(WordUtilities.isCharVowel('t'));
+		System.out.println(WordUtilities.isCharVowel('a'));
+		System.out.println(WordUtilities.isCharVowel('h'));
+		System.out.println(WordUtilities.isCharVowel('i'));
 	}
 
 	public static boolean isCharVowel(String c) {
 		return WordUtilities.vowelPattern.matcher(c).matches();
 	}
-	
-	public static boolean stringHasConsonant(String str){
+
+	public static boolean isCharVowel(char c) {
+		return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+	}
+
+	public static boolean stringHasConsonant(String str) {
 		boolean verdict = false;
-		
+
 		for (int i = 0; !verdict && i < str.length(); i++) {
 			String c = str.substring(i, i + 1);
 			verdict = verdict || !WordUtilities.isCharVowel(c);
 		}
-		
+
 		return verdict;
 	}
-	
-	public static boolean stringHasVowel(String str){
+
+	public static boolean stringHasVowel(String str) {
 		boolean verdict = false;
-		
+
 		for (int i = 0; !verdict && i < str.length(); i++) {
 			String c = str.substring(i, i + 1);
 			verdict = verdict || WordUtilities.isCharVowel(c);
 		}
+
+		return verdict;
+	}
+
+	public static boolean stringFollowsCVPattern(String str, String pattern) {
+
+		char letters[] = str.substring(0, pattern.length()).toCharArray();
+		pattern = pattern.toLowerCase();
 		
+		boolean verdict = true;
+		
+		for(int i = 0; verdict && i < letters.length; ++i){
+			if(pattern.charAt(i) =='c')
+				verdict = verdict && !WordUtilities.isCharVowel(letters[i]);
+			else if(pattern.charAt(i)=='v')
+				verdict = verdict && WordUtilities.isCharVowel(letters[i]);
+		}
 		return verdict;
 	}
 

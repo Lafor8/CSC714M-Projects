@@ -23,7 +23,7 @@ public class Driver {
 		String fileName;
 
 		// fileName = "NewsTest1";
-		fileName = "BonusTest";
+		fileName = "StemmerTest";
 		// fileName = "OpinionTest";
 
 		articleFiles = io.process(filePath + fileName + ".xml");
