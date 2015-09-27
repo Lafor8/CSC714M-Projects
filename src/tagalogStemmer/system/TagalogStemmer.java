@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import tagalogStemmer.models.Word;
 import tagalogStemmer.rulebase.AffixRemovalRule;
+import tagalogStemmer.rulebase.HyphenRemovalRule;
 import tagalogStemmer.rulebase.ReduplicationRule;
 import tagalogStemmer.rulebase.Routine;
 
@@ -33,7 +34,13 @@ public class TagalogStemmer {
 		ruleEngine.initializeWithWord(word);
 
 		// ROUTINE 1: Hyphen Search
+		// Replace all hyphens
+		{
+			Routine routine1 = new Routine();
+			routine1.addRule(new HyphenRemovalRule());
 
+			ruleEngine.apply(routine1);
+		}
 		// ROUTINE 2: Dictionary Search
 
 		// ROUTINE 3: /-in-/ Removal
