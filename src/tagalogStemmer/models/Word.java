@@ -8,6 +8,7 @@ public class Word implements Comparable<Word> {
 	public String currWord;
 	public ArrayList<String> history;
 	public StringBuilder printHistory;
+	public String correctStem;
 
 	public Word(String word) {
 		this.baseWord = word;

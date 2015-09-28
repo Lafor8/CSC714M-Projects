@@ -27,6 +27,8 @@ public class MetricsCalculator {
 
 			if (correctWord != null && generatedWord != null) {
 
+				generatedWord.correctStem = correctWord.currWord;
+
 				if (correctWord.currWord.equals(generatedWord.currWord)) {
 
 					// word is not stemmable, and program rightly left it as is
@@ -40,14 +42,23 @@ public class MetricsCalculator {
 					}
 
 				} else {
-					// word is not stemmable, and program stemmed it
-					if (correctWord.isBaseWordEqualToCurrWordIgnoreHyphen()) {
+					// overstemming - word is not stemmable, and program stemmed
+					// it
+					if (correctWord.currWord.length() > generatedWord.currWord.length()) {
 						fpList.add(generatedWord);
 						fp++;
-					} else {
+					} else if (correctWord.currWord.length() < generatedWord.currWord.length()) {
 						// word is stemmable, and program did not stem it or
 						// stemmed
 						// it wrongly
+						fnList.add(generatedWord);
+						fn++;
+					} else {
+						// length is equal but words are not the same. should be
+						// an impossible clase
+
+						// System.out.println(generatedWord.correctStem + " vs "
+						// + generatedWord.currWord);
 						fnList.add(generatedWord);
 						fn++;
 					}
@@ -101,7 +112,7 @@ public class MetricsCalculator {
 	private static String generateCSVString(ArrayList<Word> wordList) {
 		StringBuilder sb = new StringBuilder();
 		for (Word word : wordList) {
-			sb.append(word.baseWord + "," + word.currWord + "\n");
+			sb.append(word.baseWord + "," + word.currWord + "," + word.correctStem + "\n");
 		}
 
 		return sb.toString();
