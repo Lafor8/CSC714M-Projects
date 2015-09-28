@@ -83,6 +83,8 @@ public class TagalogStemmer {
 			routine4.addRule(new AffixRemovalRule("magpa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("magsa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("magsi", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("mapag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("napag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("nagka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("nagpa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("nagsa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
@@ -107,6 +109,8 @@ public class TagalogStemmer {
 			// AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			// routine4.addRule(new AffixRemovalRule("man", "",
 			// AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("isa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("nai", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("nag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pag", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pala", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
@@ -114,6 +118,9 @@ public class TagalogStemmer {
 			// AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			// routine4.addRule(new AffixRemovalRule("tag", "",
 			// AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("um", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+			routine4.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
+
 			routine4.addRule(new AffixRemovalRule("ma", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("pa", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
 			routine4.addRule(new AffixRemovalRule("ka", "", AffixRemovalRule.RULE_TYPE_PREFIX, true));
