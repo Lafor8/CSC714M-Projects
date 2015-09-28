@@ -2,7 +2,7 @@ package tagalogStemmer.models;
 
 import java.util.ArrayList;
 
-public class Word {
+public class Word implements Comparable<Word> {
 
 	public String baseWord;
 	public String currWord;
@@ -80,5 +80,10 @@ public class Word {
 	@Override
 	public int hashCode() {
 		return baseWord.hashCode();
+	}
+
+	@Override
+	public int compareTo(Word o) {
+		return baseWord.compareTo(o.baseWord);
 	}
 }

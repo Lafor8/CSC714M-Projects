@@ -2,6 +2,7 @@ package tagalogStemmer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -46,6 +47,9 @@ public class Driver {
 		ArrayList<Word> resultingWords = tagalogStemmer.stemWordsFromList(inputWords);
 
 		List<Word> correctWords = CSVReader.readWordsFromCSV("data/cleaned.csv");
+
+		Collections.sort(resultingWords);
+		Collections.sort(correctWords);
 
 		LinkedHashMap<String, Word> generatedSet = DuplicateRemoverUtility.convertListToHashMap(resultingWords);
 		LinkedHashMap<String, Word> correctSet = DuplicateRemoverUtility.convertListToHashMap(correctWords);
