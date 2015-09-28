@@ -142,7 +142,7 @@ public class TagalogStemmer {
 			ruleEngine.apply(routine6);
 		}
 
-		// ROUTINE 7: Suffix Remova l
+		// ROUTINE 7: Suffix Removal
 		{
 			Routine routine7 = new Routine();
 
@@ -151,6 +151,7 @@ public class TagalogStemmer {
 			routine7.addRule(new AffixRemovalRule("han", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
 			routine7.addRule(new AffixRemovalRule("in", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
 			routine7.addRule(new AffixRemovalRule("an", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
+			routine7.addRule(new AffixRemovalRule("ng", "", AffixRemovalRule.RULE_TYPE_SUFFIX, true));
 
 			// * Added Custom Rules
 

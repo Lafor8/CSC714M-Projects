@@ -21,8 +21,8 @@ public class Word {
 		this.printHistory.append(word);
 		this.printHistory.append("\n");
 	}
-	
-	public void applyChanges(String newWord, String printHistory){
+
+	public void applyChanges(String newWord, String printHistory) {
 		this.addToHistory(printHistory);
 		this.history.add(newWord);
 		this.currWord = newWord;
@@ -54,12 +54,31 @@ public class Word {
 	public String getPrintableWordHistory() {
 		if (this.baseWord.equals(this.currWord)) {
 			// TODO: what to do if untrimmed or cannot trim
-			
+
 			return "";
 		} else {
 			this.printHistory.append(this.toString() + "\n");
 
 			return this.printHistory.toString();
 		}
+	}
+
+	public boolean hasCurrWord() {
+		return currWord != null && !currWord.isEmpty();
+	}
+
+	public boolean isBaseWordEqualToCurrWordIgnoreHyphen() {
+		return baseWord.replaceAll("-", "").equals(currWord);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		Word other = (Word) o;
+		return baseWord.equals(other.baseWord);
+	}
+
+	@Override
+	public int hashCode() {
+		return baseWord.hashCode();
 	}
 }
