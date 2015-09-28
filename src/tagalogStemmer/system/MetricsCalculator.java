@@ -62,6 +62,13 @@ public class MetricsCalculator {
 		System.out.println("TN: " + tn);
 		System.out.println("FN: " + fn);
 
+		double precision = tp * 1.0 / (tp + fp);
+		double recall = tp * 1.0 / (tp + fn);
+		double fmeasure = 2 * (precision * recall) / (precision + recall);
+		System.out.println("Precision: " + precision);
+		System.out.println("Recall: " + recall);
+		System.out.println("F-Measure: " + fmeasure);
+
 		FileWriter fw;
 		try {
 			fw = new FileWriter("output/results.csv");
