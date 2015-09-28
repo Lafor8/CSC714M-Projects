@@ -39,7 +39,6 @@ public class ReduplicationRule implements Rule {
 		if (word.length() < 4)
 			return input;
 
-
 		boolean wordStartsWithVowel;
 		int syllables = 3;
 
@@ -52,7 +51,8 @@ public class ReduplicationRule implements Rule {
 			rule3Applied = false;
 			// RULE 3
 			// Basically given multiple consonants as starting (C1 C2 V1),
-			// partial reduplication is possible for 2 ways (C1 V1 C1 C2 V1) or (C1 C2 V1 C1 C2 V1)
+			// partial reduplication is possible for 2 ways (C1 V1 C1 C2 V1) or
+			// (C1 C2 V1 C1 C2 V1)
 			// eg. prito -> piprito, priprito
 
 			boolean cond[] = new boolean[2];
@@ -83,7 +83,8 @@ public class ReduplicationRule implements Rule {
 			if (syllables == 3) {
 				if (wordStartsWithVowel) {
 					// RULE 1
-					// TODO: confirm if the only syllable format for vowels as first letter is just (V)
+					// TODO: confirm if the only syllable format for vowels as
+					// first letter is just (V)
 					if (word.charAt(0) == word.charAt(1)) {
 						// Apply Changes
 						history += "(" + word.substring(0, 1) + ")" + word.substring(1);
@@ -94,7 +95,8 @@ public class ReduplicationRule implements Rule {
 					}
 				} else {
 					// RULE 2
-					// TODO: confirm if the only syllable format for consonants as first letter is just (CV) or (CVC)
+					// TODO: confirm if the only syllable format for consonants
+					// as first letter is just (CV) or (CVC)
 					if (word.length() > 4 && word.charAt(0) == word.charAt(2) && word.charAt(1) == word.charAt(3)) {
 						// Apply Changes
 						history += "(" + word.substring(0, 2) + ")" + word.substring(2);
@@ -103,7 +105,8 @@ public class ReduplicationRule implements Rule {
 
 						input.applyChanges(word, history);
 
-					} else if (word.length() > 6 && word.charAt(0) == word.charAt(3) && word.charAt(1) == word.charAt(4) && word.charAt(2) == word.charAt(5)) {
+					} else if (word.length() > 6 && word.charAt(0) == word.charAt(3)
+							&& word.charAt(1) == word.charAt(4) && word.charAt(2) == word.charAt(5)) {
 						// Apply Changes
 
 						history += "(" + word.substring(0, 3) + ")" + word.substring(3);
@@ -128,8 +131,10 @@ public class ReduplicationRule implements Rule {
 							if (totalLength * 2 + 1 <= word.length()) {
 								boolean cond[] = new boolean[2];
 
-								cond[0] = word.substring(0, totalLength).equals(word.substring(totalLength, totalLength * 2));
-								cond[1] = WordUtilities.stringFollowsCVPattern(word.substring(0, totalLength), patterns[i] + patterns[j]);
+								cond[0] = word.substring(0, totalLength).equals(
+										word.substring(totalLength, totalLength * 2));
+								cond[1] = WordUtilities.stringFollowsCVPattern(word.substring(0, totalLength),
+										patterns[i] + patterns[j]);
 
 								if (cond[0] && cond[1]) {
 									history += "(" + word.substring(0, totalLength) + ")" + word.substring(totalLength);
@@ -154,6 +159,9 @@ public class ReduplicationRule implements Rule {
 
 		String firstWord;
 		String secondWord;
+
+		if (word.length() <= 1)
+			return input;
 
 		// RULE 1: Reduplication and hyphenation of a two-syllable root without
 		// any affix e.g. halu-halo

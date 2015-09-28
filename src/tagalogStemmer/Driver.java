@@ -2,10 +2,14 @@ package tagalogStemmer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 import tagalogStemmer.io.ArticleConverter;
+import tagalogStemmer.io.CSVReader;
 import tagalogStemmer.io.DuplicateRemoverUtility;
 import tagalogStemmer.models.Word;
+import tagalogStemmer.system.MetricsCalculator;
 import tagalogStemmer.system.TagalogStemmer;
 
 import common.io.ArticleXMLFileIO;
@@ -35,11 +39,18 @@ public class Driver {
 
 		// CSVWriter.write("correct.csv", inputWords);
 
-		DuplicateRemoverUtility.cleanCSV("data/cleaned.csv");
+		// DuplicateRemoverUtility.cleanCSV("data/cleaned.csv");
 
 		TagalogStemmer tagalogStemmer = new TagalogStemmer();
 		// TODO:
 		ArrayList<Word> resultingWords = tagalogStemmer.stemWordsFromList(inputWords);
+
+		List<Word> correctWords = CSVReader.readWordsFromCSV("data/cleaned.csv");
+
+		LinkedHashMap<String, Word> generatedSet = DuplicateRemoverUtility.convertListToHashMap(resultingWords);
+		LinkedHashMap<String, Word> correctSet = DuplicateRemoverUtility.convertListToHashMap(correctWords);
+
+		MetricsCalculator.calculateAndPrint(correctSet, generatedSet);
 
 		// STEP 03 - OUTPUT RESULTS TO FILE / DISPLAY RESULTS TO CONSOLE
 		// System.out.println();

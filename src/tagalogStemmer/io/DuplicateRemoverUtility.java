@@ -1,13 +1,10 @@
 package tagalogStemmer.io;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Scanner;
 
 import tagalogStemmer.models.Word;
 
@@ -17,13 +14,9 @@ public class DuplicateRemoverUtility {
 
 		// Read as ArrayList<Word>
 
-		List<Word> correctWordList = readWordsFromCSV(fileName);
+		List<Word> correctWordList = CSVReader.readWordsFromCSV(fileName);
 
-		LinkedHashSet<Word> correctWordSet = new LinkedHashSet<Word>();
-
-		for (Word correctWord : correctWordList) {
-			correctWordSet.add(correctWord);
-		}
+		LinkedHashSet<Word> correctWordSet = convertListToHashSet(correctWordList);
 
 		try {
 			FileWriter fw = new FileWriter("output/cleaned.csv");
@@ -41,35 +34,28 @@ public class DuplicateRemoverUtility {
 
 	}
 
-	public static List<Word> readWordsFromCSV(String fileName) {
-		Scanner scanner;
-		List<Word> wordList = new ArrayList<Word>();
+	public static LinkedHashSet<Word> convertListToHashSet(List<Word> wordList) {
 
-		try {
-			scanner = new Scanner(new FileReader(fileName));
-			while (scanner.hasNextLine()) {
+		LinkedHashSet<Word> wordSet = new LinkedHashSet<Word>();
 
-				String[] tokens = scanner.nextLine().split(",");
-
-				if (tokens.length == 2) {
-					String baseWord = tokens[0];
-					String stemmed = tokens[1];
-
-					Word word = new Word(baseWord);
-					word.currWord = stemmed;
-
-					wordList.add(word);
-				}
-
-			}
-
-			scanner.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		for (Word word : wordList) {
+			wordSet.add(word);
 		}
 
-		return wordList;
+		return wordSet;
 
 	}
+
+	public static LinkedHashMap<String, Word> convertListToHashMap(List<Word> wordList) {
+
+		LinkedHashMap<String, Word> wordMap = new LinkedHashMap<String, Word>();
+
+		for (Word word : wordList) {
+			wordMap.put(word.baseWord, word);
+		}
+
+		return wordMap;
+
+	}
+
 }

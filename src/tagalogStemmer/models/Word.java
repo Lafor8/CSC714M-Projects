@@ -67,8 +67,8 @@ public class Word {
 		return currWord != null && !currWord.isEmpty();
 	}
 
-	public boolean isBaseWordEqualToCurrWord() {
-		return baseWord.equals(currWord);
+	public boolean isBaseWordEqualToCurrWordIgnoreHyphen() {
+		return baseWord.replaceAll("-", "").equals(currWord);
 	}
 
 	@Override
