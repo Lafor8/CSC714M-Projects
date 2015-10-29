@@ -1,0 +1,3 @@
+The Information Security Policy establishes requirements to ensure that information security policies remain current as business needs evolve and technology changes. This policy must be published and communicated to employees and relevant external parties.
+The Office of the Government Chief Information Officer is responsible for establishing, issuing and monitoring information security policies.
+The information security policy must be reviewed on an annual basis and updated when required.
