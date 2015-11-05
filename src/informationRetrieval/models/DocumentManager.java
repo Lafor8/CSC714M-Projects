@@ -83,4 +83,8 @@ public class DocumentManager {
 	public Document getDocumentByNumber(int number) {
 		return documents.get(number);
 	}
+
+	public int getNumDocuments() {
+		return documents.size();
+	}
 }

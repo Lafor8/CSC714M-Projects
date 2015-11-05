@@ -1,5 +1,6 @@
 package informationRetrieval;
 
+import informationRetrieval.index.IDFExtender;
 import informationRetrieval.index.InvertedIndexer;
 import informationRetrieval.index.TFExtender;
 import informationRetrieval.models.DocumentManager;
@@ -24,7 +25,9 @@ public class Driver {
 		// System.out.println(basicIndex);
 
 		InvertedIndex tfIndex = TFExtender.extend(basicIndex);
-		System.out.println(tfIndex);
+
+		InvertedIndex tfIdfIndex = IDFExtender.extend(tfIndex);
+		System.out.println(tfIdfIndex);
 
 	}
 }

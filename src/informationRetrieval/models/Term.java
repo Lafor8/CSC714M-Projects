@@ -19,7 +19,7 @@ public class Term {
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(text + " -> ");
+		sb.append(text + "(" + idf + ") -> ");
 		for (Posting posting : postings) {
 			sb.append(posting.toString() + ", ");
 		}
