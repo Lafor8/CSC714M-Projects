@@ -1,6 +1,7 @@
 package informationRetrieval;
 
 import informationRetrieval.models.DocumentManager;
+import informationRetrieval.tokenization.RegexTokenizer;
 
 public class Driver {
 
@@ -9,6 +10,7 @@ public class Driver {
 		DocumentManager dm = DocumentManager.getInstance();
 		dm.populate("data/IR_Data");
 
-	}
+		dm.tokenize(new RegexTokenizer("[\\p{Punct}\\s]+"));
 
+	}
 }
