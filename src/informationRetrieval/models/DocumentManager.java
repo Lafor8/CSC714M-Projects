@@ -66,9 +66,7 @@ public class DocumentManager {
 			List<String> normalizedTokens = new ArrayList<String>();
 
 			for (String token : document.tokens) {
-				String normalizedToken = normalizer.normalize(token);
-				if (normalizedToken != null)
-					normalizedTokens.add(normalizedToken);
+				normalizedTokens.addAll(normalizer.normalize(token));
 			}
 
 			document.tokens = normalizedTokens;

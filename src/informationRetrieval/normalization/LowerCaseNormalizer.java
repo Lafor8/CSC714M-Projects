@@ -1,10 +1,14 @@
 package informationRetrieval.normalization;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LowerCaseNormalizer implements Normalizer {
 
 	@Override
-	public String normalize(String word) {
-		return word.toLowerCase();
+	public List<String> normalize(String word) {
+		List<String> normalized = new ArrayList<String>();
+		normalized.add(word.toLowerCase());
+		return normalized;
 	}
-
 }
