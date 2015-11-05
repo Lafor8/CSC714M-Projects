@@ -1,10 +1,13 @@
 package informationRetrieval.models;
 
 import informationRetrieval.io.ArticleTxtFileReader;
+import informationRetrieval.normalization.Normalizer;
 import informationRetrieval.tokenization.Tokenizer;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DocumentManager {
@@ -54,9 +57,19 @@ public class DocumentManager {
 		}
 	}
 
-	public void normalize() {
-		for (Map.Entry<Integer, Document> document : documents.entrySet()) {
+	public void normalize(Normalizer normalizer) {
+		for (Map.Entry<Integer, Document> entry : documents.entrySet()) {
 
+			Document document = entry.getValue();
+			List<String> normalizedTokens = new ArrayList<String>();
+
+			for (String token : document.tokens) {
+				String normalizedToken = normalizer.normalize(token);
+				if (normalizedToken != null)
+					normalizedTokens.add(normalizedToken);
+			}
+
+			document.tokens = normalizedTokens;
 		}
 
 	}
