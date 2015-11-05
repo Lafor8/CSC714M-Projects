@@ -1,0 +1,137 @@
+Bills on ports and immigration were submitted by Senator Brownback, Republican of Kansas.
+
+1.0	bill	be submit by	Senator Brownback
+1.0	bill	be	submit
+1.0	Senator Brownback	republican of	Kansas
+
+
+Born in Davao, Philippines, Alron Lam is a Filipino Citizen.
+
+0.9493926431086334	Alron Lam	be	Filipino Citizen
+
+
+friends give true praise, while enemies give false praise.
+
+1.0	friend	give	praise
+1.0	enemy	give	false praise
+1.0	friend	give	true praise
+
+
+Friends give legitimate compliments. Enemies give fake compliments.
+
+1.0	Friends	give	legitimate compliment
+1.0	Friends	give	compliment
+1.0	enemy	give	fake compliment
+
+
+The City of London is where Queen Elizabeth of the United Kingdom resides.
+
+
+
+The City of London is not the residency of Queen Elizabeth of the United Kingdom.
+
+
+
+Hannah is older than Jason. Eric is older than Hannah. Jason is older than Eric.
+
+1.0	Hannah	be older than	Jason
+1.0	Hannah	be	older
+1.0	Eric	be	older
+1.0	Eric	be older than	Hannah
+1.0	Jason	be	older
+1.0	Jason	be older than	Eric
+
+
+Hannah is older than Jason. Eric is not older than Hannah. Jason is older than Eric.
+
+1.0	Hannah	be older than	Jason
+1.0	Hannah	be	older
+1.0	Jason	be	older
+1.0	Jason	be older than	Eric
+
+
+She said that I don't know what I want.
+
+
+
+That people enjoy eating proves my point.
+
+
+
+Obama was born in Hawaii. He is our president.
+
+1.0	Obama	be bear in	Hawaii
+1.0	Obama	be	bear
+1.0	he	be	we president
+
+
+Disturbed by violence, Frank advocates peace.
+
+1.0	Frank	advocate	peace
+1.0	Frank	disturb by	violence
+
+
+Heinz Fischer of Austria visits China. 
+
+0.8887428618943004	Austria	visit	China
+
+
+No house cats have rabies.
+
+
+
+All rabbits eat fresh vegetables.
+
+1.0	rabbit	eat	fresh vegetable
+1.0	rabbit	eat	vegetable
+
+
+All young rabbits drink milk.
+
+1.0	young rabbit	drink	milk
+
+
+Born in a small town, she took the midnight train going anywhere.
+
+1.0	she	bear in	small town
+1.0	she	bear in	town
+
+
+Dentists suggest that you should brush your teeth.
+
+1.0	you	brush	you tooth
+
+
+faeries are dancing in the field where I lost my bike.
+
+0.6196438553078624	I	lose	my bike
+
+
+She said that furry cats are cute.
+
+
+
+I persuaded Fred to leave the room.
+
+1.0	I	persuade	Fred
+1.0	Fred	leave	room
+
+
+He is the 14th student.
+
+1.0	he	be	student
+1.0	he	be	14th student
+
+
+All cute rabbits eat vegetables.
+
+1.0	cute rabbit	eat	vegetable
+
+
+Obama signed the bill into law on Friday.
+
+1.0	Obama	sign bill into	law
+1.0	Obama	sign bill on	Friday
+1.0	Obama	sign	bill
+
+
