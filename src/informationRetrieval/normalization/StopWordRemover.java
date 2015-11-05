@@ -4,7 +4,7 @@ public class StopWordRemover implements Normalizer {
 
 	@Override
 	public String normalize(String word) {
-		// METHOD STUB
+		// TODO: METHOD STUB
 		return word;
 	}
 
