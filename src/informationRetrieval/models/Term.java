@@ -25,4 +25,16 @@ public class Term {
 		}
 		return sb.toString();
 	}
+
+	public Term clone() {
+
+		List<Posting> clonePostings = new ArrayList<Posting>();
+		for (Posting posting : postings)
+			clonePostings.add(posting.clone());
+
+		Term clone = new Term(text);
+		clone.idf = idf;
+		clone.postings = clonePostings;
+		return clone;
+	}
 }

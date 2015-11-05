@@ -5,7 +5,7 @@ import java.util.List;
 
 public class InvertedIndex {
 
-	List<Term> terms;
+	public List<Term> terms;
 
 	public InvertedIndex(List<Term> terms) {
 		this.terms = terms;
@@ -26,5 +26,15 @@ public class InvertedIndex {
 			sb.append(term.toString()).append("\n");
 		}
 		return sb.toString();
+	}
+
+	public InvertedIndex clone() {
+
+		List<Term> cloneTerms = new ArrayList<Term>();
+		for (Term term : terms)
+			cloneTerms.add(term.clone());
+
+		InvertedIndex clone = new InvertedIndex(cloneTerms);
+		return clone;
 	}
 }

@@ -1,6 +1,7 @@
 package informationRetrieval;
 
 import informationRetrieval.index.InvertedIndexer;
+import informationRetrieval.index.TFExtender;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
 import informationRetrieval.normalization.LowerCaseNormalizer;
@@ -20,6 +21,10 @@ public class Driver {
 		dm.normalize(new LowerCaseNormalizer());
 		// dm.normalize(new StopWordRemover());
 		InvertedIndex basicIndex = InvertedIndexer.index(dm.getDocumentsAsList());
-		System.out.println(basicIndex);
+		// System.out.println(basicIndex);
+
+		InvertedIndex tfIndex = TFExtender.extend(basicIndex);
+		System.out.println(tfIndex);
+
 	}
 }

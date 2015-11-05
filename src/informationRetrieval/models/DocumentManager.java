@@ -79,4 +79,8 @@ public class DocumentManager {
 	public List<Document> getDocumentsAsList() {
 		return new ArrayList<Document>(documents.values());
 	}
+
+	public Document getDocumentByNumber(int number) {
+		return documents.get(number);
+	}
 }
