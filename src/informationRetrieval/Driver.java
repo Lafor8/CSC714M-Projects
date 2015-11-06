@@ -69,6 +69,6 @@ public class Driver {
 		List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
 
 		/* Display output based on results */
-		System.out.println(tfResults);
+		System.out.println(basicResults);
 	}
 }

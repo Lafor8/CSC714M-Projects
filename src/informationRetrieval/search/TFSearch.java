@@ -16,6 +16,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
+import common.util.CollectionsUtility;
+
 public class TFSearch implements SearchStrategy {
 
 	@Override
@@ -33,7 +35,7 @@ public class TFSearch implements SearchStrategy {
 				continue;
 
 			for (Posting posting : indexTerm.postings) {
-				Double newScore = (1 + Math.log10(indexTerm.idf));
+				Double newScore = (1 + Math.log10(posting.tf));
 
 				if (postingScores.containsKey(posting)) {
 					Double oldScore = postingScores.get(posting);
@@ -44,7 +46,7 @@ public class TFSearch implements SearchStrategy {
 			}
 		}
 
-		postingList = TFSearch.entriesSortedByValues(postingScores);
+		postingList = CollectionsUtility.entriesSortedByValues(postingScores);
 
 		// Building the Result List
 
@@ -56,19 +58,4 @@ public class TFSearch implements SearchStrategy {
 
 		return queryResults;
 	}
-
-	public static <K, V extends Comparable<? super V>> List<Entry<K, V>> entriesSortedByValues(Map<K, V> map) {
-
-		List<Entry<K, V>> sortedEntries = new ArrayList<Entry<K, V>>(map.entrySet());
-
-		Collections.sort(sortedEntries, new Comparator<Entry<K, V>>() {
-			@Override
-			public int compare(Entry<K, V> e1, Entry<K, V> e2) {
-				return e2.getValue().compareTo(e1.getValue());
-			}
-		});
-
-		return sortedEntries;
-	}
-
 }
