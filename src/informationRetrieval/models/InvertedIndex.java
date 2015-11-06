@@ -19,6 +19,15 @@ public class InvertedIndex {
 		// TODO
 		return new InvertedIndex(new ArrayList<Term>());
 	}
+	
+	public Term getTerm(String text){
+		for(Term term : this.terms){
+			if(term.text.equals(text))
+				return term;
+		}
+		
+		return null;
+	}
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();

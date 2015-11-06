@@ -18,4 +18,8 @@ public class Document {
 		return tokens.contains(string);
 	}
 
+	@Override
+	public String toString(){
+		return "\n" + documentNumber +": "+ text;
+	}
 }

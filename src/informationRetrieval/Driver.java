@@ -46,7 +46,7 @@ public class Driver {
 		InvertedIndex tfIndex = TFExtender.extend(basicIndex);
 		InvertedIndex tfIdfIndex = IDFExtender.extend(tfIndex);
 
-		System.out.println(tfIdfIndex);
+		//System.out.println(tfIndex);
 
 		/* Get input from the user */
 
@@ -54,6 +54,8 @@ public class Driver {
 		// once the search string is acquired from the user,
 		// tokenize and normalize into a List<String> object
 		List<String> searchTerms = new ArrayList<String>();
+		searchTerms.add("world");
+		searchTerms.add("worth");
 
 		/* Perform the actual search */
 
@@ -63,9 +65,10 @@ public class Driver {
 		SearchStrategy tfIdf = new TFIDFSearch();
 
 		List<Document> basicResults = basic.search(basicIndex, searchTerms);
-		List<Document> tfResults = tf.search(basicIndex, searchTerms);
-		List<Document> tfIdfResults = tfIdf.search(basicIndex, searchTerms);
+		List<Document> tfResults = tf.search(tfIndex, searchTerms);
+		List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
 
 		/* Display output based on results */
+		System.out.println(tfResults);
 	}
 }
