@@ -18,6 +18,8 @@ import informationRetrieval.tokenization.RegexTokenizer;
 import java.util.ArrayList;
 import java.util.List;
 
+import common.util.ConsoleInput;
+
 public class Driver {
 
 	public static void main(String[] args) {
@@ -27,7 +29,9 @@ public class Driver {
 		dm.populate("data/IR_Data");
 
 		/* Tokenization and Normalization */
-		dm.tokenize(new RegexTokenizer("[\\p{Punct}\\s“”‘’–]+"));
+		RegexTokenizer tokenizer = new RegexTokenizer("[\\p{Punct}\\s“”‘’–]+");
+		
+		dm.tokenize(tokenizer);
 
 		dm.normalize(new Trimmer());
 		dm.normalize(new LowerCaseNormalizer());
@@ -50,16 +54,15 @@ public class Driver {
 
 		/* Get input from the user */
 
-		// TODO: ask for search string from user.
-		// once the search string is acquired from the user,
-		// tokenize and normalize into a List<String> object
-		List<String> searchTerms = new ArrayList<String>();
-		searchTerms.add("world");
-		searchTerms.add("worth");
+		String searchQuery = ConsoleInput.promptUserForInput("Search: ");
+		
+		// TODO: normalize input
+		List<String> searchTerms = tokenizer.tokenize(searchQuery);
+		//searchTerms.add("world");
+		//searchTerms.add("worth");
 
 		/* Perform the actual search */
 
-		// TODO: implement these three search strategies
 		SearchStrategy basic = new BasicSearch();
 		SearchStrategy tf = new TFSearch();
 		SearchStrategy tfIdf = new TFIDFSearch();
@@ -69,6 +72,9 @@ public class Driver {
 		List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
 
 		/* Display output based on results */
-		System.out.println(basicResults);
+		System.out.println("Search Terms: " +searchTerms + "\n");
+		System.out.println("Query Results (Basic): " +basicResults + "\n\n");
+		System.out.println("Query Results (TF): " +tfResults + "\n\n");
+		System.out.println("Query Results (TF.IDF): " +tfIdfResults + "\n\n");
 	}
 }

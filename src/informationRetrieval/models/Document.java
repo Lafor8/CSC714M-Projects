@@ -20,6 +20,6 @@ public class Document {
 
 	@Override
 	public String toString(){
-		return "\n" + documentNumber +": "+ text;
+		return "\n" + documentNumber +": "+ filePath;
 	}
 }
