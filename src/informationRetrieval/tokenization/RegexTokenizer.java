@@ -17,4 +17,8 @@ public class RegexTokenizer implements Tokenizer {
 		String[] tokens = text.trim().split(regex);
 		return new ArrayList<String>(Arrays.asList(tokens));
 	}
+
+	public static RegexTokenizer createWhiteSpacePunctuationTokenizer() {
+		return new RegexTokenizer("[\\p{Punct}\\s“”‘’–]+");
+	}
 }
