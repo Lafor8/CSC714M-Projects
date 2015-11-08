@@ -7,6 +7,8 @@ import informationRetrieval.models.Document;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
 import informationRetrieval.normalization.LowerCaseNormalizer;
+import informationRetrieval.normalization.NormalizationFacade;
+import informationRetrieval.normalization.Normalizer;
 import informationRetrieval.normalization.StopWordRemover;
 import informationRetrieval.normalization.Trimmer;
 import informationRetrieval.search.BasicSearch;
@@ -15,6 +17,7 @@ import informationRetrieval.search.TFIDFSearch;
 import informationRetrieval.search.TFSearch;
 import informationRetrieval.tokenization.RegexTokenizer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import common.util.ConsoleInput;
@@ -46,14 +49,16 @@ public class Driver {
 
 		dm.tokenize(tokenizer);
 
-		dm.normalize(new Trimmer());
-		dm.normalize(new LowerCaseNormalizer());
-		dm.normalize(new StopWordRemover("data/fil-function-words.txt"));
-		// TODO: implement stop word remover
+		List<Normalizer> normalizationModules = new ArrayList<Normalizer>();
+		normalizationModules.add(new Trimmer());
+		normalizationModules.add(new LowerCaseNormalizer());
+		normalizationModules.add(new StopWordRemover("data/fil-function-words.txt"));
+		dm.normalize(normalizationModules);
 		// feel free to add new normalization modules (like expanding
 		// contractions e.g. aso't pusa -> aso at pusa))
 		// look at the normalization package. implement the normalizer
 		// interface then call dm.normalize() here with the new module.
+		// this is iterative so order of normalization modules matters
 
 		/* Inverted Index Generation */
 
@@ -67,24 +72,33 @@ public class Driver {
 	}
 
 	static void searchRoutine() {
+		/* Initialization */
 
+		// Tokenization
 		RegexTokenizer tokenizer = RegexTokenizer.createWhiteSpacePunctuationTokenizer();
 
+		// Normalization
+		List<Normalizer> normalizationModules = new ArrayList<Normalizer>();
+		normalizationModules.add(new Trimmer());
+		normalizationModules.add(new LowerCaseNormalizer());
+		normalizationModules.add(new StopWordRemover("data/fil-function-words.txt"));
+		NormalizationFacade normalizationFacade = new NormalizationFacade(normalizationModules);
+
+		// Search Strategies
 		SearchStrategy basic = new BasicSearch();
 		SearchStrategy tf = new TFSearch();
 		SearchStrategy tfIdf = new TFIDFSearch();
 
-		/* Get input from the user */
-
+		/* Continually get input from the user */
 		String searchQuery;
 
 		while (!(searchQuery = ConsoleInput.promptUserForInput("Search (/q to quit): ")).equals("/q")) {
 
-			/* Perform the actual search */
-
-			// TODO: normalize input
+			/* Tokenize and normalize search terms */
 			List<String> searchTerms = tokenizer.tokenize(searchQuery);
+			searchTerms = normalizationFacade.normalize(searchTerms);
 
+			/* Perform the actual search */
 			List<Document> basicResults = basic.search(basicIndex, searchTerms);
 			List<Document> tfResults = tf.search(tfIndex, searchTerms);
 			List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);

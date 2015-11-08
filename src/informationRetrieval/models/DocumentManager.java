@@ -1,6 +1,7 @@
 package informationRetrieval.models;
 
 import informationRetrieval.io.ArticleTxtFileReader;
+import informationRetrieval.normalization.NormalizationFacade;
 import informationRetrieval.normalization.Normalizer;
 import informationRetrieval.tokenization.Tokenizer;
 
@@ -59,20 +60,31 @@ public class DocumentManager {
 		}
 	}
 
-	public void normalize(Normalizer normalizer) {
+	public void normalize(List<Normalizer> normalizationModules) {
+
+		NormalizationFacade normalizationFacade = new NormalizationFacade(normalizationModules);
+
 		for (Map.Entry<Integer, Document> entry : documents.entrySet()) {
-
 			Document document = entry.getValue();
-			List<String> normalizedTokens = new ArrayList<String>();
-
-			for (String token : document.tokens) {
-				normalizedTokens.addAll(normalizer.normalize(token));
-			}
-
-			document.tokens = normalizedTokens;
+			document.tokens = normalizationFacade.normalize(document.tokens);
 		}
 
 	}
+
+	// public void normalize(Normalizer normalizer) {
+	// for (Map.Entry<Integer, Document> entry : documents.entrySet()) {
+	//
+	// Document document = entry.getValue();
+	// List<String> normalizedTokens = new ArrayList<String>();
+	//
+	// for (String token : document.tokens) {
+	// normalizedTokens.addAll(normalizer.normalize(token));
+	// }
+	//
+	// document.tokens = normalizedTokens;
+	// }
+	//
+	// }
 
 	public List<Document> getDocumentsAsList() {
 		return new ArrayList<Document>(documents.values());
