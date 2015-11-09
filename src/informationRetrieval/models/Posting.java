@@ -18,7 +18,7 @@ public class Posting {
 	}
 
 	public String toString() {
-		return documentNumber + "-" + filePath + " (" + tf + ")";
+		return documentNumber + " : '" + filePath + "' : " + tf;
 	}
 
 	public Posting clone() {

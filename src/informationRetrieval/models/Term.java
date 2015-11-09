@@ -19,11 +19,11 @@ public class Term {
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(text + "(" + idf + ") -> ");
+		sb.append(text + " : " + idf + " >>> ");
 		for (Posting posting : postings) {
-			sb.append(posting.toString() + ", ");
+			sb.append(posting.toString() + " ,");
 		}
-		return sb.toString();
+		return sb.toString().substring(0, sb.length() - 2);
 	}
 
 	public Term clone() {

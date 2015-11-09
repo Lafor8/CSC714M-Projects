@@ -1,5 +1,8 @@
 package informationRetrieval.models;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,20 +15,32 @@ public class InvertedIndex {
 	}
 
 	public void save(String filePath) {
-		// TODO
+		try {
+
+			File file = new File(filePath);
+			if (!file.exists())
+				file.createNewFile();
+
+			FileWriter fw = new FileWriter(file);
+			fw.append(this.toString());
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public static InvertedIndex load(String filePath) {
 		// TODO
 		return new InvertedIndex(new ArrayList<Term>());
 	}
-	
-	public Term getTerm(String text){
-		for(Term term : this.terms){
-			if(term.text.equals(text))
+
+	public Term getTerm(String text) {
+		for (Term term : this.terms) {
+			if (term.text.equals(text))
 				return term;
 		}
-		
+
 		return null;
 	}
 
@@ -46,4 +61,5 @@ public class InvertedIndex {
 		InvertedIndex clone = new InvertedIndex(cloneTerms);
 		return clone;
 	}
+
 }
