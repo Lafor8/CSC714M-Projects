@@ -29,21 +29,21 @@ public class Driver {
 	static InvertedIndex tfIdfIndex;
 
 	public static void main(String[] args) {
-		// generatAndSaveIndices(); // create this method to generate and save
-		// indices to their respective files
-
-		// loadAndInitializeIndices(); // use this to load the indices and
-		// initialize the static variables
-
-		generateAndSaveIndices();
+		// generateAndSaveIndices();
+		loadIndices();
 		// generateAndInitializeIndices();
-		// searchRoutine();
+		searchRoutine();
+	}
+
+	static void loadIndices() {
+		basicIndex = InvertedIndex.load("data/IR_Indices/basic.txt");
+		tfIndex = InvertedIndex.load("data/IR_Indices/tf.txt");
+		tfIdfIndex = InvertedIndex.load("data/IR_Indices/tf_idf.txt");
 	}
 
 	static void generateAndSaveIndices() {
 		/* Load Data */
 		DocumentManager dm = DocumentManager.getInstance();
-		dm.populate("data/IR_Data");
 
 		/* Tokenization and Normalization */
 		RegexTokenizer tokenizer = RegexTokenizer.createWhiteSpacePunctuationTokenizer();
@@ -55,11 +55,6 @@ public class Driver {
 		normalizationModules.add(new LowerCaseNormalizer());
 		normalizationModules.add(new StopWordRemover("data/fil-function-words.txt"));
 		dm.normalize(normalizationModules);
-		// feel free to add new normalization modules (like expanding
-		// contractions e.g. aso't pusa -> aso at pusa))
-		// look at the normalization package. implement the normalizer
-		// interface then call dm.normalize() here with the new module.
-		// this is iterative so order of normalization modules matters
 
 		/* Inverted Index Generation */
 
@@ -68,43 +63,10 @@ public class Driver {
 		InvertedIndex basicIndex = InvertedIndexer.index(dm.getDocumentsAsList());
 		InvertedIndex tfIndex = TFExtender.extend(basicIndex);
 		InvertedIndex tfIdfIndex = IDFExtender.extend(tfIndex);
-		// System.out.println(tfIdfIndex);
 
 		basicIndex.save("data/IR_Indices/basic.txt");
 		tfIndex.save("data/IR_Indices/tf.txt");
 		tfIdfIndex.save("data/IR_Indices/tf_idf.txt");
-
-	}
-
-	static void generateAndInitializeIndices() {
-		/* Load Data */
-		DocumentManager dm = DocumentManager.getInstance();
-		dm.populate("data/IR_Data");
-
-		/* Tokenization and Normalization */
-		RegexTokenizer tokenizer = RegexTokenizer.createWhiteSpacePunctuationTokenizer();
-
-		dm.tokenize(tokenizer);
-
-		List<Normalizer> normalizationModules = new ArrayList<Normalizer>();
-		normalizationModules.add(new Trimmer());
-		normalizationModules.add(new LowerCaseNormalizer());
-		normalizationModules.add(new StopWordRemover("data/fil-function-words.txt"));
-		dm.normalize(normalizationModules);
-		// feel free to add new normalization modules (like expanding
-		// contractions e.g. aso't pusa -> aso at pusa))
-		// look at the normalization package. implement the normalizer
-		// interface then call dm.normalize() here with the new module.
-		// this is iterative so order of normalization modules matters
-
-		/* Inverted Index Generation */
-
-		// the extender classes clone the index passed to it for extension, so
-		// there are three different indices: basic, tf, and tfidf
-		basicIndex = InvertedIndexer.index(dm.getDocumentsAsList());
-		tfIndex = TFExtender.extend(basicIndex);
-		tfIdfIndex = IDFExtender.extend(tfIndex);
-		// System.out.println(tfIdfIndex);
 
 	}
 
@@ -146,5 +108,34 @@ public class Driver {
 			System.out.println("Query Results (TF): " + tfResults + "\n\n");
 			System.out.println("Query Results (TF.IDF): " + tfIdfResults + "\n\n");
 		}
+	}
+
+	static void generateAndInitializeIndices() {
+		/* Load Data */
+		DocumentManager dm = DocumentManager.getInstance();
+
+		/* Tokenization and Normalization */
+		RegexTokenizer tokenizer = RegexTokenizer.createWhiteSpacePunctuationTokenizer();
+
+		dm.tokenize(tokenizer);
+
+		List<Normalizer> normalizationModules = new ArrayList<Normalizer>();
+		normalizationModules.add(new Trimmer());
+		normalizationModules.add(new LowerCaseNormalizer());
+		normalizationModules.add(new StopWordRemover("data/fil-function-words.txt"));
+		dm.normalize(normalizationModules);
+		// feel free to add new normalization modules (like expanding
+		// contractions e.g. aso't pusa -> aso at pusa))
+		// look at the normalization package. implement the normalizer
+		// interface then call dm.normalize() here with the new module.
+		// this is iterative so order of normalization modules matters
+
+		/* Inverted Index Generation */
+
+		// the extender classes clone the index passed to it for extension, so
+		// there are three different indices: basic, tf, and tfidf
+		basicIndex = InvertedIndexer.index(dm.getDocumentsAsList());
+		tfIndex = TFExtender.extend(basicIndex);
+		tfIdfIndex = IDFExtender.extend(tfIndex);
 	}
 }

@@ -16,8 +16,10 @@ public class DocumentManager {
 	private static DocumentManager instance;
 
 	public static DocumentManager getInstance() {
-		if (instance == null)
+		if (instance == null) {
 			instance = new DocumentManager();
+			instance.populate("data/IR_Data");
+		}
 		return instance;
 	}
 
@@ -25,6 +27,10 @@ public class DocumentManager {
 	private int documentCount = 0;
 
 	public void populate(String folderPath) {
+
+		this.documentCount = 0;
+		this.documents.clear();
+
 		// list all files
 		// list all folders, recurse
 		File folder = new File(folderPath);

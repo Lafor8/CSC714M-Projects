@@ -19,7 +19,7 @@ public class Term {
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(text + " : " + idf + " >>> ");
+		sb.append(text + " : " + idf + " = ");
 		for (Posting posting : postings) {
 			sb.append(posting.toString() + " ,");
 		}
@@ -36,5 +36,21 @@ public class Term {
 		clone.idf = idf;
 		clone.postings = clonePostings;
 		return clone;
+	}
+
+	public static Term loadFromString(String string) {
+
+		String[] tokens = string.split("[=,]");
+
+		String[] termTokens = tokens[0].trim().split("[\\s:]+");
+		Term term = new Term(termTokens[0]);
+		term.idf = Double.parseDouble(termTokens[1]);
+
+		for (int i = 1; i < tokens.length; i++) {
+			term.postings.add(Posting.loadFromString(tokens[i].trim()));
+		}
+
+		return term;
+
 	}
 }

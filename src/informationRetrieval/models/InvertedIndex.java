@@ -1,10 +1,14 @@
 package informationRetrieval.models;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class InvertedIndex {
 
@@ -31,7 +35,25 @@ public class InvertedIndex {
 	}
 
 	public static InvertedIndex load(String filePath) {
-		// TODO
+
+		try {
+
+			List<Term> terms = new ArrayList<Term>();
+
+			Scanner scanner = new Scanner(new BufferedReader(new FileReader(filePath)));
+
+			while (scanner.hasNext()) {
+				String currLine = scanner.nextLine();
+				terms.add(Term.loadFromString(currLine));
+			}
+
+			scanner.close();
+
+			return new InvertedIndex(terms);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
 		return new InvertedIndex(new ArrayList<Term>());
 	}
 
