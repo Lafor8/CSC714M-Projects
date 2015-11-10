@@ -33,7 +33,7 @@ public class TFIDFSearch implements SearchStrategy {
 				continue;
 
 			for (Posting posting : indexTerm.postings) {
-				Double newScore = (1 + Math.log10(posting.tf) * indexTerm.idf);
+				Double newScore = ((1 + Math.log10(posting.tf)) * indexTerm.idf);
 
 				if (postingScores.containsKey(posting)) {
 					Double oldScore = postingScores.get(posting);
