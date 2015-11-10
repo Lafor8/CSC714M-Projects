@@ -84,7 +84,7 @@ public class Driver {
 		NormalizationFacade normalizationFacade = new NormalizationFacade(normalizationModules);
 
 		// Search Strategies
-		SearchStrategy basic = new BasicSearch();
+		SearchStrategy basic = new BasicSearch(); // BasicSearch.SEARCH_SETTING_AND);
 		SearchStrategy tf = new TFSearch();
 		SearchStrategy tfIdf = new TFIDFSearch();
 
@@ -104,9 +104,9 @@ public class Driver {
 
 			/* Display output based on results */
 			System.out.println("Search Terms: " + searchTerms + "\n");
-			System.out.println("Query Results (Basic): " + basicResults + "\n\n");
-			System.out.println("Query Results (TF): " + tfResults + "\n\n");
-			System.out.println("Query Results (TF.IDF): " + tfIdfResults + "\n\n");
+			System.out.println("Query Results (Basic): " + basicResults.size()+" Item(s) found.\n" + basicResults + "\n\n");
+			System.out.println("Query Results (TF): " + tfResults.size()+" Item(s) found.\n"+ tfResults + "\n\n");
+			System.out.println("Query Results (TF.IDF): " + tfIdfResults.size()+" Item(s) found.\n"+ tfIdfResults + "\n\n");
 		}
 	}
 
