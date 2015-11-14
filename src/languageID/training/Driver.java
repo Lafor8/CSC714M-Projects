@@ -25,15 +25,21 @@ public class Driver {
 		char[] csBuf = new char[numChars];
 		for (int i = 0; i < categories.length; ++i) {
 			String category = categories[i];
-			File trainingFile = new File(dataDir, category);
-			FileInputStream fileIn = new FileInputStream(trainingFile);
-			InputStreamReader reader = new InputStreamReader(fileIn, Strings.UTF8);
-			reader.read(csBuf);
-			String text = new String(csBuf, 0, numChars);
-			Classification c = new Classification(category);
-			Classified<CharSequence> classified = new Classified<CharSequence>(text, c);
-			classifier.handle(classified);
-			reader.close();
+
+			File categoryFolder = new File(dataDir, category);
+			File[] files = categoryFolder.listFiles();
+
+			for (File trainingFile : files) {
+				FileInputStream fileIn = new FileInputStream(trainingFile);
+				InputStreamReader reader = new InputStreamReader(fileIn, Strings.UTF8);
+				reader.read(csBuf);
+				String text = new String(csBuf, 0, numChars);
+				Classification c = new Classification(category);
+				Classified<CharSequence> classified = new Classified<CharSequence>(text, c);
+				classifier.handle(classified);
+				reader.close();
+			}
+
 		}
 		AbstractExternalizable.compileTo(classifier, modelFile);
 	}
