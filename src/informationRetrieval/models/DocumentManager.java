@@ -60,6 +60,7 @@ public class DocumentManager {
 	public void tokenize(Tokenizer tokenizer) {
 		for (Map.Entry<Integer, Document> entry : documents.entrySet()) {
 			Document document = entry.getValue();
+			
 			document.tokens = tokenizer.tokenize(document.text);
 			// System.out.println("There are " + document.tokens.size() +
 			// " tokens in " + document.filePath);

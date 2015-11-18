@@ -4,6 +4,7 @@ import informationRetrieval.models.Document;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
 import informationRetrieval.models.Posting;
+import informationRetrieval.models.SearchResult;
 import informationRetrieval.models.Term;
 
 import java.util.ArrayList;
@@ -31,8 +32,8 @@ public class BasicSearch implements SearchStrategy {
 	}
 
 	@Override
-	public List<Document> search(InvertedIndex index, List<String> searchTerms) {
-		List<Document> queryResults = new ArrayList<>();
+	public List<SearchResult> search(InvertedIndex index, List<String> searchTerms) {
+		List<SearchResult> queryResults = new ArrayList<>();
 		List<Posting> postingList = new ArrayList<>();
 
 		List<Posting> andPostingList = new ArrayList<>();
@@ -74,8 +75,10 @@ public class BasicSearch implements SearchStrategy {
 		DocumentManager dm = DocumentManager.getInstance();
 
 		for (Posting posting : postingList) {
-			if (!queryResults.contains(posting))
-				queryResults.add(dm.getDocumentByNumber(posting.documentNumber));
+			if (!queryResults.contains(posting)) {
+				SearchResult res = new SearchResult(dm.getDocumentByNumber(posting.documentNumber), 1.0);
+				queryResults.add(res);
+			}
 		}
 
 		return queryResults;

@@ -15,9 +15,11 @@ public class ArticleTxtFileReader {
 		Scanner scanner = new Scanner(new BufferedReader(new FileReader(file)));
 
 		StringBuilder sb = new StringBuilder();
-		while (scanner.hasNext())
+		while (scanner.hasNext()){
 			sb.append(scanner.nextLine());
-
+			sb.append("\n");
+		}
+		
 		scanner.close();
 
 		return new Document(file.getName(), sb.toString());

@@ -6,6 +6,8 @@ import informationRetrieval.index.TFExtender;
 import informationRetrieval.models.Document;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
+import informationRetrieval.models.Posting;
+import informationRetrieval.models.SearchResult;
 import informationRetrieval.normalization.LowerCaseNormalizer;
 import informationRetrieval.normalization.NormalizationFacade;
 import informationRetrieval.normalization.Normalizer;
@@ -19,6 +21,7 @@ import informationRetrieval.tokenization.RegexTokenizer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import common.util.ConsoleInput;
 
@@ -29,7 +32,7 @@ public class Driver {
 	static InvertedIndex tfIdfIndex;
 
 	public static void main(String[] args) {
-		// generateAndSaveIndices();
+		 generateAndSaveIndices();
 		loadIndices();
 		// generateAndInitializeIndices();
 		searchRoutine();
@@ -98,9 +101,9 @@ public class Driver {
 			searchTerms = normalizationFacade.normalize(searchTerms);
 
 			/* Perform the actual search */
-			List<Document> basicResults = basic.search(basicIndex, searchTerms);
-			List<Document> tfResults = tf.search(tfIndex, searchTerms);
-			List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
+			List<SearchResult> basicResults = basic.search(basicIndex, searchTerms);
+			List<SearchResult> tfResults = tf.search(tfIndex, searchTerms);
+			List<SearchResult> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
 
 			/* Display output based on results */
 			System.out.println("Search Terms: " + searchTerms + "\n");
