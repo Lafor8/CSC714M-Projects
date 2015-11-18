@@ -57,9 +57,13 @@ public class VerbParser {
 			}
 			return multipleVerbPhrases;
 		} else {
-			List<Tree> verbs = new ArrayList<>();
-			verbs.add(getBaseVerbPhrase(verbPhraseTree));
-			return verbs.toArray(new Tree[verbs.size()]);
+			Tree verb = getBaseVerbPhrase(verbPhraseTree);
+			if (verb != null) {
+				List<Tree> verbs = new ArrayList<>();
+				verbs.add(verb);
+				return verbs.toArray(new Tree[verbs.size()]);
+			} else
+				return null;
 		}
 	}
 

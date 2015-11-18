@@ -28,7 +28,7 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		sentences = FileManager.read("input.txt");
 
-		String text = sentences[0];
+		String text = sentencesArrayToString();
 		Properties props = new Properties();
 		props.setProperty("annotators", "tokenize,ssplit,pos,lemma,parse,depparse,natlog");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
@@ -39,27 +39,47 @@ public class Main {
 
 		for (CoreMap sentence : doc.get(CoreAnnotations.SentencesAnnotation.class)) {
 			Tree rootTree = sentence.get(TreeAnnotation.class);
-			System.out.println(rootTree.pennString());
+			// System.out.println(rootTree.pennString());
 			Tree[] clauses = ClauseParser.getIndependentClauses(sentence);
-
+			System.out.println("Sentence: " + printTree(rootTree));
 			for (Tree clause : clauses) {
-				System.out.println(clause);
+				System.out.println("Clause: " + printTree(clause));
 
 				Tree subject = SubjectParser.getSubject(clause);
 				System.out.println("Subject: " + printTree(subject));
-
+				// may also need to get the prepositional phrases in the subject
+				// phrases.
 				Tree[] verbPhrases = VerbParser.getVerbPhrases(clause);
 				if (verbPhrases != null)
-					for (Tree verbPhrase : verbPhrases)
+					for (Tree verbPhrase : verbPhrases) {
 						System.out.println("Verb Phrase: " + printTree(verbPhrase));
+						Tree dobj = DOBJParser.getDirectObject(verbPhrase);
+						System.out.println("DOBJ: " + printTree(dobj));
+						Tree ofPhrase = PrepositionParser.getNounPhrase(verbPhrase, "of");
+						System.out.println("Of Prep: " + printTree(ofPhrase));
+						Tree withPhrase = PrepositionParser.getNounPhrase(verbPhrase, "with");
+						System.out.println("With Prep: " + printTree(withPhrase));
+						Tree byPhrase = PrepositionParser.getNounPhrase(verbPhrase, "by");
+						System.out.println("By Prep: " + printTree(byPhrase));
+						Tree toPhrase = PrepositionParser.getNounPhrase(verbPhrase, "to");
+						System.out.println("To Prep: " + printTree(toPhrase));
+						Tree fromPhrase = PrepositionParser.getNounPhrase(verbPhrase, "from");
+						System.out.println("From Prep: " + printTree(fromPhrase));
+						Tree forPhrase = PrepositionParser.getNounPhrase(verbPhrase, "for");
+						System.out.println("For Prep: " + printTree(forPhrase));
+						Tree uponPhrase = PrepositionParser.getNounPhrase(verbPhrase, "upon");
+						System.out.println("Upon Prep: " + printTree(uponPhrase));
 
-				Tree dobj = DOBJParser.getDirectObjects(verbPhrases);
-				System.out.println("DOBJ: " + printTree(dobj));
+						System.out.println();
+					}
 				// get subject.
 				// get verb and DOBJ pairs
-				// get By NP
-				// get To NP
-				// get From NP
+				// get Of NP (can be used as scope or subject)
+				// get With NP (can be used as scope)
+				// get By NP (can be used as subject)
+				// get To NP (can be used as jurisdiction)
+				// get From NP (may be used as constraint)
+				// get For NP (may be used as scope or subject)
 
 				// Using example at index 27, NP Of personnel.
 				// personnel is considered as the jurisdiction
