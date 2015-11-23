@@ -67,7 +67,7 @@ public class VerbParser {
 		}
 	}
 
-	private static Tree getBaseVerbPhrase(Tree verbPhraseTree) {
+	public static Tree getBaseVerbPhrase(Tree verbPhraseTree) {
 		for (Tree t : verbPhraseTree.children())
 			if (t.value().equals("VP"))
 				return getBaseVerbPhrase(t);
@@ -107,5 +107,18 @@ public class VerbParser {
 		}
 		return null;
 
+	}
+
+	public static String getVerbs(Tree verbPhrase) {
+		String verbs = "";
+		for (Tree t : verbPhrase.children()) {
+			if (t.value().charAt(0) == 'V')
+				verbs += t.yield().get(0).value() + ", ";
+		}
+		if (!verbs.equals("")) {
+			verbs = verbs.substring(0, verbs.length() - 2);
+			return verbs;
+		} else
+			return null;
 	}
 }
