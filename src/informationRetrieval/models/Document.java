@@ -1,5 +1,7 @@
 package informationRetrieval.models;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 public class Document {
@@ -20,6 +22,15 @@ public class Document {
 
 	@Override
 	public String toString(){
-		return "\n" + documentNumber +": "+ filePath;
+		StringBuilder sb = new StringBuilder();
+		
+		NumberFormat formatter = new DecimalFormat("000");    
+		
+		sb.append("#");
+		sb.append(formatter.format(documentNumber));
+		sb.append(": ");
+		sb.append(filePath);
+		
+		return sb.toString();
 	}
 }

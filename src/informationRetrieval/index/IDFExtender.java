@@ -15,7 +15,7 @@ public class IDFExtender {
 		for (Term term : idfExtended.terms) {
 			double N = dm.getNumDocuments() * 1.0;
 			double df = term.getDocumentFrequency() * 1.0;
-			term.idf = Math.log(N / df);
+			term.idf = Math.log10(N / df);
 		}
 
 		return idfExtended;

@@ -6,6 +6,8 @@ import informationRetrieval.index.TFExtender;
 import informationRetrieval.models.Document;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
+import informationRetrieval.models.Posting;
+import informationRetrieval.models.SearchResult;
 import informationRetrieval.normalization.LowerCaseNormalizer;
 import informationRetrieval.normalization.NormalizationFacade;
 import informationRetrieval.normalization.Normalizer;
@@ -19,6 +21,7 @@ import informationRetrieval.tokenization.RegexTokenizer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import common.util.ConsoleInput;
 
@@ -84,7 +87,7 @@ public class Driver {
 		NormalizationFacade normalizationFacade = new NormalizationFacade(normalizationModules);
 
 		// Search Strategies
-		SearchStrategy basic = new BasicSearch();
+		SearchStrategy basic = new BasicSearch(); // BasicSearch.SEARCH_SETTING_AND);
 		SearchStrategy tf = new TFSearch();
 		SearchStrategy tfIdf = new TFIDFSearch();
 
@@ -98,15 +101,15 @@ public class Driver {
 			searchTerms = normalizationFacade.normalize(searchTerms);
 
 			/* Perform the actual search */
-			List<Document> basicResults = basic.search(basicIndex, searchTerms);
-			List<Document> tfResults = tf.search(tfIndex, searchTerms);
-			List<Document> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
+			List<SearchResult> basicResults = basic.search(basicIndex, searchTerms);
+			List<SearchResult> tfResults = tf.search(tfIndex, searchTerms);
+			List<SearchResult> tfIdfResults = tfIdf.search(tfIdfIndex, searchTerms);
 
 			/* Display output based on results */
 			System.out.println("Search Terms: " + searchTerms + "\n");
-			System.out.println("Query Results (Basic): " + basicResults + "\n\n");
-			System.out.println("Query Results (TF): " + tfResults + "\n\n");
-			System.out.println("Query Results (TF.IDF): " + tfIdfResults + "\n\n");
+			System.out.println("Query Results (Basic): " + basicResults.size()+" Item(s) found.\n" + basicResults + "\n\n");
+			System.out.println("Query Results (TF): " + tfResults.size()+" Item(s) found.\n"+ tfResults + "\n\n");
+			System.out.println("Query Results (TF.IDF): " + tfIdfResults.size()+" Item(s) found.\n"+ tfIdfResults + "\n\n");
 		}
 	}
 

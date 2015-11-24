@@ -4,6 +4,7 @@ import informationRetrieval.models.Document;
 import informationRetrieval.models.DocumentManager;
 import informationRetrieval.models.InvertedIndex;
 import informationRetrieval.models.Posting;
+import informationRetrieval.models.SearchResult;
 import informationRetrieval.models.Term;
 
 import java.util.ArrayList;
@@ -19,8 +20,8 @@ import common.util.CollectionsUtility;
 public class TFIDFSearch implements SearchStrategy {
 
 	@Override
-	public List<Document> search(InvertedIndex index, List<String> searchTerms) {
-		List<Document> queryResults = new ArrayList<>();
+	public List<SearchResult> search(InvertedIndex index, List<String> searchTerms) {
+		List<SearchResult> queryResults = new ArrayList<>();
 		HashMap<Posting, Double> postingScores = new HashMap<>();
 		List<Entry<Posting, Double>> postingList;
 
@@ -33,7 +34,7 @@ public class TFIDFSearch implements SearchStrategy {
 				continue;
 
 			for (Posting posting : indexTerm.postings) {
-				Double newScore = (1 + Math.log10(posting.tf) * indexTerm.idf);
+				Double newScore = ((1 + Math.log10(posting.tf)) * indexTerm.idf);
 
 				if (postingScores.containsKey(posting)) {
 					Double oldScore = postingScores.get(posting);
@@ -51,7 +52,8 @@ public class TFIDFSearch implements SearchStrategy {
 		DocumentManager dm = DocumentManager.getInstance();
 
 		for (Entry<Posting, Double> postingEntry : postingList) {
-			queryResults.add(dm.getDocumentByNumber(postingEntry.getKey().documentNumber));
+			SearchResult res = new SearchResult(dm.getDocumentByNumber(postingEntry.getKey().documentNumber), postingEntry.getValue());
+			queryResults.add(res);
 		}
 
 		return queryResults;
