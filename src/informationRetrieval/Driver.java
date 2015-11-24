@@ -32,7 +32,7 @@ public class Driver {
 	static InvertedIndex tfIdfIndex;
 
 	public static void main(String[] args) {
-		 generateAndSaveIndices();
+		// generateAndSaveIndices();
 		loadIndices();
 		// generateAndInitializeIndices();
 		searchRoutine();
