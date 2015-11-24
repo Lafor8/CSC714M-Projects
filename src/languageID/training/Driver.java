@@ -16,7 +16,7 @@ public class Driver {
 		File dataDir = new File("data/Language_Data");
 		File modelFile = new File("data/Language_Models/palito.model");
 		int nGram = 5;
-		int numChars = 1000;
+		int numChars = 10000000;
 
 		String[] categories = dataDir.list();
 
