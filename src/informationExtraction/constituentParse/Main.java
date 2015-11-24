@@ -10,7 +10,6 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
-import real.FileManager;
 
 public class Main {
 
@@ -41,12 +40,11 @@ public class Main {
 
 		for (CoreMap sentence : doc.get(CoreAnnotations.SentencesAnnotation.class)) {
 			Tree rootTree = sentence.get(TreeAnnotation.class);
-			// System.out.println(rootTree.pennString());
 			Tree[] clauses = ClauseParser.getIndependentClauses(sentence);
 			System.out.println("Sentence: " + printTree(rootTree));
+			System.out.println(rootTree.pennString());
 			for (Tree clause : clauses) {
 				System.out.println("Clause: " + printTree(clause));
-
 				Tree subject = SubjectParser.getSubject(clause);
 				// System.out.println("Subject: " + printTree(subject));
 				// may also need to get the prepositional phrases in the subject
@@ -87,6 +85,7 @@ public class Main {
 						Tree uponPhrase = PrepositionParser.getNounPhrase(verbPhrase, "upon", false);
 						// System.out.println("Upon Prep: " +
 						// printTree(uponPhrase));
+						Tree onPhrase = PrepositionParser.getNounPhrase(verbPhrase, "on", true);
 
 						eGoal = verbs;
 						if (byPhrase != null) {
@@ -110,6 +109,14 @@ public class Main {
 							eJurisdiction = printTree(ofPhrase);
 						else if (forPhrase != null)
 							eJurisdiction = printTree(forPhrase);
+						else if (onPhrase != null)
+							eJurisdiction = printTree(onPhrase);
+
+						if (eScope == null && withPhrase != null) {
+							eScope = printTree(withPhrase);
+							if (eConstraint.equals(eScope))
+								eConstraint = null;
+						}
 
 						System.out.println("eSubject: " + eSubject);
 						System.out.println("eScope: " + eScope);
@@ -129,6 +136,7 @@ public class Main {
 
 				// Using example at index 27, NP Of personnel.
 				// personnel is considered as the jurisdiction
+
 			}
 			System.out.println();
 		}
