@@ -24,7 +24,7 @@ public class NounPhraseParser {
 	public static boolean containsActorWords(Tree nounPhrase, String[] actorWords) {
 		for (Tree t : nounPhrase) {
 			for (String actorWord : actorWords) {
-				if (t.yield().get(0).value().toLowerCase().equals(actorWord))
+				if (t.yield().get(0).value().toLowerCase().contains(actorWord))
 					return true;
 			}
 		}

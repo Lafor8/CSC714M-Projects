@@ -1,0 +1,254 @@
+Chapter 3 - Asset Management 
+Information and information systems services constitute valuable government resources. The asset management chapter establishes the blueprint to identify the rules of 
+
+acceptable use and the rules for protection: what assets to protect, who protects them and how much protection is adequate. 
+ 
+To account for the assets that require protection, this chapter specifies the requirement to designate who owns assets. Designated owners become responsible for 
+
+protecting information and technology assets and to maintain the way assets are protected. 
+ 
+This chapter sets the foundation for a system that classifies information to identify different security levels, to specify how much protection is expected and how 
+
+information should be handled at each level. Not all the information requires the same level of protection because only some information is sensitive or confidential. 
+3.1 	Responsibility for assets 
+3.1.1 
+  	Inventory of assets 
+	An inventory of all important assets associated with information systems must be documented and maintained. 
+3.1.2 
+  	Ownership of assets 
+	Information Owners and Information Custodians must be designated for all assets associated with information systems. 
+3.1.3 
+  	Acceptable use of assets 
+	Rules for the acceptable use of information systems must be identified, documented, and implemented. 
+3.2 	Information Classification 
+3.2.1 
+  	Classification guidelines 
+	The government information security classification system must take into account the value, sensitivity and intended use of the information. 
+3.2.2 
+  	Information labelling and handling 
+	Information must be identified, labelled when appropriate and handled in accordance with the assigned information security classification. 
+ 	 
+3.1 	Asset Management - Responsibility for assets 
+3.1.1 	An inventory of all important assets associated with information systems must be documented and maintained. 
+a) Identification of assets 
+b)	Documenting and maintaining asset inventories 
+c)	Loss, theft or misappropriation of assets 
+Purpose: 	To identify and manage information and information technology assets associated with information systems or services (“assets”) to provide control and 
+
+accountability, support strategic planning, enhance critical incident response, system planning, protection, maintenance and recovery. 
+3.1.1.
+a) Identification of assets  
+Information Owners and Information Custodians must identify assets under their control including:  
+• 	Software; 
+•	Hardware; 
+•	Services including computer and communications services, and general utilities; 
+•	Information assets required to be inventoried in the personal information directory (required under the Freedom of Information and Protection of Privacy Act); 
+
+and, 
+•	All other information assets including: database and data files, contracts and agreements, system documentation, research information, user manuals, training 
+
+material, operational or support procedures, continuity plans, fallback arrangements, archived information. 
+3.1.1 b) Documenting and maintaining asset inventories 
+Information Owners and Information Custodians must document, maintain and verify asset inventories on a regular basis, depending on the criticality and value of the 
+
+assets, and validate the measures taken to protect the assets as part of an enterprise risk management strategy. 
+ 
+Information Owners and Information Custodians must document, maintain and verify the personal information directory including the personal information bank and privacy 
+
+impact assessment sections. 
+ 
+The following information should be recorded to facilitate system planning and asset recovery in the case of interruption, corruption, loss or destruction: 
+•	Type of asset; 
+•	Ownership; 
+•	Format; 
+•	Location; 
+•	Back-up information and location; 
+•	License information; 
+•	Sensitivity and safeguards requirements; 
+•	Criticality for service delivery and maintaining business functions; • 	Consequences of loss. 
+ 
+Information Owners and Information Custodians are accountable for asset identification and inventory maintenance. 
+ 
+3.1.1 c) Loss, theft or misappropriation of assets. 
+The loss, theft or misappropriation of assets must be reported immediately using the General Incident or Loss Report. Where the loss, theft or misappropriation 
+
+involves information the Information Incident Management Process must be followed. 
+Standards: 
+Information Incident Management Process 
+Metrics and Enforcement: 
+•	Is there a formal process in place for maintaining asset inventory? 
+•	Are inventory audits conducted periodically (e.g., every 2 years)? 
+•	Is the Personal Information Directory up-to-date? 
+•	Are information incidents and loss of assets reported immediately? 
+Other References: 
+ISP 3.2.1 - Classification guidelines 
+ISP 2.1.3 - Responsibilities for protection of assets 
+ISP 5.2.5 -Security of equipment off-premises 
+ISP 9.1.1 - Information Security Incident Management 
+ISP 11.1.2 - Intellectual Property Rights 
+CPPM 8.3.2 - Asset Management, Tangible Capital Assets and Other Assets 
+CPPM 12.3.3 - Information Management and Information Technology Management, Information Management 
+CPPM 20 - Loss Management  
+CPPM L - Loss Reporting 
+Freedom of Information and Protection of Privacy Act 
+ 
+3.1.2 	Information Owners and Information Custodians must be designated for all assets associated with information systems. 
+a)	Responsibilities for asset ownership. 
+b)	Designating Information Custodians. 
+Purpose: 	To designate custodians for assets with approved management responsibility for the protection of organizational assets associated with information and 
+
+technology systems or services. 
+3.1.2 a) Responsibilities for asset ownership  
+An Information Owner is responsible for controlling the production, development, maintenance, use and security of information and technology assets within their 
+
+jurisdiction. Information Owners are responsible for: 
+•	Ensuring the appropriate classification and safeguarding of information and technology systems or services; 
+•	Defining and regularly reviewing access restrictions, classifications and safeguards in accordance with applicable policies
+•	Designating Information Custodians and ensuring that they have the correct tools for protecting designated assets. 
+3.1.2 b) Designating Information Custodians  
+Information Owners may delegate responsibility for custody of information and technology systems or services to Information Custodians. 
+ 
+Information Custodians will be responsible for: 
+•	Overseeing the functioning of information and technology assets; 
+• 	Delivery of services in accordance with defined service requirements;  
+• 	Regular reporting on designated information and technology assets. 
+Guidelines: 
+Ownership and custodianship responsibilities should be defined and monitored within the MyPerformance Plan. 
+Metrics and Enforcement: 
+•	Are the responsibilities for asset ownership and custodianship documented (e.g., in employee My Performance plan and/or job description)? 
+•	Is there a regular reporting on information and technology assets by Information Custodians to Information Owners? 
+Other References: 
+ISP 2.2.3 - Addressing security in external party agreements 
+ISP 3.1.1 - Inventory of assets 
+ISP 3.2.1 - Classification Guidelines 
+CPPM 12 - Information Management and Information Technology Management Working Outside the Workplace 
+ 
+3.1.3 	Rules for the acceptable use of information systems must be identified, documented and implemented. 
+a) Acceptable use of government resources 
+Purpose: 	To prevent misuse or compromise of government information systems. 
+3.1.3 a) Acceptable use of government resources 
+All users of government’s information systems must take responsibility for, and accept the duty to actively protect government’s information and technology assets.  
+ 
+The requirements for personal use of government information systems are described in Core Policy and Procedures Manual 12.3.1 - Appropriate Use of Government 
+
+Resources. 
+Metrics and Enforcement: 
+	• 	Is there a mechanism in place for ensuring employee awareness of the appropriate use policies? 
+Other References: 
+ISP 4.2.2 - Information security awareness, education and training 
+ISP 6.10.2 - Monitoring system use 
+ISP 11.1.5 - Prevention of misuse of information processing facilities 
+ISP 11.2.1 - Compliance with security policy and standards 
+CPPM 12.3.1 - Information Management and Information Technology Management, Appropriate Use of Government Resources 
+ 
+3.2 	Asset Management - Information classification 
+3.2.1 	The government information security classification system must take into account the value, sensitivity and intended use of the information. 
+a)	Information and information system security classification 
+b)	Mandatory features of information security classification 
+c)	Mandatory features of information system security classification 
+Purpose: To define the information security classification system characteristics for information and information systems. 
+3.2.1 a) Information and information system security classification 
+Information Owners and Information Custodians must use the Information Security Classification system to categorize information and information systems.  
+ 
+The Office of the Government Chief Information Officer is responsible for definition, application and enforcement of the Information and Information System Security 
+
+Classification system.  
+ 
+Risk Management Branch and Government Security Office is responsible for definition of Security Categories. 
+3.2.1 b) Mandatory features of information security classification 
+The Information Security Classification system must: 
+•	Apply to information types rather than discrete data elements; 
+•	Determine the relative value of information including factors such as: 
+•	Statutory or regulatory requirements, o Impact to health, life or personal safety, o Impact on other information or information systems, 
+• 	Economic impact from loss of information, o Effects of data aggregation, o Cost to create or replace the information, 
+•	Impact to the Ministry service plan from loss of information confidentiality, integrity and availability,  
+•	Changes to information sensitivity over time; 
+•	Designate a default category to be used in the absence of explicit categorization;   
+•	Maintain compatibility with the Administrative Records Classification System and Operational Records Classification System. 
+ 
+The Information Security Classification system must include processes for: 
+•	Defining information types for categorization; 
+•	Making decisions on categorization of information 
+•	Periodic reassessment of the information security categorization processes. 
+3.2.1 c) Mandatory features of information system security classification 
+The Information System Security Classification system must include processes for: 
+•	Categorization of information systems based on the security classification of information stored, handled or processed by the information system; 
+•	Inclusion of information and system security classification documentation in the System Security Plan. 
+Standards:  
+Information Security Classification Standard 
+Information Security Classification Framework 
+Information Security Threat and Risk Assessment Standard 
+Administrative Records Classification System Operational Records Classification System 
+Guidelines: 
+The Information Security Classification system is a cornerstone of security and risk assessment activities. The security categories communicate the value and 
+
+classification of information in a way that allows for decisions to be made about risk management and information handling. 
+ 
+For example, Information Security Classifications assist in: 
+•	Consistent, comparable Statement of Sensitivity descriptions of the Security Threat and Risk Assessment describing the confidentiality, integrity and 
+
+availability requirements of the assessed system. 
+•	The selection of system security controls: Service providers can bundle system security controls into packages or service offerings based on the consistently 
+
+defined protection requirements of the information. 
+•	The selection of, and consistent application of, information handling and labeling rules. 
+•	Information sharing agreements by indicating the relative value of information being exchanged in a consistent and comparable manner across government. 
+Metrics and Enforcement: 
+•	Is there a process to ensure the Information Security Classification System is being used? 
+•	Is the Information Security Classification part of the System Security Plan? 
+•	Is the Information Security Classification reflected in STRAs? 
+Other References: 
+ISP 5 - Physical and environmental security 
+ISP 6 - Communications and operations management 
+ISP 7 - Access control 
+ISP 8 - Information systems acquisition, development and maintenance 
+ISP 9 - Information security incident management 
+ISP 10 - Business continuity management 
+ISP 11 - Compliance 
+CPPM 15.3 - Security, Policy 
+ 
+3.2.2 	Information must be identified, labelled when appropriate and handled in accordance with the assigned information security classification. 
+a) Information labelling procedures 
+b) Information handling procedures 
+Purpose: 	To protect information in accordance with its security classification. 
+3.2.2 a) Information labelling procedures 
+Information Owners and Information Custodians must document procedures to label information with its information security classification as required by the government 
+
+Information Security Classification system. Information labelling communicates the security classification and protection requirements to information users. 
+ 
+Information types that must be considered for labelling include: printed or electronic records, reports, files, on-screen displays or messages. Information Owners must 
+
+select and document the appropriate label type for each information type. 
+ 
+Automatic information labelling must be used where possible (e.g., by use of document templates, standard report footers, printer watermarks, on-screen displays, 
+
+system-applied text). 
+ 
+Where direct information labelling is not possible, alternate methods must be used to communicate the information security classification, such as: marking storage 
+
+media; description in information sharing agreements or system interface specifications; or, use of metadata. 
+3.2.2 b) Information handling procedures 
+Information Owners and Information Custodians must document information handling procedures for the secure processing, storage, transmission, declassification and 
+
+destruction. 
+ 
+Information protection procedures must take into account the information security classification, labelling and handling processes and the access control policies. 
+ 
+Procedures must be defined for interpreting information classification labels from, and handling information exchanged with, other jurisdictions. 
+Standards: 
+Information Security Classification Standard Information Security Classification Framework 
+Guidelines: 
+During systems development, specify labelling requirements when defining business requirements for reports, screens and data storage. 
+Metrics and Enforcement: 
+•	Is there a mechanism to ensure the correct labels are applied and used with information classification? 
+•	Are labelling requirements defined as part of business requirements for system development? 
+ 
+Other References: 
+ISP 3.2 - Classification guidelines 
+ISP 5 - Physical and environmental security 
+ISP 6 - Communications and operations management 
+ISP 7 - Access control 
+ISP 8 - Information systems acquisition, development and maintenance 
+ISP 9 - Information security incident management 
+ISP 10 - Business continuity management 
+ISP 11 - Compliance 

@@ -6,7 +6,7 @@ public class SubjectParser {
 
 	public static Tree getSubject(Tree clause) {
 		// TODO
-		for (Tree t : clause) {
+		for (Tree t : clause.children()) {
 			if (t.value().equals("NP")) {
 				return t;
 			}

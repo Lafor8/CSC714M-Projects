@@ -7,9 +7,20 @@ public class DOBJParser {
 	public static Tree getDirectObject(Tree verb) {
 		for (Tree t : verb.children()) {
 			if (t.value().equals("NP"))
-				return t;
+				return NounPhraseParser.getBaseNounPhrase(t);
 		}
 		return null;
 	}
 
+	public static Tree getPrepositionalPhraseOfDirectObject(Tree verb) {
+		for (Tree t : verb.children()) {
+			if (t.value().equals("NP")) {
+				for (Tree c : t.children()) {
+					if (c.value().equals("PP"))
+						return c;
+				}
+			}
+		}
+		return null;
+	}
 }

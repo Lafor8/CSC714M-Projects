@@ -48,26 +48,27 @@ public class VerbParser {
 
 	public static Tree[] getVerbPhrases(Tree clause) {
 		Tree verbPhraseTree = VerbParser.getVerbPhraseTreeFromClause(clause);
-
-		Tree[] multipleVerbPhrases = getMultipleVerbPhrases(verbPhraseTree);
-		if (multipleVerbPhrases != null) {
-			for (int i = 0; i < multipleVerbPhrases.length; i++) {
-				Tree t = multipleVerbPhrases[i];
-				multipleVerbPhrases[i] = getBaseVerbPhrase(t);
+		if (verbPhraseTree != null) {
+			Tree[] multipleVerbPhrases = getMultipleVerbPhrases(verbPhraseTree);
+			if (multipleVerbPhrases != null) {
+				for (int i = 0; i < multipleVerbPhrases.length; i++) {
+					Tree t = multipleVerbPhrases[i];
+					multipleVerbPhrases[i] = getBaseVerbPhrase(t);
+				}
+				return multipleVerbPhrases;
+			} else {
+				Tree verb = getBaseVerbPhrase(verbPhraseTree);
+				if (verb != null) {
+					List<Tree> verbs = new ArrayList<>();
+					verbs.add(verb);
+					return verbs.toArray(new Tree[verbs.size()]);
+				}
 			}
-			return multipleVerbPhrases;
-		} else {
-			Tree verb = getBaseVerbPhrase(verbPhraseTree);
-			if (verb != null) {
-				List<Tree> verbs = new ArrayList<>();
-				verbs.add(verb);
-				return verbs.toArray(new Tree[verbs.size()]);
-			} else
-				return null;
 		}
+		return null;
 	}
 
-	public static Tree getBaseVerbPhrase(Tree verbPhraseTree) {
+	private static Tree getBaseVerbPhrase(Tree verbPhraseTree) {
 		for (Tree t : verbPhraseTree.children())
 			if (t.value().equals("VP"))
 				return getBaseVerbPhrase(t);
@@ -120,5 +121,24 @@ public class VerbParser {
 			return verbs;
 		} else
 			return null;
+	}
+
+	public static boolean hasBeInVerbPhrase(Tree verbPhrase) {
+		for (Tree t : verbPhrase.children()) {
+			if (t.children()[0].yield().get(0).value().equals("be"))
+				return true;
+			if (t.value().equals("VP"))
+				return hasBeInVerbPhrase(t);
+
+		}
+		return false;
+	}
+
+	public static Tree getWholeVerbPhrase(Tree clause) {
+		for (Tree t : clause.children()) {
+			if (t.value().equals("VP"))
+				return t;
+		}
+		return null;
 	}
 }
