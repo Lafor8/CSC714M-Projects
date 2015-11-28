@@ -5,10 +5,10 @@ import java.util.List;
 
 public class InputParser {
 
-	private String currChapter;
-	private String currSection;
-	private String currSentence;
-	private String mergeString;
+	private String currChapter = "";
+	private String currSection = "";
+	private String currSentence = "";
+	private String mergeString = "";
 
 	private boolean ignoreNextLine;
 	private boolean isMerging;
@@ -48,7 +48,7 @@ public class InputParser {
 				if (currToken.contains("Chapter") && tokenIndex == 0) {
 					currChapter = lineTokens[tokenIndex + 1];
 					currSentence = "";
-					currSection = null;
+					currSection = "Chapter " + currChapter;
 					break;
 				} else if (isSection) {
 
@@ -90,7 +90,7 @@ public class InputParser {
 						break;
 
 				} else if (currToken.equals("To")) {
-					currSentence = "The doer of this section should";
+					currSentence = "The policy-doer should";
 				} else {
 					currSentence += " " + currToken;
 

@@ -1,5 +1,6 @@
 package informationExtraction.constituentParse;
 
+import informationExtraction.ExtractionResult;
 import informationExtraction.inputParser.Sentence;
 
 import java.io.IOException;
@@ -27,7 +28,9 @@ public class InformationExtractor {
 		return s;
 	}
 
-	public static void parse(List<Sentence> sentences) throws IOException {
+	public static List<ExtractionResult> parse(List<Sentence> sentences) throws IOException {
+
+		List<ExtractionResult> results = new ArrayList<ExtractionResult>();
 
 		String text = sentencesArrayToString(sentences);
 
@@ -148,23 +151,33 @@ public class InformationExtractor {
 						// eConstraint = null;
 						// }
 
-						
 						eConstraint = eConstraint.trim();
 						eJurisdiction = eJurisdiction.trim();
-						
+
 						if (eConstraint.length() > 0 && eConstraint.charAt(eConstraint.length() - 1) == '|')
 							eConstraint = eConstraint.substring(0, eConstraint.length() - 1).trim();
 
-						if (eJurisdiction.length() > 0
-								&& eJurisdiction.charAt(eJurisdiction.length() - 1) == '|')
+						if (eJurisdiction.length() > 0 && eJurisdiction.charAt(eJurisdiction.length() - 1) == '|')
 							eJurisdiction = eJurisdiction.substring(0, eJurisdiction.length() - 1).trim();
 
-						System.out.println("eSubject: " + eSubject);
-						System.out.println("eScope: " + eScope);
-						System.out.println("eGoal: " + eGoal);
-						System.out.println("eConstraint: " + eConstraint);
-						System.out.println("eJurisdiction: " + eJurisdiction);
-						System.out.println();
+						ExtractionResult result = new ExtractionResult();
+						result.setSubject(eSubject);
+						result.setScope(eScope);
+						result.setGoal(eGoal);
+						result.setConstraint(eConstraint);
+						result.setJurisdiction(eJurisdiction);
+						result.setOriginalSentence(printTree(rootTree));
+						result.setClause(printTree(clause));
+						result.setSection(sentences.get(i).getSection());
+						results.add(result);
+
+						// System.out.println("eSubject: " + eSubject);
+						// System.out.println("eScope: " + eScope);
+						// System.out.println("eGoal: " + eGoal);
+						// System.out.println("eConstraint: " + eConstraint);
+						// System.out.println("eJurisdiction: " +
+						// eJurisdiction);
+
 					}
 				// get subject.
 				// get verb and DOBJ pairs
@@ -181,6 +194,8 @@ public class InformationExtractor {
 			}
 			System.out.println();
 		}
+
+		return results;
 	}
 
 	private static String printTree(Tree t) {

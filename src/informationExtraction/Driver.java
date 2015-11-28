@@ -28,7 +28,9 @@ public class Driver {
 		// fw.close();
 		// System.out.println(sb.toString());
 
-		InformationExtractor.parse(sentences);
+		List<ExtractionResult> results = InformationExtractor.parse(sentences);
+
+		ResultFileWriter.writeToFile("isp-extraction.csv", results);
 
 	}
 }
