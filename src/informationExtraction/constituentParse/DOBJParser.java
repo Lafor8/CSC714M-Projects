@@ -6,7 +6,7 @@ public class DOBJParser {
 
 	public static Tree getDirectObject(Tree verb) {
 		for (Tree t : verb.children()) {
-			if (t.value().equals("NP"))
+			if (t.value().equals("NP") || t.value().equals("S"))
 				return NounPhraseParser.getBaseNounPhrase(t);
 		}
 		return null;

@@ -3,6 +3,7 @@ package informationExtraction.constituentParse;
 import informationExtraction.inputParser.Sentence;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -68,33 +69,33 @@ public class InformationExtractor {
 						// System.out.println("DOBJ: " + printTree(dobj));
 						Tree prepOfDobj = DOBJParser.getPrepositionalPhraseOfDirectObject(verbPhrase);
 
-						Tree ofPhrase = PrepositionParser.getNounPhrase(verbPhrase, "of", true);
+						Tree ofPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "of");
 						if (ofPhrase == null)
-							ofPhrase = PrepositionParser.getNounPhrase(subject, "of", true);
+							ofPhrase = PrepositionParser.getPrepositionalPhrase(subject, "of");
 						// System.out.println("Of Prep: " +
 						// printTree(ofPhrase));
-						Tree withPhrase = PrepositionParser.getNounPhrase(verbPhrase, "with", true);
+						Tree withPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "with");
 						// System.out.println("With Prep: " +
 						// printTree(withPhrase));
 						Tree byPhrase = PrepositionParser.getNounPhrase(verbPhrase, "by", true);
 						// System.out.println("By Prep: " +
 						// printTree(byPhrase));
-						Tree toPhrase = PrepositionParser.getNounPhrase(verbPhrase, "to", true);
-						// System.out.println("To Prep: " +
-						// printTree(toPhrase));
-						Tree fromPhrase = PrepositionParser.getNounPhrase(verbPhrase, "from", true);
+						Tree fromPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "from");
 						// System.out.println("From Prep: " +
 						// printTree(fromPhrase));
-						Tree forPhrase = PrepositionParser.getNounPhrase(verbPhrase, "for", true);
+						Tree forPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "for");
 						if (forPhrase == null)
-							forPhrase = PrepositionParser.getNounPhrase(subject, "for", true);
+							forPhrase = PrepositionParser.getPrepositionalPhrase(subject, "for");
 						// System.out.println("For Prep: " +
 						// printTree(forPhrase));
-						Tree uponPhrase = PrepositionParser.getNounPhrase(verbPhrase, "upon", false);
+						Tree uponPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "upon");
 						// System.out.println("Upon Prep: " +
 						// printTree(uponPhrase));
-						Tree onPhrase = PrepositionParser.getNounPhrase(verbPhrase, "on", true);
-
+						Tree onPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "on");
+						Tree inPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "in");
+						Tree toPhrase = PrepositionParser.getPrepositionalPhrase(verbPhrase, "to");
+						// System.out.println("To Prep: " +
+						// printTree(toPhrase));
 						eGoal = verbs;
 
 						if (byPhrase != null) {
@@ -103,8 +104,8 @@ public class InformationExtractor {
 						} else if (!hasBeInVerbPhrase) {
 							eSubject = printTree(subject);
 							eScope = printTree(dobj);
-							if (prepOfDobj != null)
-								eConstraint = printTree(prepOfDobj) + " | ";
+							// if (prepOfDobj != null)
+							// eConstraint = printTree(prepOfDobj) + " | ";
 						} else {
 							eScope = printTree(subject);
 						}
@@ -117,31 +118,46 @@ public class InformationExtractor {
 							eConstraint += printTree(uponPhrase) + " | ";
 						if (onPhrase != null)
 							eConstraint += printTree(onPhrase) + " | ";
-						if (sBar != null)
-							eConstraint += printTree(sBar) + " | ";
-
+						if (inPhrase != null)
+							eConstraint += printTree(inPhrase) + " | ";
+						if (sBar != null) {
+							List<Tree> toCheck = new ArrayList<Tree>();
+							toCheck.add(withPhrase);
+							toCheck.add(fromPhrase);
+							toCheck.add(uponPhrase);
+							toCheck.add(onPhrase);
+							toCheck.add(inPhrase);
+							boolean isChild = false;
+							for (Tree tree : toCheck) {
+								if (ParentChecker.isChildOfParent(tree, sBar))
+									isChild = true;
+							}
+							if (isChild == false)
+								eConstraint += printTree(sBar) + " | ";
+						}
 						if (ofPhrase != null)
 							eJurisdiction += printTree(ofPhrase) + " | ";
 						if (forPhrase != null)
 							eJurisdiction += printTree(forPhrase) + " | ";
+						if (toPhrase != null)
+							eJurisdiction += printTree(toPhrase) + " | ";
 
-						if (eScope == null && withPhrase != null) {
-							eScope = printTree(withPhrase);
-							if (eConstraint.equals(eScope))
-								eConstraint = null;
-						}
+						// if (eScope == null && withPhrase != null) {
+						// eScope = printTree(withPhrase);
+						// if (eConstraint.equals(eScope))
+						// eConstraint = null;
+						// }
 
-						// if (eConstraint.length() > 0 &&
-						// eConstraint.trim().charAt(eConstraint.length() - 1)
-						// == '|')
-						// eConstraint = eConstraint.substring(0,
-						// eConstraint.length() - 1).trim();
-						//
-						// if (eJurisdiction.length() > 0
-						// && eJurisdiction.trim().charAt(eJurisdiction.length()
-						// - 1) == '|')
-						// eJurisdiction = eJurisdiction.substring(0,
-						// eJurisdiction.length() - 1).trim();
+						
+						eConstraint = eConstraint.trim();
+						eJurisdiction = eJurisdiction.trim();
+						
+						if (eConstraint.length() > 0 && eConstraint.charAt(eConstraint.length() - 1) == '|')
+							eConstraint = eConstraint.substring(0, eConstraint.length() - 1).trim();
+
+						if (eJurisdiction.length() > 0
+								&& eJurisdiction.charAt(eJurisdiction.length() - 1) == '|')
+							eJurisdiction = eJurisdiction.substring(0, eJurisdiction.length() - 1).trim();
 
 						System.out.println("eSubject: " + eSubject);
 						System.out.println("eScope: " + eScope);

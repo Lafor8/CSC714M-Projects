@@ -32,4 +32,12 @@ public class PrepositionParser {
 		}
 		return null;
 	}
+
+	public static Tree getPrepositionalPhrase(Tree tree, String preposition) {
+		for (Tree t : tree) {
+			if (t.value().equals("PP") && t.children()[0].yield().get(0).value().equals(preposition))
+				return t;
+		}
+		return null;
+	}
 }
